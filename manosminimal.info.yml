@@ -1,0 +1,28 @@
+name: manosminimal
+type: theme
+description: 'Thema manosdefuego'
+package: Other
+core: 8.x
+libraries:
+  - manosminimal/global-styling
+regions:
+  header_top: 'Header Top'
+  header: Header
+  banner: Banner
+  held: Help
+  sidebar_first: 'Sidebar first'
+  content: Content
+  highlighted: Highlighted
+  sidebar_second: 'Sidebar second'
+  feature_firs: 'Feature firs'
+  feature_second: 'Feature second'
+  feature_third: 'Feature third'
+  feature_fourth: 'Feature fourth'
+  footer_firs: 'Footer firs'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer: Footer
+  footer_bottom: 'Footer bottom'
+
+base theme: false

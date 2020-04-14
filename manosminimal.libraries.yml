@@ -1,0 +1,8 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      https://necolas.github.io/normalize.css/8.0.1/normalize.css: {type:external}
+      css/base/base.css: {}
+  js:
+    js/manosdefuego.js: {}
