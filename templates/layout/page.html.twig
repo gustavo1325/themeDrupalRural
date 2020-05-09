@@ -1,32 +1,48 @@
-<div class="mf-container">
-  <header id="header">
-    <div id="header_top" clas="header-item">
-      {% if page.header_top %}
+<!-- comienza el header-->
+  <header class="main-header">
+    <div class="container-header">
+      <div id="header_top" clas="header-item">
+        {% if page.header_top %}
           {{page.header_top}}
-      {% endif %}
-    </div>
-    <div id="header-header" class="header-item">
-      {% if page.header %}
-          {{page.header}}
-      {% endif %}
+        {% endif %}
+        </div>
 
-    </div id="header_banner" clas="header_item">
+        <div id="header-header" class="header-item">
+        {% if page.header %}
+          {{page.header}}
+        {% endif %}
+        </div>
+    </div>
+  </header>
+<!--comienza el banner slider-->
+    <div id="main-banner" clas="header_item">
       {% if page.banner %}
           {{page.banner}}
       {% endif %}
     </div>
 
-    </div id="header_held" clas="header_item">
+    <div id="header_held" clas="header_item">
       {% if page.held %}
           {{page.held}}
       {% endif %}
     </div>
 
-    </div id="header_content " clas="header_item">
+<main>
+<section>
+    <div id="main-carrusel " clas="main-item">
       {% if page.content %}
           {{page.content }}
       {% endif %}
     </div>
-  </header>
+</section>
+<section>
+    <div id="main-Highlighted " clas="main-item">
+      {% if page.Highlighted %}
+          {{page.Highlighted }}
+      {% endif %}
+    </div>
 
-</div>
+</section>
+</main>
+<footer class="main-footer">
+</footer>

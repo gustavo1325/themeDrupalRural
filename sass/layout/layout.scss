@@ -1,0 +1,12 @@
+.container-header{
+  max-width: 100%;
+  padding-left: .5rem;
+  padding-right: .5rem;
+
+}
+
+#header-header{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 30% 20%;
+}

@@ -1,0 +1,72 @@
+img {
+  max-width: 100%;
+  height: auto; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+.header-header {
+  text-align: center; }
+
+.container-header {
+  max-width: 100%;
+  padding-left: .5rem;
+  padding-right: .5rem; }
+
+#header-header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 30% 20%; }
+
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+
+.main-menu__item a {
+  color: #333333; }
+
+.tlf {
+  font-size: 3.7vw;
+  margin-bottom: 0.3em; }
+
+[class*=icon-]::before {
+  content: "";
+  display: inline-block; }
+
+.icon-tlf::before {
+  content: url(../img/tlfT16.png); }
+
+.link-lenguage-item .is-active:after {
+  display: inline-block;
+  content: url(../img/marcaChecbox16.png); }
+
+.fa-fw {
+  width: .2em; }
+
+#mouseover-ul {
+  max-width: 7em;
+  margin-bottom: 0; }
+
+.link-lenguage-item {
+  list-style: none; }
+
+.main-link-lenguage a {
+  color: #333333; }
+
+.language-link {
+  margin-left: -2em;
+  visibility: hidden; }
+
+.is-active {
+  visibility: visible; }
+
+.invisible {
+  display: none; }

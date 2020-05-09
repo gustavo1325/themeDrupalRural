@@ -3,6 +3,7 @@ global-styling:
   css:
     base:
       https://necolas.github.io/normalize.css/8.0.1/normalize.css: {type:external}
-      css/base/base.css: {}
+      styles/style.css: {}
   js:
     js/manosdefuego.js: {}
+    js/link-leguage.js: {}
