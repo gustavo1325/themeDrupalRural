@@ -1,0 +1,33 @@
+li {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo_principal);
+  font-family: var(--tipografia), sans-serif;
+  color: var(--tipografi_principal); }
+
+a {
+  text-decoration: none; }
+
+input#edit-email {
+  max-width: 100%; }
+
+/*#block-manosminimal-content{
+  display: none;
+}*/
+div#block-manosminimal-content #lupa {
+  display: none; }
+
+#block-compraruralblock #lupa {
+  display: none; }
+
+#block-newsletter-sularyyblock #lupa {
+  display: none; }

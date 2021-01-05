@@ -1,0 +1,14 @@
+#contentdiahome {
+  margin-top: -10px;
+  padding: 0 1rem; }
+  #contentdiahome h1 {
+    font-size: var(--titulo);
+    color: var(--tipografi_principal);
+    margin: 0 !important;
+    padding-top: 2.3rem; }
+  #contentdiahome p {
+    font-size: var(--texto);
+    text-align: justify; }
+
+.diahome_img {
+  border-bottom: 25px solid var(--fondo_texto_separado); }

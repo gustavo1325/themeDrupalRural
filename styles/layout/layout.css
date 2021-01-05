@@ -1,0 +1,18 @@
+#header_top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  justify-content: space-around;
+  align-items: center; }
+
+#block-manosminimal-main-menu {
+  text-align: center; }
+
+#block-manosminimal-branding {
+  flex-grow: 1;
+  align-self: flex-end; }
+  #block-manosminimal-branding a img {
+    max-width: 80%;
+    display: block;
+    margin: auto; }

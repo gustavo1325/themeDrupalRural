@@ -1,0 +1,119 @@
+@import"mixin";
+
+//crear dos columnas con el pie y el newsleter a partir de 767
+div#footer_contact {
+  @include rwd(large){
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+  }
+}
+
+
+
+footer{
+  background: #fff;
+  height: 250px;
+    @media screen and(min-width: 425px){
+        height: 350px;
+    }
+    @include rwd(large){
+    //  width: 50%
+    }
+}
+
+#contetnt_footerual{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+
+}
+
+#logo_rural_footer{
+  text-align: center;
+}
+
+.logo_rural_footer{
+  margin-top: 1rem;
+  max-width: 85%;
+
+  @include rwd(large){
+    max-width: 100%;
+  }
+  @include rwd(960px){
+    max-width: 90%;
+  }
+
+}
+
+#correoRural{
+  //text-align: left;
+  //position: relative;
+    p{
+      font-size:var(--texto);
+      //font-size:0.7em;
+      color: var(--form);
+      margin-left: 1.5rem;
+      text-align: center;
+      @include rwd(960px){
+        margin-left: 5rem;
+      }
+    }
+}
+
+.mail_footer{
+  position: relative;
+}
+.mail_footer::before{
+  content: url('../img/Mail.png');
+  position: absolute;
+  max-width:4px;
+  max-height:4px;
+  transform: scale(0.1);
+ left:-20px;
+ top:-6px;
+}
+
+
+
+#whassRural{
+
+  p{
+    //font-size:var(--texto);
+
+    font-size:var(--texto);
+    color: var(--form);
+    margin-left: 1.5rem;
+    text-align: center;
+    @include rwd(960px){
+      margin-left: 5rem;
+      //text-align: left;
+    }
+
+  }
+}
+.mail_footer{
+
+}
+.tlt_footer{
+  padding-top: 0.5rem;
+  position: relative
+
+}
+.tlt_footer::before{
+  content: url('../img/Whatsapp.png');
+  position: absolute;
+  max-width:4px;
+  max-height:4px;
+  transform: scale(0.1);
+ left:-20px;
+ top:1px;
+
+}
+
+
+.item_footer{
+  @include rwd(large){
+    display: none;
+  }
+}

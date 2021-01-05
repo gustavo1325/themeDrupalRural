@@ -27,16 +27,16 @@
       {% endif %}
     </div>
 
-<main>
+<main id="content">
 <section>
-    <div id="main-carrusel " clas="main-item">
+    <div id="main-content" clas="main-item">
       {% if page.content %}
           {{page.content }}
       {% endif %}
     </div>
 </section>
 <section>
-    <div id="main-Highlighted " clas="main-item">
+    <div id="main-Highlighted" clas="main-item">
       {% if page.Highlighted %}
           {{page.Highlighted }}
       {% endif %}
@@ -44,5 +44,17 @@
 
 </section>
 </main>
+
 <footer class="main-footer">
+    <div id="footer_contact" class="footer-item">
+      {% if page.footer_firs %}
+          {{page.footer_firs}}
+      {% endif %}
+    </div>
+
+<div id="footer_contact" class="footer-item">
+  {% if page.footer %}
+      {{page.footer}}
+  {% endif %}
+</div>
 </footer>

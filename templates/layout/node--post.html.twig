@@ -1,0 +1,82 @@
+
+
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>efecto
+  {% endif %}
+
+    <div id="content_node"{{ content_attributes }}>
+    {# {{ content }} #}
+
+              <div id=item_img class="content_item">
+                  <img id="post_img" class="post_img" src="{{ file_url(content.field_imatge_post['#items'].entity.uri.value) }}" alt="Imatge post">
+                  <div id="efecto1" class="efecto">
+                          <img id="flecha_img" class="flecha_img" src="/rural/web/modules/custom/quisomrural/img/flechaVerde.jpg"  alt="Icona fletxa">
+                  </div>
+              </div>
+
+
+
+
+              <div>
+                    <div id=item_title class="content_item">
+                        <h2> {{content.field_titulo.0}} </h2>
+                        <p id="borde_fantasma"></p>
+                    </div>
+              </div>
+              <div clas="date_author">
+                  <strong id="format_date"> {{date}} </strong>
+
+              </div>
+
+              <div id="text_post">
+                    {{content.body.0}}
+              </div>
+              <div class="content_redes">
+                          <div class="content_comparte">
+
+                                <ul >
+                                    <li class="item_list_compartir tituloItem" > <h4 class="comparte_list_title" >COMPARTEIX:</h4> </li>
+                                    <li class="item_compartir item_list_compartir">
+                                          <a id="comparte_facebook" href="#" target="_blank"><img class="icona_compartir" src="/rural/web/themes/custom/manosminimal/img/facebook_dia.png" alt="Icona facebook" /></a>
+                                    </li>
+                                    <li class="item_compartir item_list_compartir">
+                                        <a id="comparte_twiter" href="#" target="_blank"><img class="icona_compartir_twi" src="/rural/web/themes/custom/manosminimal/img/twiter_dia.png" alt="Icona twiter" /></a>
+                                    </li>
+                                </ul>
+
+                          </div>
+
+
+                          <div id="like">
+                              <img id="id_img_like" class="img_like" src="/rural/web/themes/custom/manosminimal/img/Likes.png" alt="Icona m'agrada"/>
+
+                          </div>
+              </div>
+              <div class="coment_post">
+                 {{content.field_comentaris_post.0}}
+
+
+              </div>
+
+
+    </div>
+
+
+
+</article>

@@ -63,7 +63,11 @@ function manosminimal_theme_suggestions_node_alter(array &$suggestions, array $v
  * Implements hook_preprocess_HOOK() for Block document templates.
  */
 function manosminimal_preprocess_block(array &$variables) {
-
+  //Automaticamente limpia caches pero en modo desarrollo, no se si tambien en produccion cuando estas logeado no respeta el javascript y el css
+  /*if ($variables['plugin_id'] == 'diadia') {
+  $variables['#cache']['max-age'] = 0;
+//  echo($variables['plugin_id']);
+}*/
 }
 
 /**
@@ -120,6 +124,7 @@ function manosminimal_preprocess_select(array &$variables) {
 function manosminimal_preprocess_field(array &$variables, $hook) {
   /*switch ($variables['element']['#field_name']) {
   }*/
+
 }
 
 /**
@@ -142,4 +147,48 @@ function manosminimal_theme_suggestions_details_alter(array &$suggestions, array
  */
 function manosminimal_preprocess_menu_local_task(array &$variables) {
   //$variables['element']['#link']['url']->setOption('attributes', ['class'=>'rounded']);
+}
+
+/**
+ * Implements hook__form_alte().
+ */
+function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
+  if ($form_id == 'search_block_form') {
+
+    //  $form['keys']['#attributes']['placeholder'] = t('patata');
+      //\Drupal::messenger()->addMessage(t('Dades guardades correctament.'));
+  }
+    if ($form_id == 'comment_comment_form') {
+      //$form['comment_body[0][value]']['#attributes']['class'][] = 'form-control';
+      //echo "HOLA SOY TU FORM";
+      //  $form[]['comment_body']['#attributes']['#placeholder'] = t('comment');
+      //  $form['comment_body'][LANGUAGE_NONE][0]['#attributes']['placeholder'] = t('comment');
+        //$form['comment_body']['value']['#attributes']['placeholder'] = 'foo';
+      //  \Drupal::messenger()->addMessage(t('Dades guardades correctament.'));
+      }
+
+      if($form_id == 'comprarural_addform'){
+        /*dpm($form);
+        echo "HOLA SOY TU FORM";
+        $form['politica_privacidad'][LANGUAGE_NONE][0]['value']['#attributes']['class'][] = 'foo';*/
+      }
+
+      //dpm($form);
+    //  drupal_set_message("Form ID is : " . $form_id);//---------EXTRAES ID DE FORMULARIOS
+
+}
+
+
+function manosminimal_preprocess_views_view_fields(&$variables) {
+ //OBTIENE LOS VALORES DE LAS VARIABLES POR DEFECTO, SE PUEDEN CREAR NUEVAS VARIABLES O CAMBIAR EL VALOR DE LAS EXISTENTES
+ //O PREPROCESAR UNA FECHA, ETC
+    $view = $variables['view'];
+    $row = $variables['row'];
+    // You can get the field value for the field this way even if the field is hidden (excluded from display)
+    $field_value = $view->style_plugin->getField($row->index, 'field_text_dia');
+    $field_value2 = $view->style_plugin->getField($row->index, 'created');
+    $field_value3 = $view->style_plugin->getField($row->index, 'field_imatge_post');
+  //echo($field_value3);
+  //CON ESTA LINE CAMBIAS EL VALOR DE LA VARIABLE POR DEFECTO O CREAS UNA NUEVA
+  //$variables['fields']['create']->content = $field_value3;
 }

@@ -5,5 +5,8 @@ global-styling:
       https://necolas.github.io/normalize.css/8.0.1/normalize.css: {type:external}
       styles/style.css: {}
   js:
-    js/manosdefuego.js: {}
+    js/manosminimal.js: {}
     js/link-leguage.js: {}
+
+  dependencies:
+    - core/jquery

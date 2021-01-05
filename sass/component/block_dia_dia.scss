@@ -1,0 +1,220 @@
+@import"mixin";
+//cambio el orden del contenido HTML
+
+/*.views-row.clearfix.row-2 {
+  .views-col.col-1 {
+    display:-webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+    background: red;
+    .views-field-field-imatge-post{
+        background: red;
+        order:-1;
+    }
+}
+
+
+}*/
+#container_dia{
+  @include rwd(mediumLarge){
+    margin: 0 1.5rem;
+    }
+  @include rwd(large){
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    }
+}
+
+#dia_home_items_desk{
+  @include rwd(mediumLarge){
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    }
+}
+
+#dia_home_movil{
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+#titulo_dia{
+  position: relative;
+  font-size: var(--titulo);
+}
+
+#titulo_dia::after{
+  position: relative;
+  content: url('../img/guionT.png');
+}
+
+.time_post1{
+  color:var(--barra_texto_suscribete_leermas);
+  font-size:1.2em;
+  /*.bocadillo-cuadrado
+    position: relative
+    height: 200px
+    width: 300px
+    background: $color-bocadillo
+    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5)
+    &:before
+        border: 25px solid $color-bocadillo
+        content: ''
+        border-left-color: transparent
+        border-bottom-color: transparent
+        border-right-color: transparent
+        position: absolute
+        bottom: -48px
+        left: calc(50% - 25px)*/
+}
+
+.dia_post_content{
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+
+  //align-content: start;
+  @include rwd(mediumLarge){
+    //width: 100%;
+    }
+}
+
+//layout modulo dia a dia movil home
+
+.dia_post_item_creado{
+  margin-top:0.7rem;
+  font-weight: 600;
+  //grid-area: 1 / 1 / 3 /2;
+  border-bottom: 1px solid var(--form);
+}
+
+.dia_post_item_coment{
+  font-size: var(--texto);
+  //grid-area: 3 / 1 / 4 / 2;
+      h6{
+        margin-top:0.7rem;
+        margin-bottom: 0;
+
+      }
+
+}
+
+.dia_post_item_text{
+  font-size: var(--menu);
+  //grid-area: 4 / 1 / 5 / 2;
+    p{
+      margin-top: 0.4rem;
+      margin-bottom: 0px;
+    }
+
+}
+.contentimgpost{
+  grid-area: 1 / 2 / 5 / 3;
+  @include rwd(mediumLarge){
+    //max-height:  144px;
+
+    }
+
+}
+.borde_flecha{
+  grid-area: 1 / 1 / 5 / 2;
+  position: relative;
+ background: var(--fondo_principal);
+ display: grid;
+ align-items: center;
+ //z-index:600;
+//background: fff;
+  //box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
+  @include rwd(mediumLarge){
+    //width: 100%;
+    //grid-area: 1 / 2 / 3 / 3
+    }
+
+}
+.borde_flecha::before{
+  border: 25px solid var(--fondo_principal);
+  content: '';
+  border-top: 11px solid transparent;
+  border-bottom:11px solid transparent;
+  border-right:11px solid transparent;
+  position: absolute;
+  right:  -30px;
+  bottom: calc(50% - 20px);
+
+}
+
+
+  .content-items{
+  //  background: red
+    max-width: 80%;
+    padding-left: 0.5rem;
+    margin-left: 0.7rem;
+    display: flex;
+    flex-direction: column;
+  /*  @include rwd(medium){
+      background:red;
+    }*/
+          //align-items: center;
+        //background-color: red;
+    }
+
+  //segundo imtem de plana movil home
+  .dia_post_content1{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .borde_flecha1{
+    grid-area: 1 / 2 / 5 / 3;
+    position: relative;
+    background: var(--fondo_principal);
+    display: grid;
+    align-items: center;
+
+
+  // z-index:700;
+  }
+  .borde_flecha1::before{
+    border: 25px solid var(--fondo_principal);
+
+    content: '';
+    border-top: 11px solid transparent;
+    border-bottom:11px solid transparent;
+    border-left:11px solid transparent;
+    position: absolute;
+    left: -30px;
+    bottom:  calc(50% - 20px);
+
+    /*bottom:   -60px;
+    right:  calc(50% - 2px);
+*/
+  }
+
+
+  .dia_post_item_img1{
+      grid-area: 1 / 1 / 5 / 2;
+      text-align: right;
+  }
+
+  .time_post2{
+    color:var(--barra_texto_suscribete_leermas);
+  }
+
+.like_dia{
+
+}
+.img_like_dia{
+  position:relative;
+  top:2px;
+  width: 13px;
+  height:13px;
+  object-fit: cover;
+  object-position: 0px 0px;
+  padding-top:1.5px;
+}
+
+//object-fit
+
+.img_dia{
+  width: 100%;
+  object-fit: cover;
+  object-position: 0px 0px;
+}

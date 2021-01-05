@@ -1,3 +1,51 @@
+:root{
+  --tipografia: Montserrat;
+  --texto: 1em;
+  --titulo: 1.5em;
+  --menu: 0.8em;
+  --leer_mas: 0.6em;
+  --text_form: 0.7em;
+  --text_comment: 0.8em;
 
-$text-color: #777777;
-$menu-color: #333333;
+  --tipografi_principal: #352d2d;
+  --fondo_principal: #fcf9f0;
+  --fondo_texto_separado: #d8d8ce;
+  --barra_texto_suscribete_leermas:#95985e;
+  --compra_rural_fondo1:#e8d6ba;
+  --compra_rural_fondo2:#90b37d;
+  --menu_hamburger:#777;
+  --form:#bbb;//grais suave
+  --text_titleinstagram:#425927;
+
+  --header-height:6rem;
+  --contador_like:10%;
+
+  --width_post:320px;
+  --height_post:461px;
+
+  --interlineado:1.6;
+}
+
+p{
+  line-height:var(--interlineado);
+}
+/*
+$breakpoints:(
+  xs: 0px,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+);
+
+@mixin rwd($bp) {
+  @media screen and (min-width:map-get($breakpoints, $bp)){
+    @content;
+  }
+}*/
+
+/*
+
+@media screen and(min-width: 768px){
+
+}
+*/

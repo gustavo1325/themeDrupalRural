@@ -1,12 +1,35 @@
-.container-header{
-  max-width: 100%;
-  padding-left: .5rem;
-  padding-right: .5rem;
+//---------------Header top----------------------------
+#header_top{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+#block-manosminimal-main-menu{
+  text-align: center;
+}
+
+#block-manosminimal-branding{
+  flex-grow: 1;
+  align-self: flex-end;
+  a{
+    img{
+    max-width: 80%;
+    display: block;
+    margin:auto;
+
+    }
+  }
+
 
 }
 
-#header-header{
-  display: grid;
-  align-items: center;
-  grid-template-columns: 50% 30% 20%;
+#block-formularidecerca{
+
+
+
 }

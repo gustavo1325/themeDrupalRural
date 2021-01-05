@@ -1,0 +1,43 @@
+<h1> PLANTILLA DE POST </h1>
+
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes }}>
+    {# {{ content }} #}
+    {#  {{ node.post.value }} #}
+    <p>{{ file_url(content.field_imatge_post['#items'].entity.uri.value) }}</p>
+    <div id="esto_funciona">
+       {{content.field_titulo}}  </div>
+       <div id="sin_html">
+        <p>  {{content.field_titulo.0}} </p> </div>
+        <p>{{ author_name }} </p>
+        <p>{{date }}</p>
+    <p>  {{ content.field_imatge_post[0] }} </p>
+    <p> {{content.body}} </p>
+    {#{{ file_url(node.field_imatge_post['#items'].entity.uri.value) }} #}
+    <p> {{content.field_flecha_img_post}} </p>
+    <p> {{content.field_comentaris_post}} </p>
+{# <p> {{content.field_imatge_post_get('url')->getValue()}} </p> #}
+<p>{{[elements][values][title]}}</p>
+  </div>
+ {# {{ devel_dump() }} #}
+ {{ devel_dump(field_titulo)}}
+</article>

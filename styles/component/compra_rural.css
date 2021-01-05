@@ -1,0 +1,147 @@
+#content_comprarural {
+  background: var(--compra_rural_fondo1);
+  margin-top: 1.5rem; }
+  @media screen and (min-width: 767px) {
+    #content_comprarural {
+      margin-top: 0; } }
+
+#comprarural_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
+  @media screen and (min-width: 767px) {
+    #comprarural_section {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
+.intem_comprarural_img {
+  grid-area: 1 / 1 / 5 / 2; }
+  @media screen and (min-width: 767px) {
+    .intem_comprarural_img {
+      grid-area: 1 / 1 / 5 / 3; } }
+
+.intem_comprarural_content {
+  grid-area: 1 / 2 / 5 / 4;
+  margin-bottom: -1.5rem; }
+  @media screen and (min-width: 767px) {
+    .intem_comprarural_content {
+      grid-area: 1 / 3 / 4 / 5; } }
+
+.comprarural_text {
+  font-size: var(--text_comment);
+  text-align: center;
+  text-align: justify;
+  margin: 0 0 0.6rem 0; }
+  @media screen and (min-width: 576px) {
+    .comprarural_text {
+      margin-left: 0.9rem;
+      max-width: 80%;
+      font-size: var(--texto); } }
+  @media screen and (min-width: 767px) {
+    .comprarural_text {
+      font-size: var(--menu);
+      margin: 0.6rem 0 0.6rem 0; } }
+
+.comprarural-addform {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90%;
+  margin: 0 auto; }
+
+.compra_email {
+  background: var(--compra_rural_fondo1);
+  border: none;
+  border-bottom: 1px solid var(--form);
+  font-size: var(--text_form); }
+  @media screen and (min-width: 576px) {
+    .compra_email {
+      font-size: 0.8em; } }
+
+.comprarural-addform .form-item-email {
+  grid-area: 1 / 1 / 2 / 4; }
+
+.comprarural-addform .form-checkboxes {
+  grid-area: 2 / 1 / 3 / 3; }
+
+.comprarural-addform .form-actions {
+  grid-area: 2 / 3 / 3 / 4; }
+  .comprarural-addform .form-actions .form-submit {
+    margin-top: 0.3rem;
+    background: var(--compra_rural_fondo1);
+    border-color: var(--form);
+    margin-left: 0; }
+    @media screen and (min-width: 576px) {
+      .comprarural-addform .form-actions .form-submit {
+        margin-top: 1.5rem; } }
+    @media screen and (min-width: 767px) {
+      .comprarural-addform .form-actions .form-submit {
+        margin-top: 1.5rem; } }
+
+@media screen and (min-width: 576px) {
+  #edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad {
+    margin-top: 1.5rem; } }
+
+@media screen and (min-width: 767px) {
+  #edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad {
+    margin-top: 0.5rem; } }
+
+#edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad .option {
+  font-size: var(--leer_mas);
+  margin-top: -0.3rem; }
+  @media screen and (min-width: 576px) {
+    #edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad .option {
+      font-size: 0.7rem; } }
+  @media screen and (min-width: 767px) {
+    #edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad .option {
+      font-size: 0.7rem; } }
+
+.item_comprarural_img {
+  padding: 0.3rem 1rem 0.5rem 1rem;
+  text-align: center; }
+  .item_comprarural_img img {
+    max-width: 90%; }
+    @media screen and (min-width: 767px) {
+      .item_comprarural_img img {
+        max-width: 80%;
+        margin-top: 1rem; } }
+
+.compra_politica_privacidad {
+  visibility: hidden; }
+
+input[type="checkbox"] {
+  display: none; }
+
+label {
+  cursor: pointer; }
+
+input[type="checkbox"] + label:before {
+  border: 1px solid var(--form);
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 12px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 12px; }
+
+input[type="checkbox"]:checked + label:before {
+  background: #fff;
+  color: #333;
+  content: "\2713";
+  text-align: center; }
+
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold; }
+
+.img_ondasfooter {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    .img_ondasfooter {
+      display: block; } }
+
+@media screen and (min-width: 767px) {
+  .img_comprarural {
+    margin-bottom: -0.5rem; } }
+
+@media screen and (min-width: 960px) {
+  .img_comprarural {
+    margin-bottom: -0.7rem; } }

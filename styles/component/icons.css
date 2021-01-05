@@ -1,0 +1,17 @@
+/*
+[class*=icon-]::before{
+  content:"";
+  display:inline-block;
+}
+
+.icon-tlf::before{
+content:url(../img/tlfT16.png);}
+}
+
+.link-lenguage-item .is-active:after{
+  display:inline-block;
+  content: url(../img/marcaChecbox16.png);
+}
+
+.fa-fw{width: .2em;}
+*/

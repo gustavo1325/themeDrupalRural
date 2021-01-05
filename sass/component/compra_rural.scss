@@ -1,0 +1,204 @@
+@import"mixin";
+
+
+
+
+#content_comprarural{
+  background: var(--compra_rural_fondo1);
+  margin-top:1.5rem;
+  @include rwd(large){
+      margin-top:0;
+    }
+}
+
+
+#comprarural_section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include rwd(large){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.intem_comprarural_img{
+    grid-area: 1 / 1 / 5 / 2;
+    @include rwd(large){
+        grid-area: 1 / 1 / 5 / 3;
+      }
+}
+
+.intem_comprarural_content{
+  grid-area: 1 / 2 / 5 / 4;
+  margin-bottom: -1.5rem;
+  @include rwd(large){
+      grid-area: 1 / 3 / 4 / 5;
+    }
+}
+
+
+.comprarural_text{
+  font-size: var(--text_comment);
+  text-align: center;
+  text-align: justify;
+  margin:0 0 0.6rem 0;
+  @include rwd(mediumLarge){
+      margin-left: 0.9rem;
+      max-width: 80%;
+      font-size: var(--texto);
+    }
+    @include rwd(large){
+        font-size: var(--menu);
+        margin:0.6rem 0 0.6rem 0;
+      }
+}
+
+.item_comprarural_form{
+
+}
+.comprarural-addform{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.compra_email{
+    background:var(--compra_rural_fondo1);
+    border:none;
+    border-bottom: 1px solid var(--form);
+    font-size: var(--text_form);
+    @include rwd(mediumLarge){
+      font-size: 0.8em;
+      }
+
+  input[type="text"]{
+
+  }
+
+}
+
+.comprarural-addform .form-item-email{
+    grid-area: 1 / 1 / 2 / 4;
+    //background: red;
+}
+.comprarural-addform .form-checkboxes{
+    grid-area: 2 / 1 / 3 / 3;
+  //background: red;
+}
+
+.comprarural-addform .form-actions{
+    grid-area: 2 / 3 / 3 / 4;
+  //  background: red;
+  .form-submit{
+    margin-top:0.3rem;
+    background: var(--compra_rural_fondo1);
+    border-color:var(--form);
+    margin-left: 0;
+    @include rwd(mediumLarge){
+      margin-top:1.5rem;
+      }
+    @include rwd(large){
+      margin-top:1.5rem;
+      }
+
+  }
+}
+
+
+
+#edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad {
+  @include rwd(mediumLarge){
+    margin-top:1.5rem;
+    }
+    @include rwd(large){
+      margin-top:0.5rem;
+      }
+      .option{
+        font-size: var(--leer_mas);
+        margin-top: -0.3rem;
+        @include rwd(mediumLarge){
+          font-size: 0.7rem;
+        }
+        @include rwd(large){
+          font-size: 0.7rem;
+        }
+      }
+}
+
+.item_comprarural_img{
+  padding:0.3rem 1rem 0.5rem 1rem;
+  text-align: center;
+  img{
+    max-width: 90%;
+    @include rwd(large){
+        max-width: 80%;
+        margin-top: 1rem;
+      }
+  }
+}
+
+.compra_politica_privacidad {
+  //border: none;
+
+}
+
+
+//----------------------------------SUTITUIR form-checkboxes
+
+.compra_politica_privacidad{
+  visibility: hidden;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+//creo la casilla
+input[type="checkbox"] + label:before {
+  border: 1px solid var(--form);
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 12px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 12px;
+}
+
+//creo el icono de verificacion
+input[type="checkbox"]:checked + label:before {
+  background: #fff;
+  color: #333;
+  content: "\2713";
+  text-align: center;
+}
+
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+
+//--------------------------------
+
+
+.comprarural-addform .form-actions .form-submit {
+    //margin-top: 1.3rem;
+  }
+//mostrar las ondas en dia_desk
+.img_ondasfooter{
+  display:none;
+  @include rwd(large){
+      display:block;
+    }
+}
+
+.img_comprarural{
+  @include rwd(large){
+   margin-bottom: -0.5rem;
+ }
+ @include rwd(960px){
+  margin-bottom: -0.7rem;
+}
+}

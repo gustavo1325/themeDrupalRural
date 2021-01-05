@@ -1,0 +1,58 @@
+#container_quisom{
+  margin-top:1rem;
+}
+
+.text_pre_mas{
+
+  background: var(--fondo_texto_separado);
+  margin-top: -10px ;
+  h1{
+    font-size: var(--titulo);
+    color:var(--tipografi_principal);
+    text-align: center;
+    margin:0 !important;
+    padding-top: 2.3rem;
+
+  }
+  p{
+    font-size: var(--texto);
+    text-align: justify; }
+    padding: 0 1rem;
+}
+.quisom_item {
+    //margin-bottom: 2rem;
+}
+
+
+.bottom_leer_mas{
+
+  text-align: center;
+   img{
+     //width: 3%;
+     max-width: 9px;
+   }
+   h4{
+     margin:0;
+     //max-width: 30%;
+
+     font-size: var(--leer_mas);
+     color:var(--barra_texto_suscribete_leermas);
+     //border-bottom: 1px solid var(--barra_texto_suscribete_leermas);
+   }
+}
+.sub{
+  height: 5px;
+  width: 60px;
+  border-top: 1.3px solid var(--barra_texto_suscribete_leermas);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:5px;
+  padding-bottom: 2rem;
+}
+
+#text_pre_mas2{
+  //margin-top: 0 !important;
+}
+.can_ferriol2{
+  padding-top: 1.5rem;
+}

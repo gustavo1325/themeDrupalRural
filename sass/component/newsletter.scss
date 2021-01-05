@@ -1,0 +1,225 @@
+@import"mixin";
+
+
+#block-newsletter-sularyyblock{
+  display: block;
+  @include rwd(large){
+    display:none;
+
+  }
+}
+
+#content_newsletter{
+  background: #fff;
+  margin-top: -10px;
+  padding-bottom: 1rem;
+  position: relative;
+  @include rwd(large){
+    margin:0px;
+  }
+  h1{
+    font-size:1.2em;
+    //font-size: 0.5em;
+    padding-top: 2rem;
+    color:var(--barra_texto_suscribete_leermas);
+    text-align: left;
+    @include rwd(mediumLarge){
+      font-size:1.6em;
+    }
+    @include rwd(large){
+      font-size:1.2em;
+    }
+
+    //background: red;
+  }
+}
+
+.content_items{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70%;
+
+}
+#titulo_newsletter{
+
+  position: relative;
+  margin-top: 0.5rem;
+}
+.item_newsletter{
+  h1{
+    font-size: 2em;
+      text-align: center;
+  }
+  @include rwd(large){
+    margin-top:2rem;
+  }
+}
+#titulo_newsletter::after{
+  content: url('../img/flechaVerdeFblan.jpg');
+  position: absolute;
+  padding-left: 0.4em;
+  max-width:8px;
+  max-height:8px;
+  transform: scale(1);
+  @include rwd(mediumLarge){
+
+  }
+
+//  left:10px;
+  //display: block;
+  //max-width:2px;
+  //max-height:2px;
+  //transform: scale(0.6);
+  /*padding-left: 1.2em;
+  padding-top: 0.3em;
+  //margin-top:100px
+  //top:2px;*/
+}
+
+
+#newsletter-sularyy-addform{
+  padding-top: 1rem;
+}
+
+.newsletter_sularyy_nom, .newsletter_sularyy_email{
+  border: none;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--form);
+  font-size:var(--text_comment);
+
+  padding-bottom: 0.7rem;
+}
+
+.newsletter_sularyy_email{
+  margin-top: 0.5rem;
+  color:var(--barra_texto_suscribete_leermas);
+
+}
+
+
+
+.newsletter_sularyy_nom, .newsletter_sularyy_email{
+  max-width: 100%;
+}
+/*.form-checkbox{
+  border-color: var(--form);
+  background: red;
+}*/
+
+#edit-politica-privacidad, #edit-politica-privacidad--2, #edit-politica-privacidad--3{
+  margin-top: 1rem;
+  font-size: 0.7em;
+  color: var(--form);
+  @include rwd(large){
+    margin-top: 2rem;
+  }
+}
+input[type=submit]{
+  text-align: right;
+  padding-bottom: 1.5rem;
+  text-align: right;
+  //padding-bottom: 1.5rem;
+  font-size: 0.7em;
+  padding:0.7rem 1rem 0.7rem 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #fff;
+  margin-top: 2.5rem;
+  border:1px solid #d9d9d9;
+	border-radius:8px;
+}
+label.option {
+    color: #666;
+    //margin-bottom: 5px;
+}
+.newsletter-sularyy-addform{
+  .form-actions{
+    margin-bottom: 0;
+  }
+}
+
+#edit-actions--2, #edit-actions{
+  text-align: right;
+  padding-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+.newsletter_sularyy_bottom{
+  text-align: right;
+  //padding-bottom: 1.5rem;
+  font-size: 0.7em;
+  padding:0.7rem 1rem 0.7rem 0;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #fff;
+  margin-top: 2.5rem;
+  border:1px solid #d9d9d9;
+	border-radius:15px;
+
+  //margin-left: 50px;
+}
+
+
+.block-newsletter-sularyyblock{
+  position:relative;
+}
+
+.onda_movil{
+  width: 100%;
+  position:absolute;
+  top:-14px;
+  left:0;
+  @include rwd(large){
+    display: none;
+  }
+
+
+}
+/*.wave{
+     background:
+       linear-gradient(to right);
+     //height: 50px;
+     //position: relative;
+}
+.wave::before{
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     background-repeat: repeat;
+     height: 10px;
+     background-size: 20px 20px;
+     background-image:
+       radial-gradient(circle at 10px -5px, transparent 12px, aquamarine 13px);
+}
+.wave::after{
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     right: 0;
+     background-repeat: repeat;
+     height: 15px;
+     background-size: 40px 20px;
+     background-image:
+       radial-gradient(circle at 10px 15px, aquamarine 12px, transparent 13px);
+}
+*/
+.item_newsletter{
+  #lupa{
+    @include rwd(large){
+      display: none;
+    }
+  }
+}
+
+
+#block-newsletter-sularyyblock-2{
+    display:none;
+  @include rwd(large){
+    display:block;
+    max-width: 50%;
+    border-left: 1.5px solid rgba(75, 75, 75, 0.3);
+  }
+}
