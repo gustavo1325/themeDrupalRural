@@ -1,9 +1,11 @@
 //---------------Header top----------------------------
 #header_top{
+  background: var(--fondo_principal);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-top: 1rem;
+  //margin-top: 1rem;
+  padding: 1rem 0;
   justify-content: space-around;
   align-items: center;
 }
@@ -24,12 +26,6 @@
 
     }
   }
-
-
-}
-
-#block-formularidecerca{
-
 
 
 }

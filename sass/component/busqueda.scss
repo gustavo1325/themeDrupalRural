@@ -1,11 +1,20 @@
+@import"mixin";
+
+//Estiños para vista en phone
 #block-formularidecerca{
   position: relative;
 }
 
 #search-block-form{
   //margin-right: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
   position: fixed;
-  height: calc(100vh - var(--header-height));
+  height: calc(30vh - var(--header-height));
+  @include rwd(992px){
+    height: calc(10vh - var(--header-height));
+  }
   width: 100vw;
   background: var(--fondo_principal);
   top:var(--header-height);
@@ -14,10 +23,46 @@
   &.show{
     right: 0;
   }
+  &.show2{
+    top:10px;
+    right: 130px;
+    max-width: 50%;
+    @include rwd(extralarge){
+      top:35px;
+      right: 150px;
+    }
+    @include rwd(1700px){
+      right: 190px;
+    }
+    @include rwd(1700px){
+      right: 210px;
+    }
+  }
+}
+
+.bottom_enviar_search{
+  input{
+    max-width: 1.5rem;
+    margin-top: 2rem;
+    padding-right: 0.5rem;
+  }
 }
 
 .js-form-type-search{
   input{
+    width: 300px;
+    margin-top: 2rem;
+    border:none;
+    border-bottom: 1px solid #555;
+    background: var(--fondo_principal);
+    font-size: 0.6em;
+    @include rwd(992px){
+      width: 500px;
+    }
+    @include rwd(extralarge){
+      width: 600px;
+    }
+    //display: inline;
   }
 }
 
@@ -25,20 +70,24 @@
     text-align: center;
 }
 
-#edit-actions{
+#search-block-form #edit-actions{
+  max-width: 5rem;
   margin-left: 0.3rem;
-  text-align: center;
+//  text-align: center;
+  background-image: url();
+
 
 }
 /*#edit-submit{
   max-width: 20%;
 }*/
 
-#lupa{
-
-}
 .icona_recerca{
   min-width: 1.5rem;
-  max-width: 2rem;
+  max-width: 1rem;
 
+}
+
+.show3{
+  visibility:hidden;
 }

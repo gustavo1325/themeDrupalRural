@@ -22,6 +22,16 @@ footer{
     }
 }
 
+#block-footeruralblock{
+  @include rwd(large){
+    max-width: 50%;
+  }
+  @include rwd(1400px){
+    background: #fff;
+    z-index:30;
+  }
+}
+
 #contetnt_footerual{
   margin-left: auto;
   margin-right: auto;
@@ -35,7 +45,7 @@ footer{
 
 .logo_rural_footer{
   margin-top: 1rem;
-  max-width: 85%;
+  width: 82%;
 
   @include rwd(large){
     max-width: 100%;
@@ -43,20 +53,32 @@ footer{
   @include rwd(960px){
     max-width: 90%;
   }
+  @include rwd(1100px){
+    max-width: 75%;
+  }
+  @include rwd(1300px){
+    max-width: 60%;
+  }
+  @include rwd(extralarge){
+    max-width: 80%;
+  }
+
 
 }
 
 #correoRural{
-  //text-align: left;
-  //position: relative;
     p{
-      font-size:var(--texto);
-      //font-size:0.7em;
+      font-size:0.8em;
       color: var(--form);
-      margin-left: 1.5rem;
-      text-align: center;
+      padding-left:3rem;
+      @include rwd(425px){
+      font-size:var(--texto);
+      }
+      @include rwd(large){
+        font-size: var(--menu);
+      }
       @include rwd(960px){
-        margin-left: 5rem;
+        font-size:var(--texto);
       }
     }
 }
@@ -70,24 +92,32 @@ footer{
   max-width:4px;
   max-height:4px;
   transform: scale(0.1);
- left:-20px;
+ left:0px;
  top:-6px;
+ @include rwd(large){
+   top:-10px;
+ }
+ @include rwd(960px){
+   top:-6px;
+ }
+ @include rwd(1300px){
+   top:-3px;
+ }
 }
 
 
 
 #whassRural{
-
   p{
-    //font-size:var(--texto);
-
     font-size:var(--texto);
     color: var(--form);
-    margin-left: 1.5rem;
-    text-align: center;
+
+    padding-left:3rem;
+    @include rwd(large){
+      font-size: var(--menu);
+    }
     @include rwd(960px){
-      margin-left: 5rem;
-      //text-align: left;
+      font-size:var(--texto);
     }
 
   }
@@ -106,11 +136,70 @@ footer{
   max-width:4px;
   max-height:4px;
   transform: scale(0.1);
- left:-20px;
- top:1px;
+  left:0px;
+  top:1px;
+  @include rwd(large){
+    top:-5px;
+  }
+  @include rwd(960px){
+    top:1px;
+  }
+  @include rwd(1300px){
+    top:2px;
+  }
 
 }
+#correoRural, #whassRural{
+  p{
+    @include rwd(1300px){
+      font-size: 1.2em;
+    }
+    @include rwd(extralarge){
+      font-size: 1.4em;
+    }
+  }
+}
 
+#content_email{
+  @include rwd(large){
+    margin-top:1.5rem;
+  }
+  @include rwd(992px){
+    margin-top:1rem;
+  }
+}
+#content_email, #content_wapssa{
+  margin-left:1rem;
+  @include rwd(576px){
+    margin-left:3rem;
+  }
+  @include rwd(large){
+    margin-left:1.5rem;
+  }
+  @include rwd(992px){
+    margin-left:2rem;
+  }
+  @include rwd(1100px){
+    margin-left:4rem;
+  }
+  @include rwd(1200px){
+    margin-left:5.5rem;
+  }
+  @include rwd(1300px){
+    margin-left:9.5rem;
+  }
+  @include rwd(extralarge){
+    margin-left:5.5rem;
+  }
+}
+
+div#content-redes {
+    margin-top: 2.3rem;
+    @include rwd(extralarge){
+      margin-top:0rem;
+
+    }
+}
 
 .item_footer{
   @include rwd(large){

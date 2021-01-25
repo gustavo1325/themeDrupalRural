@@ -9,10 +9,18 @@ img {
   box-sizing: border-box; }
 
 body {
-  margin: 0;
-  background: var(--fondo_principal);
+  margin: 0 auto;
   font-family: var(--tipografia), sans-serif;
   color: var(--tipografi_principal); }
+
+#content {
+  max-width: var(--max-width-header);
+  margin: 0 auto; }
+
+footer {
+  max-width: var(--max-width-contetnt);
+  margin: 0 auto;
+  background: var(--fondo_principal); }
 
 a {
   text-decoration: none; }
@@ -20,9 +28,6 @@ a {
 input#edit-email {
   max-width: 100%; }
 
-/*#block-manosminimal-content{
-  display: none;
-}*/
 div#block-manosminimal-content #lupa {
   display: none; }
 

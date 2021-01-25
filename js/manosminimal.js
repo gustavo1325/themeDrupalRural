@@ -46,17 +46,42 @@ getComputedStyle(document.documentElement).getPropertyValue('--header-height', h
 
 
 //function show search
-const showSearch = (lupaid, searchBlock) => {
-  const lupa = document.getElementById(lupaid),
-        search = document.getElementById(searchBlock)
-  if(lupaid && searchBlock){
-    lupa.addEventListener('click',() => {
-      search.classList.toggle('show')
-    })
-}
+const showSearch = (lupaid, searchBlock, img_search_lupa, blockmenu) => {
+      const lupa = document.getElementById(lupaid),
+            src_img=document.getElementById(img_search_lupa),
+            search = document.getElementById(searchBlock),
+            largeminBp= matchMedia('(min-width: 992px)'),
+            largemaxBp= matchMedia('(max-width: 991px)'),
+            menu_principal= document.getElementById(blockmenu)
+
+      console.log(menu_principal)
+      if(lupaid && searchBlock && src_img && largemaxBp.matches){
+            lupa.addEventListener('click',() => {
+                search.classList.toggle('show')
+
+                if(src_img.getAttribute('src') == '/rural/web/themes/custom/manosminimal/img/lupa.JPG'){//cambio atributo scr para mostrar lupa o x
+                src_img.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/x.JPG')
+                }else{
+                  src_img.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/lupa.JPG')
+                 }
+            })
+      }
+      if(lupaid && searchBlock && src_img && largeminBp.matches){
+        lupa.addEventListener('click',() => {
+
+          console.log(largeminBp)
+            search.classList.toggle('show2')
+            menu_principal.classList.toggle('show3')
+            if(src_img.getAttribute('src') == '/rural/web/themes/custom/manosminimal/img/lupa.JPG'){//cambio atributo scr para mostrar lupa o x
+            src_img.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/x.JPG')
+            }else{
+              src_img.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/lupa.JPG')
+             }
+        })
+      }
 }
 
-showSearch( 'lupa' , 'search-block-form')
+showSearch( 'lupa' , 'search-block-form', 'img_search_lupa', 'block-menuprincipalstock')
 
 
 //----------------------------function Read more
@@ -416,7 +441,7 @@ let urlactual= location.href,
     didhome_desk =document.getElementById("didhome_desk"),
     diaadi_desk =document.getElementById("dia_desk")
 
-    
+
 
 
    fr=urlactual.search(patron)
@@ -455,4 +480,18 @@ let urlactual= location.href,
 
   }
 
-  ///////---------------------------------
+  ///////--------------------------------- colocamo img al item del menu con el focomenu PERO NO HACE FALTA
+
+//const itemmenumprincipal=  Array.from(document.querySelectorAll('.main-menu__item a'))
+
+//var patrons=[new RegExp("qui_som"), new RegExp("horts"), new RegExp("compra_a_la_rural"), new RegExp("ateneu_rural"), new RegExp("dia_a_dia"), new RegExp("contacte")];
+
+//for(i=0; i<=5; i++){
+//  urlactual;
+//  frr=urlactual.search(patrons[i]);
+//  if(frr != -1){
+//  itemmenumprincipal[i].setAttribute('class', 'itemmeu');
+//    console.log(i);
+//  }
+// }
+//  liNa.setAttribute('id', 'item-compra')

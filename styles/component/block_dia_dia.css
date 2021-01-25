@@ -12,14 +12,18 @@
 
 
 }*/
-@media screen and (min-width: 576px) {
-  #container_dia {
-    margin: 0 1.5rem; } }
-
-@media screen and (min-width: 767px) {
-  #container_dia {
-    margin-top: 3rem;
-    margin-bottom: 4rem; } }
+#container_dia {
+  max-width: var(--max-width-contetnt);
+  margin: 0 auto;
+  background: var(--fondo_principal);
+  padding-bottom: 4rem; }
+  @media screen and (min-width: 767px) {
+    #container_dia {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem; } }
 
 @media screen and (min-width: 576px) {
   #dia_home_items_desk {
@@ -32,7 +36,13 @@
 
 #titulo_dia {
   position: relative;
-  font-size: var(--titulo); }
+  font-size: var(--titulo);
+  margin: 0;
+  padding-top: 1.5rem; }
+  @media screen and (min-width: 1400px) {
+    #titulo_dia {
+      font-size: 2em;
+      font-weight: 900; } }
 
 #titulo_dia::after {
   position: relative;
@@ -40,7 +50,7 @@
 
 .time_post1 {
   color: var(--barra_texto_suscribete_leermas);
-  font-size: 1.2em;
+  font-size: 0.9em;
   /*.bocadillo-cuadrado
     position: relative
     height: 200px
@@ -56,6 +66,12 @@
         position: absolute
         bottom: -48px
         left: calc(50% - 25px)*/ }
+  @media screen and (min-width: 1400px) {
+    .time_post1 {
+      font-size: 1.2em; } }
+  @media screen and (min-width: 1400px) {
+    .time_post1 {
+      font-size: 2em; } }
 
 .dia_post_content {
   display: grid;
@@ -73,7 +89,13 @@
     margin-bottom: 0; }
 
 .dia_post_item_text {
-  font-size: var(--menu); }
+  font-size: 0.6em; }
+  @media screen and (min-width: 425px) {
+    .dia_post_item_text {
+      font-size: var(--menu); } }
+  @media screen and (min-width: 1400px) {
+    .dia_post_item_text {
+      font-size: var(--texto); } }
   .dia_post_item_text p {
     margin-top: 0.4rem;
     margin-bottom: 0px; }
@@ -103,10 +125,7 @@
   padding-left: 0.5rem;
   margin-left: 0.7rem;
   display: flex;
-  flex-direction: column;
-  /*  @include rwd(medium){
-      background:red;
-    }*/ }
+  flex-direction: column; }
 
 .dia_post_content1 {
   display: grid;
@@ -127,10 +146,7 @@
   border-left: 11px solid transparent;
   position: absolute;
   left: -30px;
-  bottom: calc(50% - 20px);
-  /*bottom:   -60px;
-    right:  calc(50% - 2px);
-*/ }
+  bottom: calc(50% - 20px); }
 
 .dia_post_item_img1 {
   grid-area: 1 / 1 / 5 / 2;

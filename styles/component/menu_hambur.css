@@ -39,11 +39,26 @@
   .main-menu__item a {
     font-size: var(--menu);
     color: var(--tipografi_principal); }
+    @media screen and (min-width: 1200px) {
+      .main-menu__item a {
+        font-size: 1em; } }
 
 #item-compra {
   font-weight: 700;
   position: relative;
-  padding-left: 2em; }
+  padding-left: 2em;
+  /*  padding: 15px;  Este border-img del elmento li
+    border-image-source: url(../img/focomenu.png);
+    border-image-repeat: round;
+    border-image-slice: 30;
+    border-image-width: 0 0 15px 0;*/ }
+  #item-compra a:active {
+    padding-bottom: 5px;
+    border: 10px solid transparent;
+    border-image-source: url(../img/focomenu.png);
+    border-image-repeat: round;
+    border-image-slice: 30;
+    border-image-width: 0 0 15px 0; }
 
 #item-compra::before {
   content: url("../img/flechaP.png");
@@ -100,4 +115,33 @@
     width: 50em; }
   #block-menuprincipalstock .main-menu li {
     padding: 1em;
-    font-size: 1em; } }
+    font-size: 0.9em; } }
+
+@media screen and (min-width: 1400px) {
+  #block-manosminimal-branding {
+    max-width: 450px !important; } }
+
+@media screen and (min-width: 1400px) {
+  #header_top {
+    padding-bottom: 1.9rem; } }
+
+@media screen and (min-width: 1400px) {
+  #block-menuprincipalstock .main-nav {
+    width: 60em; } }
+
+.main-menu__item a {
+  /*  padding-bottom:5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/focomenum.png);
+    border-image-repeat: round;
+    border-image-slice: 35;
+    border-image-width: 0 0 15px 0;*/ }
+
+@media screen and (min-width: 767px) {
+  .main-menu__item .is-active {
+    padding-bottom: 5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/focomenum.png);
+    border-image-repeat: round;
+    border-image-slice: 35;
+    border-image-width: 0 0 15px 0; } }

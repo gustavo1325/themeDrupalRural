@@ -22,7 +22,13 @@
         font-size: 1.6em; } }
     @media screen and (min-width: 767px) {
       #content_newsletter h1 {
-        font-size: 1.2em; } }
+        font-size: 1.1em; } }
+    @media screen and (min-width: 960px) {
+      #content_newsletter h1 {
+        font-size: 1.4em; } }
+    @media screen and (min-width: 1200px) {
+      #content_newsletter h1 {
+        font-size: 1.7em; } }
 
 .content_items {
   margin-left: auto;
@@ -70,6 +76,16 @@
 
 .newsletter_sularyy_nom, .newsletter_sularyy_email {
   max-width: 100%; }
+  @media screen and (min-width: 1400px) {
+    .newsletter_sularyy_nom, .newsletter_sularyy_email {
+      font-size: 1em;
+      margin-bottom: 1rem; } }
+
+input.newsletter_sularyy_nom::placeholder {
+  color: var(--barra_texto_suscribete_leermas); }
+
+input.newsletter_sularyy_email::placeholder {
+  color: var(--barra_texto_suscribete_leermas); }
 
 /*.form-checkbox{
   border-color: var(--form);
@@ -82,6 +98,9 @@
   @media screen and (min-width: 767px) {
     #edit-politica-privacidad, #edit-politica-privacidad--2, #edit-politica-privacidad--3 {
       margin-top: 2rem; } }
+  @media screen and (min-width: 1400px) {
+    #edit-politica-privacidad, #edit-politica-privacidad--2, #edit-politica-privacidad--3 {
+      font-size: 1rem; } }
 
 input[type=submit] {
   text-align: right;
@@ -95,6 +114,9 @@ input[type=submit] {
   margin-top: 2.5rem;
   border: 1px solid #d9d9d9;
   border-radius: 8px; }
+  @media screen and (min-width: 1400px) {
+    input[type=submit] {
+      font-size: 1rem; } }
 
 label.option {
   color: #666; }
@@ -172,3 +194,6 @@ label.option {
       display: block;
       max-width: 50%;
       border-left: 1.5px solid rgba(75, 75, 75, 0.3); } }
+  @media screen and (min-width: 1200px) {
+    #block-newsletter-sularyyblock-2 {
+      width: 50%; } }

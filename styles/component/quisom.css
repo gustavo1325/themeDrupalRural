@@ -1,19 +1,72 @@
-#container_quisom {
-  margin-top: 1rem; }
+@media screen and (min-width: 767px) {
+  #content_text_quison_phone {
+    display: none; } }
+
+#container_text_quison_desk {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    #container_text_quison_desk {
+      display: block;
+      max-width: var(--max-width-contetnt);
+      background: var(--fondo_texto_separado); } }
+  @media screen and (min-width: 1400px) {
+    #container_text_quison_desk {
+      margin: 0 auto; } }
+
+.quisom_item_img {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    .quisom_item_img {
+      display: block;
+      max-width: 1900px !important; } }
+
+#content_text_quisom {
+  display: flex; }
 
 .text_pre_mas {
   background: var(--fondo_texto_separado);
   margin-top: -10px;
   padding: 0 1rem; }
+  @media screen and (min-width: 767px) {
+    .text_pre_mas {
+      max-width: var(--max-width-contetnt);
+      margin: 0 auto;
+      text-align: center;
+      margin-top: -4px;
+      display: flex;
+      flex-direction: column; } }
+  @media screen and (min-width: 1400) {
+    .text_pre_mas {
+      text-align: center;
+      display: flex;
+      flex-direction: column; } }
   .text_pre_mas h1 {
-    font-size: var(--titulo);
+    font-size: 1.2em;
     color: var(--tipografi_principal);
     text-align: center;
     margin: 0 !important;
-    padding-top: 2.3rem; }
+    padding-top: 2.3rem;
+    margin-bottom: 1rem !important; }
+    @media screen and (min-width: 425px) {
+      .text_pre_mas h1 {
+        font-size: var(--titulo); } }
   .text_pre_mas p {
     font-size: var(--texto);
     text-align: justify; }
+
+@media screen and (min-width: 767px) {
+  #tres_ejes {
+    background: var(--fondo_principal);
+    max-width: var(--max-width-contetnt);
+    margin: 0 auto; }
+    #tres_ejes h1 {
+      font-size: 1.2em; } }
+
+@media screen and (min-width: 767px) {
+  #img_grupo_canferriol {
+    background: var(--fondo_principal);
+    max-width: var(--max-width-contetnt);
+    margin: 0 auto; } }
 
 .bottom_leer_mas {
   text-align: center; }
@@ -23,6 +76,9 @@
     margin: 0;
     font-size: var(--leer_mas);
     color: var(--barra_texto_suscribete_leermas); }
+  @media screen and (min-width: 767px) {
+    .bottom_leer_mas {
+      display: none; } }
 
 .sub {
   height: 5px;
@@ -35,3 +91,49 @@
 
 .can_ferriol2 {
   padding-top: 1.5rem; }
+
+p#bordere {
+  border-right: 2px solid rgba(66, 89, 39, 0.5); }
+
+#title_tres_eixos {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    #title_tres_eixos {
+      display: block;
+      margin: 0;
+      font-size: 1.1em;
+      color: var(--text_titleinstagram);
+      text-align: center;
+      padding-top: 2rem; } }
+
+@media screen and (min-width: 767px) {
+  img.can_ferriol_img {
+    max-width: 80%;
+    display: block;
+    margin: auto;
+    padding-bottom: 2rem; } }
+
+@media screen and (min-width: 767px) {
+  .can_ferriol2 {
+    display: none; } }
+
+img.can_ferriol22 {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    img.can_ferriol22 {
+      display: inline;
+      width: 4%;
+      margin-top: 2rem; } }
+
+@media screen and (min-width: 767px) {
+  #bordeimgcanferriol {
+    border-bottom: 2px solid rgba(121, 125, 127, 0.8); } }
+
+@media screen and (min-width: 767px) {
+  #text_leer_mas2 {
+    display: block; } }
+
+@media screen and (min-width: 767px) {
+  #text_pre_mas2, #text_leer_mas2 {
+    max-width: 90%;
+    margin: 0 auto; } }

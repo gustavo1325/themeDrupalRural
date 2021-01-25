@@ -1,0 +1,8 @@
+@import"mixin";
+
+div#block-ondaseparadorablock {
+    margin-top: -10px;
+    @include rwd(1400px){
+      margin-top: -12px;
+    }
+}

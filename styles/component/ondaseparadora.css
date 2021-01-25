@@ -1,0 +1,5 @@
+div#block-ondaseparadorablock {
+  margin-top: -10px; }
+  @media screen and (min-width: 1400px) {
+    div#block-ondaseparadorablock {
+      margin-top: -12px; } }

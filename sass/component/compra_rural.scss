@@ -4,14 +4,19 @@
 
 
 #content_comprarural{
+  max-width: var(--max-width-contetnt);
+  margin: 0 auto;
   background: var(--compra_rural_fondo1);
-  margin-top:1.5rem;
   @include rwd(large){
       margin-top:0;
     }
 }
 
-
+.content_item_text{
+  @include rwd(960px){
+      margin-top: 1.5rem;
+    }
+}
 #comprarural_section{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -37,19 +42,31 @@
 
 
 .comprarural_text{
-  font-size: var(--text_comment);
-  text-align: center;
+  font-size: 0.6em;
+  max-width: 80%;
   text-align: justify;
   margin:0 0 0.6rem 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include rwd(425px){
+    font-size: var(--text_comment);
+  }
   @include rwd(mediumLarge){
-      margin-left: 0.9rem;
       max-width: 80%;
       font-size: var(--texto);
-    }
-    @include rwd(large){
+  }
+  @include rwd(large){
         font-size: var(--menu);
-        margin:0.6rem 0 0.6rem 0;
-      }
+
+  }
+  @include rwd(1200px){
+        font-size: 0.9em;
+  }
+  @include rwd(extralarge){
+        font-size: 1.3em;
+        margin-bottom: 1.5rem;
+  }
 }
 
 .item_comprarural_form{
@@ -60,6 +77,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 90%;
   margin: 0 auto;
+  @include rwd(large){
+    max-width: 80%;
+  }
 }
 .compra_email{
     background:var(--compra_rural_fondo1);
@@ -97,7 +117,13 @@
       margin-top:1.5rem;
       }
     @include rwd(large){
-      margin-top:1.5rem;
+      margin-top:1.3rem;
+      }
+    @include rwd(960px){
+      margin-top:2rem;
+      }
+    @include rwd(1039px){
+      margin-top:3rem;
       }
 
   }
@@ -112,6 +138,10 @@
     @include rwd(large){
       margin-top:0.5rem;
       }
+      @include rwd(1039px){
+        margin-top:2rem;
+        }
+
       .option{
         font-size: var(--leer_mas);
         margin-top: -0.3rem;
@@ -120,6 +150,9 @@
         }
         @include rwd(large){
           font-size: 0.7rem;
+        }
+        @include rwd(extralarge){
+          font-size: 1rem;
         }
       }
 }
@@ -160,11 +193,11 @@ input[type="checkbox"] + label:before {
   content: "\00a0";
   display: inline-block;
   font: 16px/1em sans-serif;
-  height: 12px;
+  height: 15px;
   margin: 0 .25em 0 0;
   padding: 0;
   vertical-align: top;
-  width: 12px;
+  width: 15px;
 }
 
 //creo el icono de verificacion
@@ -185,6 +218,10 @@ input[type="checkbox"]:checked + label:after {
 
 .comprarural-addform .form-actions .form-submit {
     //margin-top: 1.3rem;
+    @include rwd(large){
+      font-size: 1.1em;
+    }
+
   }
 //mostrar las ondas en dia_desk
 .img_ondasfooter{

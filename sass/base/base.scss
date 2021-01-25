@@ -1,10 +1,4 @@
 //breaK point
-
-
-
-
-
-
 // font-family: 'Montserrat', sans-serif;
 li {
   list-style:none;
@@ -20,29 +14,27 @@ img{
 }
 
 body{
-  margin: 0;
-  background:var(--fondo_principal);
+  margin: 0 auto;
   font-family: var(--tipografia) , sans-serif;
   color:var(--tipografi_principal);
-
+}
+#content{
+  max-width: var(--max-width-header);
+  margin: 0 auto;
+}
+footer{
+  max-width: var(--max-width-contetnt);
+  margin: 0 auto;
+  background:var(--fondo_principal);
 }
 
 a{
   text-decoration: none;
 }
 
-.main-header{
-
-}
 input#edit-email {
     max-width: 100%;
 }
-//eliminar contenido
-/*#block-manosminimal-content{
-  display: none;
-}*/
-
-
 
 div#block-manosminimal-content #lupa {
     display: none;

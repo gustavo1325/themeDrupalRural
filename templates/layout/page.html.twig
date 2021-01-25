@@ -1,4 +1,5 @@
 <!-- comienza el header-->
+
   <header class="main-header">
     <div class="container-header">
       <div id="header_top" clas="header-item">
@@ -15,19 +16,21 @@
     </div>
   </header>
 <!--comienza el banner slider-->
+
+
     <div id="main-banner" clas="header_item">
       {% if page.banner %}
           {{page.banner}}
       {% endif %}
     </div>
-
+<main id="content">
     <div id="header_held" clas="header_item">
       {% if page.held %}
           {{page.held}}
       {% endif %}
     </div>
 
-<main id="content">
+
 <section>
     <div id="main-content" clas="main-item">
       {% if page.content %}

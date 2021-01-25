@@ -2,7 +2,8 @@
 
 
 #content_instagram{
-  margin-top: 1.5rem;
+  max-width: var(--max-width-contetnt);
+  margin: 0 auto;
   background: var(--fondo_texto_separado);
   @include rwd(large){
     display: flex;
@@ -11,6 +12,7 @@
     justify-content: center;
     border-bottom: 60px solid var(--fondo_texto_separado);
     border-top: 50px solid var(--fondo_texto_separado);
+    margin-top: 0px;
   }
 }
 .intems_instagram{
@@ -45,6 +47,9 @@
     @include rwd(large){
       font-size: 1rem;
     }
+    @include rwd(extralarge){
+      font-size: 1.8rem;
+    }
 
   }
 
@@ -56,6 +61,10 @@
   @include rwd(large){
     margin:0;
   }
+  @include rwd(extralarge){
+    margin-top:1.2rem;
+    margin-bottom: 1.2rem;
+  }
 
 }
 .text_instagram{
@@ -63,6 +72,10 @@
   max-width: 70%;
   @include rwd(large){
     font-size: 0.9rem;
+    margin-top:1.2rem;
+  }
+  @include rwd(extralarge){
+    font-size: 1.4rem;
     margin:0;
   }
   p{
@@ -78,6 +91,9 @@
 .icono_instagram{
   max-width: 35%;
   margin:1rem 0 4rem 0;
+  @include rwd(large){
+    margin: 2rem 0 1rem 0;
+  }
 }
 
 .border_fantasma_sigue{
@@ -90,5 +106,8 @@
     border-top: 1px solid rgba(66, 89, 39, 0.5);
     border-bottom: 1px solid rgba(66, 89, 39, 0.5);
     margin-top: 1rem;
+  }
+  @include rwd(extralarge){
+    height: 29rem;
   }
 }

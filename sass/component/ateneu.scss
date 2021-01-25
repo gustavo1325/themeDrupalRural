@@ -1,0 +1,37 @@
+//los bloques de la img_slider, descripcion y galeri de imgenes tienen el css igual y se controla desde el componente de horts, tambien los max-width de los contenedores
+@import"mixin";
+
+#content_ateneu{
+  max-width:var(--max-width-contetnt);
+  background:var(--fondo_principal);
+  margin:0 auto;
+//  padding-bottom:2rem;
+  h1{
+    color:var(--tipografi_principal);
+    margin:0 !important;
+    padding-top: 2.3rem;
+  }
+  p{
+    text-align: justify;
+  }
+}
+
+#content_projet{
+    background: #d6dacc;
+}
+
+#item_title_projet{
+  max-width: 80%;
+  margin: 0 auto;
+  h1{
+    font-size: var(--texto);
+    color: var(--verde_titulo);
+
+  }
+}
+
+#item_img_projet{
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}

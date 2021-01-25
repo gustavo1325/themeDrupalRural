@@ -1,0 +1,25 @@
+#content_ateneu {
+  max-width: var(--max-width-contetnt);
+  background: var(--fondo_principal);
+  margin: 0 auto; }
+  #content_ateneu h1 {
+    color: var(--tipografi_principal);
+    margin: 0 !important;
+    padding-top: 2.3rem; }
+  #content_ateneu p {
+    text-align: justify; }
+
+#content_projet {
+  background: #d6dacc; }
+
+#item_title_projet {
+  max-width: 80%;
+  margin: 0 auto; }
+  #item_title_projet h1 {
+    font-size: var(--texto);
+    color: var(--verde_titulo); }
+
+#item_img_projet {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0; }

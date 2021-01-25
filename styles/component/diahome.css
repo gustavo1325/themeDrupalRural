@@ -1,4 +1,12 @@
+#text_diahome {
+  margin-bottom: 0;
+  padding-bottom: 1rem; }
+  @media screen and (min-width: 767px) {
+    #text_diahome {
+      padding-bottom: 0; } }
+
 #contentdiahome {
+  background: var(--fondo_principal);
   margin-top: -10px;
   padding: 0 1rem; }
   #contentdiahome h1 {
@@ -9,6 +17,23 @@
   #contentdiahome p {
     font-size: var(--texto);
     text-align: justify; }
+  @media screen and (min-width: 767px) {
+    #contentdiahome {
+      max-width: var(--max-width-contetnt);
+      margin: 0 auto; } }
 
 .diahome_img {
   border-bottom: 25px solid var(--fondo_texto_separado); }
+
+@media screen and (min-width: 767px) {
+  #borde_fantasma {
+    margin-left: 0;
+    max-width: 22%; } }
+
+@media screen and (min-width: 1100px) {
+  #borde_fantasma {
+    max-width: 15%; } }
+
+@media screen and (min-width: 1400px) {
+  #borde_fantasma {
+    max-width: 12%; } }

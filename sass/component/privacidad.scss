@@ -1,0 +1,48 @@
+@import"mixin";
+
+div#block-licenciaderechosblock{
+  width:100%;
+  @include rwd(1400px){
+    background: #fff;
+    padding-top: 2rem;
+  }
+}
+#content_privacitat{
+  @include rwd(large){
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}
+
+
+#content_privacitat{
+  background: #fff;
+  p{
+    margin-top:0px;
+    color:var(--barra_texto_suscribete_leermas);
+  }
+}
+
+#privacitat{
+  a{
+    p{
+      font-size: var(--leer_mas);
+      text-align: center;
+    }
+  }
+}
+
+#copyright{
+   p{
+     font-size: var(--leer_mas);
+     text-align: center;
+   }
+ }
+ div#content_privacitat {
+    padding-top: 1.5rem;
+     @include rwd(425px){
+        padding-top: 0rem;
+     }
+ }

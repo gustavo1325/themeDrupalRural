@@ -3,7 +3,8 @@ $breackpoints:(
   medium:480px,
   mediumLarge:576px,
   large:767px,
-  xlarge:1024,
+  xlarge:1024px,
+  extralarge:1400px,
 );
 
 @mixin rwd($bp){

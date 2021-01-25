@@ -1,0 +1,32 @@
+div#block-licenciaderechosblock {
+  width: 100%; }
+  @media screen and (min-width: 1400px) {
+    div#block-licenciaderechosblock {
+      background: #fff;
+      padding-top: 2rem; } }
+
+@media screen and (min-width: 767px) {
+  #content_privacitat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; } }
+
+#content_privacitat {
+  background: #fff; }
+  #content_privacitat p {
+    margin-top: 0px;
+    color: var(--barra_texto_suscribete_leermas); }
+
+#privacitat a p {
+  font-size: var(--leer_mas);
+  text-align: center; }
+
+#copyright p {
+  font-size: var(--leer_mas);
+  text-align: center; }
+
+div#content_privacitat {
+  padding-top: 1.5rem; }
+  @media screen and (min-width: 425px) {
+    div#content_privacitat {
+      padding-top: 0rem; } }

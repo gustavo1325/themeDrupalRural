@@ -1,3 +1,8 @@
+@import"mixin";
+
+
+
+
 //--------------------MENU HAMBURGER
 #block-menuprincipalstock{
   .main-menu-toggle{
@@ -5,6 +10,7 @@
   }
 
 }
+
 
 .main-menu-toggle{
   margin: 0.5rem 0.5rem ;
@@ -52,6 +58,9 @@
     a{
       font-size: var(--menu);
       color:var(--tipografi_principal);
+      @include rwd(1200px){
+            font-size: 1em;
+      }
     }
 }
 
@@ -59,6 +68,21 @@
   font-weight: 700;
   position:relative;
   padding-left: 2em;
+
+  //Aplicamos un border image a elmento del menu, hay que relacionarlo con un evento focus
+    a:active{
+      padding-bottom:5px;
+      border: 10px solid transparent;
+      border-image-source: url(../img/focomenu.png);
+      border-image-repeat: round;
+      border-image-slice: 30;
+      border-image-width: 0 0 15px 0;
+    }
+  /*  padding: 15px;  Este border-img del elmento li
+    border-image-source: url(../img/focomenu.png);
+    border-image-repeat: round;
+    border-image-slice: 30;
+    border-image-width: 0 0 15px 0;*/
 }
 
 #item-compra::before{
@@ -138,15 +162,62 @@
 }
 }
 
+
 @media screen and(min-width: 1200px){
   #block-menuprincipalstock{
-  .main-nav{
-    width:50em;
-  }
-  .main-menu{
-    li{
-      padding: 1em;
-    font-size: 1em;}
+      .main-nav{
+        width:50em;
+      }
+      .main-menu{
+        li{
+          padding: 1em;
+        font-size: 0.9em;}
+      }
+    }
+}
+
+//----------menu princiopal
+#block-manosminimal-branding{
+  @include rwd(extralarge){
+        max-width: 450px !important;
   }
 }
+
+#header_top{
+  @include rwd(extralarge){
+    padding-bottom: 1.9rem;
+  }
+}
+
+#block-menuprincipalstock{
+
+    .main-nav{
+      @include rwd(extralarge){
+        width:60em;
+      }
+
+    }
+}
+
+.main-menu__item{
+  a{
+  /*  padding-bottom:5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/focomenum.png);
+    border-image-repeat: round;
+    border-image-slice: 35;
+    border-image-width: 0 0 15px 0;*/
+  }
+
+}
+.main-menu__item .is-active{
+  @include rwd(large){
+    padding-bottom:5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/focomenum.png);
+    border-image-repeat: round;
+    border-image-slice: 35;
+    border-image-width: 0 0 15px 0;
+  }
+
 }

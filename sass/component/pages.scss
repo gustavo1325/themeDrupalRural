@@ -11,6 +11,9 @@
   }
 }
 #block-views-block-pages-block-1{
+  max-width: var(--max-width-contetnt);
+  background:var(--fondo_principal);
+  margin: 0 auto;
   padding-top: 1.5rem;
   text-align: justify;
   p{
@@ -25,6 +28,9 @@
       }
       @include rwd(large){
         font-size: var(--texto);
+      }
+      @include rwd(extralarge){
+        font-size: 1.5em;
       }
   }
 

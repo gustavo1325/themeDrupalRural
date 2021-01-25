@@ -155,7 +155,14 @@ function manosminimal_preprocess_menu_local_task(array &$variables) {
 function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
   if ($form_id == 'search_block_form') {
 
-    //  $form['keys']['#attributes']['placeholder'] = t('patata');
+      $form['keys']['#attributes']['placeholder'] = t('BUSCAR');
+
+      $form['actions']['submit']['#type'] = 'image_button';
+      $form['actions']['submit']['#src'] = 'themes/custom/manosminimal/img/lupa.JPG';
+      $form['actions']['submit']['#prefix'] = ' <div class="bottom_enviar_search">';
+      $form['actions']['submit']['#suffix'] = '</div>';
+
+      //$form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
       //\Drupal::messenger()->addMessage(t('Dades guardades correctament.'));
   }
     if ($form_id == 'comment_comment_form') {

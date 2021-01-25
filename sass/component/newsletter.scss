@@ -27,7 +27,14 @@
       font-size:1.6em;
     }
     @include rwd(large){
-      font-size:1.2em;
+      font-size:1.1em;
+    }
+    @include rwd(960px){
+      font-size:1.4em;
+    }
+
+    @include rwd(1200px){
+      font-size:1.7em;
     }
 
     //background: red;
@@ -101,6 +108,20 @@
 
 .newsletter_sularyy_nom, .newsletter_sularyy_email{
   max-width: 100%;
+  @include rwd(extralarge){
+    font-size: 1em;
+    margin-bottom: 1rem;
+  }
+
+}
+
+
+
+input.newsletter_sularyy_nom::placeholder {
+    color: var(--barra_texto_suscribete_leermas);
+}
+input.newsletter_sularyy_email::placeholder{
+  color: var(--barra_texto_suscribete_leermas);
 }
 /*.form-checkbox{
   border-color: var(--form);
@@ -113,6 +134,9 @@
   color: var(--form);
   @include rwd(large){
     margin-top: 2rem;
+  }
+  @include rwd(extralarge){
+    font-size: 1rem;
   }
 }
 input[type=submit]{
@@ -128,6 +152,9 @@ input[type=submit]{
   margin-top: 2.5rem;
   border:1px solid #d9d9d9;
 	border-radius:8px;
+  @include rwd(extralarge){
+    font-size: 1rem;
+  }
 }
 label.option {
     color: #666;
@@ -221,5 +248,8 @@ label.option {
     display:block;
     max-width: 50%;
     border-left: 1.5px solid rgba(75, 75, 75, 0.3);
+  }
+  @include rwd(1200px){
+    width: 50%;
   }
 }
