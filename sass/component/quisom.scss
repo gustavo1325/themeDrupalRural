@@ -1,6 +1,11 @@
 @import"mixin";
 
 #container_quisom{
+  .text_pre_mas{
+    max-width: var(--max-width-contetnt);
+    background: var(--fondo_texto_separado);
+    margin: 0 auto;
+  }
 }
 
 #content_text_quison_phone{
@@ -32,7 +37,7 @@
   display:flex;
 
 }
-.text_pre_mas{
+#content_text_quison_phone .text_pre_mas{
     background: var(--fondo_texto_separado);
     margin-top: -10px ;
     padding: 0 1rem;
@@ -158,8 +163,10 @@ img.can_ferriol22 {
 #bordeimgcanferriol{
   @include rwd(large){
     border-bottom: 2px solid rgba(121, 125, 127, 0.8 );
+    text-align: center;
   }
 }
+
 
 #text_leer_mas2{
   @include rwd(large){
@@ -172,4 +179,10 @@ img.can_ferriol22 {
     max-width: 90%;
     margin: 0 auto;
   }
+}
+#text_p_leer_mas2{
+  @include rwd(large){
+    margin-bottom: 0px;
+  }
+
 }

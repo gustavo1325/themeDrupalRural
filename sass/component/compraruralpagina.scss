@@ -8,135 +8,122 @@
   h1{
     color:var(--tipografi_principal);
     margin:0 !important;
-    padding-top: 2.3rem;
-  }
+    @include rwd(large){
+      padding-top: 2.3rem;
+    }
+  }5
   p{
+    //font-size:0.8em;
+    @include rwd(large){
+    font-size: 1em;
+    }
     text-align: justify;
   }
 }
 
+.compra_img{
+   border-bottom: 25px solid var(--fondo_texto_separado);
+}
 
 #item_distribucio{
   max-width: 80%;
   margin:0 auto;
   h1{
-    color:var(--tipografi_principal);
+    padding-top: 1rem;
+     //color:var(--verde_titulo);
+     font-size: 1.2em;
+     @include rwd(large){
      font-size: var(--titulo);
+     }
      @include rwd(1200px){
        font-size: 2em;
      }
   }
+
+
+
+  #borde_fantasma_compra{
+    border-bottom: 5px solid var(--compra_rural_fondo2);
+    margin-left: 0;
+    width: 8rem;
+  }
 }
 
 #item_distribucion_img{
-  display:flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  img{
-    padding-bottom:1rem;
-  }
-  h1{
-    padding-top:1rem;
-    color:var(--tipografi_principal);
-    @include rwd(large){
-      font-size: 1.1em;
-    }
-    @include rwd(1200px){
-      font-size: 1.5em;
-    }
-    display:inline;
-    border-bottom: 6px solid var(--compra_rural_fondo2);
-  }
-  p{
-    margin:0;
-    font-size: 0.9em;
-    @include rwd(1200px){
-      font-size: 1.2em;
-    }
-  }
+      @include rwd(large){
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+
+      img{
+        padding-bottom:1rem;
+      }
+      h1{
+        padding-top:1rem;
+        font-size: 1rem;
+        border-bottom: 3px solid var(--compra_rural_fondo2);
+        @include rwd(large){
+          font-size: 1.1em;
+          border-bottom: 6px solid var(--compra_rural_fondo2);
+        }
+        @include rwd(1200px){
+          font-size: 1.5em;
+        }
+        display:inline;
+
+      }
+      p{
+        margin:0;
+        font-size: 0.9em;
+        @include rwd(1200px){
+          font-size: 1.2em;
+        }
+      }
 }
 .distribucion_text{
   padding:1rem 0 2.5rem 0;
 }
 .distribucion_img{
+  @include rwd(large){
   max-width: 40%;
 }
 
-.item_cistelles{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-
 }
-.item_cistelles-top{
-  margin-top: 2rem;
+.verde_titulo_compra{
+
+  color:var(--verde_titulo);
 }
 
-.item_cistelles_img{
-  padding: 1.5rem 3rem;
-
-}
-.cistellas_img{
-  max-width: 100%;
-  @include rwd(1000px){
-    max-width: 90%;
-    padding-left:2rem;
+#content_items_cistellas{
+  max-width: 95%;
+  margin:0 auto;
+  @include rwd(large){
+    max-width: 100%;
   }
 }
 
-.item_cistelles_content{
-  max-width: 60%;
-  @include rwd(1000px){
-    max-width: 60%;
-  }
-  h1{
-    font-size: var(--titulo);
-    padding:0 3rem;
-
-    @include rwd(large){
-      font-size: var(--texto);
-    }
-    @include rwd(1000px){
-      font-size: var(--titulo);
-    }
-  }
-  p{
-    font-size: 0.8em;
-    padding:0 3rem;
-    margin-bottom:0;
-    @include rwd(1000px){
-      font-size:1em;
-    }
-    @include rwd(1200px){
-      font-size:1.3em;
-      max-width: 90%;
-    }
-
-  }
-  img{
-    max-width: 30%;
-  }
-}
-
-.parrafo_cistellas{
-  margin-top:0;
-
-
-}
 
 #item_cistelles_botiga{
   background: var(--fondo_texto_separado);
   h1{
-    //font-size: var(--titulo);
-    max-width: 25%;
-    padding-bottom: 1rem;
-    border-bottom: 6px solid var(--compra_rural_fondo2);
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid var(--compra_rural_fondo2);
+    @include rwd(large){
+      max-width: 25%;
+
+      border-bottom: 6px solid var(--compra_rural_fondo2);
+    }
 
   }
     p{
+      font-size: 0.7em;
+      @include rwd(1200px){
       font-size: 0.9em;
+    }
       @include rwd(1200px){
         font-size: 1.2em;
       }
@@ -156,19 +143,28 @@
 }
 
 #item_cistelles_botiga_title{
+
   max-width: 80%;
   margin:0 auto;
   font-size:0.7em;
+
+
   @include rwd(1200px){
     font-size: 1em;
   }
 
 }
-
+#strong_mail_cistellas{
+  display:block;
+    @include rwd(large){
+      display:inline;
+    }
+}
 #item_cistelles_botiga_p{
   max-width: 80%;
   margin:0 auto;
   position:relative;
+
   p{
     margin-left:0.9rem;
   }
@@ -176,18 +172,109 @@
 }
 #item_cistelles_botiga_p:before{
   content: url('../img/flechaP.png');
-  //display: block;
   max-width:2px;
   max-height:2px;
-//  padding-left:;
   padding-top: 0.3em;
   transform: scale(0.6);
-  //margin-top:100px
   position: absolute;
   left:1px;
-  //top:2px;
   @include rwd(1200px){
     top:6px;
   }
 
+}
+
+.item_cistelles{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  @include rwd(large){
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.item_cistelles-top{
+  margin-top: 2rem;
+  @include rwd(large){
+  margin-top: 2rem;
+}
+}
+
+.item_cistelles_img{
+  @include rwd(large){
+      padding: 1.5rem 3rem;
+  }
+
+
+}
+.cistellas_img{
+  max-width: 100%;
+  @include rwd(1000px){
+    max-width: 90%;
+    padding-left:2rem;
+  }
+}
+
+.item_cistelles_content{
+  max-width: 55%;
+  padding-left: 0.5rem;
+  @include rwd(425px){
+    padding-left: 1rem;
+  }
+  @include rwd(large){
+    max-width: 60%;
+    padding-left: 0.8rem;
+  }
+  @include rwd(1000px){
+    max-width: 60%;
+  }
+  h1{
+    font-size: 0.8em;
+    @include rwd(425px){
+      font-size: 0.9em;;
+    }
+    @include rwd(large){
+      font-size: var(--texto);
+    }
+    @include rwd(1000px){
+      font-size: var(--titulo);
+    }
+  }
+  p{
+    font-size: 0.6em;
+    margin-bottom:0;
+    @include rwd(425px){
+      font-size: 0.7em;
+    }
+    @include rwd(1000px){
+      padding:0 3rem;
+      font-size:1em;
+    }
+    @include rwd(1200px){
+      font-size:1.3em;
+      max-width: 90%;
+    }
+
+  }
+  img{
+    @include rwd(large){
+      max-width: 30%;
+    }
+
+  }
+}
+
+.borde_compra_img{
+  max-width: 50%;
+}
+
+.parrafo_cistellas1{
+  margin-top: 0px;
+  font-weight: 600;
+}
+.parrafo_cistellas{
+  margin-top:0;
 }

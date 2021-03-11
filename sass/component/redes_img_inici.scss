@@ -1,0 +1,45 @@
+@import"mixin";
+
+#main-banner{
+  position: relative;
+}
+
+#block-redesstaticblock-2{
+  position:absolute;
+  display:none;
+    @include rwd(large){
+      display:block;
+      top:5rem;
+      right:0;
+    }
+    @include rwd(800px){
+      top:6rem;
+    }
+    @include rwd(950px){
+      top:7.5rem;
+    }
+    @include rwd(1000px){
+      top:8.5rem;
+    }
+    @include rwd(1100px){
+      top:9.5rem;
+    }
+    @include rwd(1280px){
+      top:12.5rem;
+    }
+    @include rwd(1400px){
+      top:15.5rem;
+    }
+    @include rwd(1900px){
+      top:25.5rem;
+    }
+}
+
+#block-redesstaticblock-2 #content-redes{
+    .redes_img{
+      display: block;
+      background: var(--fondo_principal);
+      max-width: 4.5rem;
+      padding: 10px;
+    }
+}

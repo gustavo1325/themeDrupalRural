@@ -1,7 +1,13 @@
 @import"mixin";
 
+/*
+body{
+  @include rwd(1401px){
+        background: var(--fondo_principal);
+  }
 
-
+}
+*/
 
 //--------------------MENU HAMBURGER
 #block-menuprincipalstock{
@@ -105,8 +111,8 @@
     top:17px;
   }
   @media screen and(min-width: 1200px){
-    top:16px;
-    left: -14px;
+    top:13px;
+    left: -12px;
 
   }
 }

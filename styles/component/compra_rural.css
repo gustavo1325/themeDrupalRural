@@ -1,3 +1,6 @@
+.cambio::placeholder {
+  color: #fff; }
+
 #content_comprarural {
   max-width: var(--max-width-contetnt);
   margin: 0 auto;

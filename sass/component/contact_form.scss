@@ -1,0 +1,183 @@
+@import"mixin";
+
+$fontSize: 19px;
+$lineWidth: 2px;
+$lineColor: #CCC;
+$backgroundColor: #fcf9f0;
+$xPadding: 10px;
+
+
+
+
+#main-content_contact{
+  max-width: var(--max-width-contetnt);
+  background: var(--fondo_principal);
+  margin:0 auto;
+  padding-top: 1.5rem;
+
+  @include rwd(large){
+  display: grid;
+  grid-template-columns:   1fr 1fr;
+  }
+}
+.contact-message-contacte-form {
+  padding-left: 1rem;
+}
+#item_contact_gif{
+  display:none;
+  grid-area: 1 / 1 / 2 / 2;
+  @include rwd(large){
+    display:block;
+    width: 350px;
+  }
+  @include rwd(960px){
+    width: 450px;
+  }
+  @include rwd(xlarge){
+    width: 500px;
+  }
+
+}
+
+#block-manosminimal-content{
+  grid-area: 1 / 2 / 2 / 3;
+}
+#contact-message-contacte-form{
+  @include rwd(large){
+    width: 350px;
+  }
+  @include rwd(960px){
+    width: 450px;
+  }
+  @include rwd(1200px){
+    width: 500px;
+  }
+  @include rwd(xlarge){
+    width: 480px;
+  }
+  @include rwd(1200px){
+    width: 520px;
+  }
+}
+
+
+
+#main-content_contact #block-compraruralblock{
+  grid-area: 2 / 1 / 2 / 4;
+}
+
+#main-content_contact #block-ondaseparadorablock{
+  display:none;
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+.img_contact{
+  max-width: 90%;
+}
+
+.titulo_contacto{
+  h1{
+    font-size: 0.7em;
+    color:var(--compra_rural_fondo2);
+    @include rwd(960px){
+      font-size: 0.8em;
+    }
+    @include rwd(xlarge){
+      font-size: 0.9em;
+    }
+  }
+}
+.form-item-field-comentarirural-0-value{
+  position:relative;
+  margin-top: -2.5rem;
+  width: 100%;
+  label{
+    background: var(--fondo_principal);
+    padding-right: 0.3rem;
+    position: relative;
+    top:42px;
+  }
+}
+
+.form-item-field-nomrural-0-value, .form-item-field-cognomsrural-0-value, .form-item-field-comentarirural-0-value{
+  label{
+      display: inline;
+      font-size: 0.7em;
+      @include rwd(xlarge){
+        font-size: 0.8em;
+      }
+  }
+}
+
+.form-item-field-nomrural-0-value, .form-item-field-cognomsrural-0-value{
+  label{
+    position: relative;
+    top: 5px;
+  }
+}
+
+input#edit-field-nomrural-0-value {
+    max-width: 80%;
+    @include rwd(960px){
+      max-width: 85%;
+    }
+    @include rwd(1200px){
+    //  max-width: 90%;
+    }
+    border:none;
+    border-bottom:1px solid $lineColor;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    background: var(--fondo_principal);
+}
+
+input#edit-field-cognomsrural-0-value{
+  max-width: 72%;
+  @include rwd(960px){
+    max-width: 78%;
+  }
+  border:none;
+  border-bottom:1px solid $lineColor;
+  margin-bottom: 2rem;
+  background: var(--fondo_principal);
+}
+
+textarea#edit-field-comentarirural-0-value{
+  max-width: 95%;
+  font-size: $fontSize;
+  border: none;
+  background-attachment: local;
+  background-image:
+    linear-gradient(to right, $backgroundColor, $backgroundColor $xPadding, transparent $xPadding),
+    linear-gradient(to left, $backgroundColor, $backgroundColor $xPadding, transparent $xPadding),
+    repeating-linear-gradient(
+      $backgroundColor,
+      $backgroundColor $fontSize*2-$lineWidth,
+      $lineColor $fontSize*2-$lineWidth,
+      $lineColor $fontSize*2
+    );
+  line-height: $fontSize*2;
+  padding: $fontSize/3 $xPadding;
+  resize: none;
+}
+
+.form-item-newcheck {
+  margin-top: 1rem;
+  .option{
+    font-size: 0.7em;
+    color:var(--compra_rural_fondo2);
+
+  }
+}
+
+#contact-message-contacte-form #edit-actions #edit-submit{
+  position:relative;
+  bottom: 70px;
+  right: 10px;
+  color:var(--compra_rural_fondo2);
+  background: var(--fondo_principal);
+  border-color: var(--compra_rural_fondo2);
+  @include rwd(960px){
+    right: 30px;
+  }
+}

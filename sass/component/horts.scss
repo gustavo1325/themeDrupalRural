@@ -13,12 +13,25 @@
   p{
     text-align: justify;
   }
+
 }
 
 #img_slider_horts img{
   @include rwd(large){
     border-bottom: 25px solid var(--fondo_texto_separado);
   }
+}
+.descripcion_horts_destok{
+    display:none;
+    @include rwd(large){
+      display:block;
+    }
+}
+.descripcion_horts_phone{
+
+    @include rwd(large){
+      display:none;
+    }
 }
 
 .item_horts_descripcion{
@@ -34,20 +47,38 @@
 
    }
 }
-#content_galeria_hort{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
+
+.pegartexto{
+  margin-top: -10px;
 }
+#content_galeria_hort{
+  display:none;
+  @include rwd(large){
+    display:flex;
+    //flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+#galeria_img_phone{
+  @include rwd(large){
+    display:none;
+  }
+  max-width: 90%;
+  margin:0 auto;
+}
+
 .container_galeria_hort{
   @include rwd(large){
     padding: 1rem;
   }
 }
 .img_galeria_hort{
-  width: 100%;
+
   object-fit: cover;
   object-position: 0px 0px;
+  width: 500px;
+  height: 400px;
 }
 
 
@@ -66,4 +97,14 @@
 
 #item_mapa{
   grid-area: 1 / 2 / 2 / 4;
+}
+
+#flecha_galeria{
+  text-align: right;
+}
+.flecha_galeria{
+  width: 15px;
+  margin-right: 10px;
+  margin-top:10px;
+  cursor: pointer;
 }

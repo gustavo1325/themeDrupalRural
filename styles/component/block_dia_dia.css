@@ -1,17 +1,3 @@
-/*.views-row.clearfix.row-2 {
-  .views-col.col-1 {
-    display:-webkit-flex;
-	  display: -ms-flexbox;
-	  display: flex;
-    background: red;
-    .views-field-field-imatge-post{
-        background: red;
-        order:-1;
-    }
-}
-
-
-}*/
 #container_dia {
   max-width: var(--max-width-contetnt);
   margin: 0 auto;
@@ -50,22 +36,7 @@
 
 .time_post1 {
   color: var(--barra_texto_suscribete_leermas);
-  font-size: 0.9em;
-  /*.bocadillo-cuadrado
-    position: relative
-    height: 200px
-    width: 300px
-    background: $color-bocadillo
-    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5)
-    &:before
-        border: 25px solid $color-bocadillo
-        content: ''
-        border-left-color: transparent
-        border-bottom-color: transparent
-        border-right-color: transparent
-        position: absolute
-        bottom: -48px
-        left: calc(50% - 25px)*/ }
+  font-size: 0.9em; }
   @media screen and (min-width: 1400px) {
     .time_post1 {
       font-size: 1.2em; } }

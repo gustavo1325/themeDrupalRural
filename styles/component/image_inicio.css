@@ -1,0 +1,9 @@
+@media screen and (min-width: 767px) {
+  #block-views-block-image-inici-block-1 {
+    display: none; } }
+
+#block-views-block-image-inici-phone-block-1 {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    #block-views-block-image-inici-phone-block-1 {
+      display: block; } }

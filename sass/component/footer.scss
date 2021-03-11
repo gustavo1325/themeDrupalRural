@@ -36,6 +36,7 @@ footer{
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
+  margin-top:10px;
 
 }
 
@@ -83,8 +84,26 @@ footer{
     }
 }
 
+.invertir_email{unicode-bidi: bidi-override; direction: rtl}
 .mail_footer{
   position: relative;
+  right: 8%;
+  @include rwd(large){
+    right: 10%;
+  }
+  @include rwd(960px){
+    right: 18%;
+  }
+  @include rwd(1200px){
+    right: 24%;
+  }
+  @include rwd(1300px){
+    right: 8%;
+  }
+  @include rwd(1400px){
+    right: 12%;
+  }
+
 }
 .mail_footer::before{
   content: url('../img/Mail.png');
@@ -92,16 +111,27 @@ footer{
   max-width:4px;
   max-height:4px;
   transform: scale(0.1);
- left:0px;
+ left:65px;
  top:-6px;
  @include rwd(large){
+   left:95px;
    top:-10px;
  }
  @include rwd(960px){
+   left:100px;
+   top:-6px;
+ }
+ @include rwd(1200px){
+   left:130px;
    top:-6px;
  }
  @include rwd(1300px){
+   left:65px;
    top:-3px;
+ }
+ @include rwd(1400px){
+   left:100px;
+   top:-1px;
  }
 }
 

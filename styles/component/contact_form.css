@@ -1,0 +1,138 @@
+#main-content_contact {
+  max-width: var(--max-width-contetnt);
+  background: var(--fondo_principal);
+  margin: 0 auto;
+  padding-top: 1.5rem; }
+  @media screen and (min-width: 767px) {
+    #main-content_contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+
+.contact-message-contacte-form {
+  padding-left: 1rem; }
+
+#item_contact_gif {
+  display: none;
+  grid-area: 1 / 1 / 2 / 2; }
+  @media screen and (min-width: 767px) {
+    #item_contact_gif {
+      display: block;
+      width: 350px; } }
+  @media screen and (min-width: 960px) {
+    #item_contact_gif {
+      width: 450px; } }
+  @media screen and (min-width: 1024px) {
+    #item_contact_gif {
+      width: 500px; } }
+
+#block-manosminimal-content {
+  grid-area: 1 / 2 / 2 / 3; }
+
+@media screen and (min-width: 767px) {
+  #contact-message-contacte-form {
+    width: 350px; } }
+
+@media screen and (min-width: 960px) {
+  #contact-message-contacte-form {
+    width: 450px; } }
+
+@media screen and (min-width: 1200px) {
+  #contact-message-contacte-form {
+    width: 500px; } }
+
+@media screen and (min-width: 1024px) {
+  #contact-message-contacte-form {
+    width: 480px; } }
+
+@media screen and (min-width: 1200px) {
+  #contact-message-contacte-form {
+    width: 520px; } }
+
+#main-content_contact #block-compraruralblock {
+  grid-area: 2 / 1 / 2 / 4; }
+
+#main-content_contact #block-ondaseparadorablock {
+  display: none;
+  grid-area: 3 / 1 / 4 / 4; }
+
+.img_contact {
+  max-width: 90%; }
+
+.titulo_contacto h1 {
+  font-size: 0.7em;
+  color: var(--compra_rural_fondo2); }
+  @media screen and (min-width: 960px) {
+    .titulo_contacto h1 {
+      font-size: 0.8em; } }
+  @media screen and (min-width: 1024px) {
+    .titulo_contacto h1 {
+      font-size: 0.9em; } }
+
+.form-item-field-comentarirural-0-value {
+  position: relative;
+  margin-top: -2.5rem;
+  width: 100%; }
+  .form-item-field-comentarirural-0-value label {
+    background: var(--fondo_principal);
+    padding-right: 0.3rem;
+    position: relative;
+    top: 42px; }
+
+.form-item-field-nomrural-0-value label, .form-item-field-cognomsrural-0-value label, .form-item-field-comentarirural-0-value label {
+  display: inline;
+  font-size: 0.7em; }
+  @media screen and (min-width: 1024px) {
+    .form-item-field-nomrural-0-value label, .form-item-field-cognomsrural-0-value label, .form-item-field-comentarirural-0-value label {
+      font-size: 0.8em; } }
+
+.form-item-field-nomrural-0-value label, .form-item-field-cognomsrural-0-value label {
+  position: relative;
+  top: 5px; }
+
+input#edit-field-nomrural-0-value {
+  max-width: 80%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  background: var(--fondo_principal); }
+  @media screen and (min-width: 960px) {
+    input#edit-field-nomrural-0-value {
+      max-width: 85%; } }
+
+input#edit-field-cognomsrural-0-value {
+  max-width: 72%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  margin-bottom: 2rem;
+  background: var(--fondo_principal); }
+  @media screen and (min-width: 960px) {
+    input#edit-field-cognomsrural-0-value {
+      max-width: 78%; } }
+
+textarea#edit-field-comentarirural-0-value {
+  max-width: 95%;
+  font-size: 19px;
+  border: none;
+  background-attachment: local;
+  background-image: linear-gradient(to right, #fcf9f0, #fcf9f0 10px, transparent 10px), linear-gradient(to left, #fcf9f0, #fcf9f0 10px, transparent 10px), repeating-linear-gradient(#fcf9f0, #fcf9f0 36px, #CCC 36px, #CCC 38px);
+  line-height: 38px;
+  padding: 6.33333px 10px;
+  resize: none; }
+
+.form-item-newcheck {
+  margin-top: 1rem; }
+  .form-item-newcheck .option {
+    font-size: 0.7em;
+    color: var(--compra_rural_fondo2); }
+
+#contact-message-contacte-form #edit-actions #edit-submit {
+  position: relative;
+  bottom: 70px;
+  right: 10px;
+  color: var(--compra_rural_fondo2);
+  background: var(--fondo_principal);
+  border-color: var(--compra_rural_fondo2); }
+  @media screen and (min-width: 960px) {
+    #contact-message-contacte-form #edit-actions #edit-submit {
+      right: 30px; } }

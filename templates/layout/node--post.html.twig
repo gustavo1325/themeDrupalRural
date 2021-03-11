@@ -1,6 +1,6 @@
 
 
-<article{{ attributes }}>
+<article id="content_post"{{ attributes }}>
 
   {{ title_prefix }}
   {% if label and not page %}
@@ -20,25 +20,29 @@
     </footer>efecto
   {% endif %}
 
-    <div id="content_node"{{ content_attributes }}>
-    {# {{ content }} #}
+    <div id="content_node_post"{{ content_attributes }}>
 
-              <div id=item_img class="content_item">
+
+              <div id=item_img_post >
                   <img id="post_img" class="post_img" src="{{ file_url(content.field_imatge_post['#items'].entity.uri.value) }}" alt="Imatge post">
                   <div id="efecto1" class="efecto">
-                          <img id="flecha_img" class="flecha_img" src="/rural/web/modules/custom/quisomrural/img/flechaVerde.jpg"  alt="Icona fletxa">
+                          <img id="flecha_img" class="flecha_img" src="/rural/web/modules/custom/quisomrural/img/flechaVerde.png"  alt="Icona fletxa">
                   </div>
               </div>
 
 
 
 
-              <div>
-                    <div id=item_title class="content_item">
-                        <h2> {{content.field_titulo.0}} </h2>
-                        <p id="borde_fantasma"></p>
+              <div id="content_items_post">
+                    <div id="item_title_post">
+                        <h2 class="titulo_post"> {{content.field_titulo.0}} </h2>
+                        <!--<p id="borde_fantasma"></p>-->
+                        <div id="borde_titulo">
+                              <img  class="borde_titulo" src="/rural/web/themes/custom/manosminimal/img/borde_titulo.png"  alt="borde">
+                        </div>
                     </div>
               </div>
+
               <div clas="date_author">
                   <strong id="format_date"> {{date}} </strong>
 
@@ -71,7 +75,15 @@
               <div class="coment_post">
                  {{content.field_comentaris_post.0}}
 
+              </div>
 
+              <div id="galeria_post">
+                  <div id="galeria_post_siguiente">
+                        <img  class="galeria_post" src="/rural/web/themes/custom/manosminimal/img/siguiente.png" alt="Icona seguen"/>
+                  </div>
+                  <div id="galeria_post_anterior">
+                        <img  class="galeria_post" src="/rural/web/themes/custom/manosminimal/img/anterior.png" alt="Icona anterior"/>
+                  </div>
               </div>
 
 

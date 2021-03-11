@@ -1,6 +1,6 @@
 @import"mixin";
 
-//Estiños para vista en phone
+//Estilos para vista en phone
 #block-formularidecerca{
   position: relative;
 }
@@ -62,7 +62,6 @@
     @include rwd(extralarge){
       width: 600px;
     }
-    //display: inline;
   }
 }
 
@@ -73,14 +72,9 @@
 #search-block-form #edit-actions{
   max-width: 5rem;
   margin-left: 0.3rem;
-//  text-align: center;
   background-image: url();
-
-
 }
-/*#edit-submit{
-  max-width: 20%;
-}*/
+
 
 .icona_recerca{
   min-width: 1.5rem;

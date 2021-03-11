@@ -165,7 +165,43 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
       //$form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
       //\Drupal::messenger()->addMessage(t('Dades guardades correctament.'));
   }
+
+    if ($form_id == 'contact_message_contacte_form') {
+
+     $form['elemento_img'] = array(
+        '#markup' => '<img src="/rural/web/themes/custom/manosminimal/img/icono_contacto.png"',
+      );
+      $form['elemento_img']['#prefix'] = ' <div class="img_contact">';
+      $form['elemento_img']['#suffix'] = '</div>';
+
+      $form['titulo_contacto'] = array(
+         '#markup' => '<h1>ESCRIU-NOS I ET RESPONDREM EL MÉS AVIAT POSSIBLE.</h1>',
+       );
+       $form['titulo_contacto']['#prefix'] = ' <div class="titulo_contacto">';
+       $form['titulo_contacto']['#suffix'] = '</div>';
+
+      $form['newcheck'] = array(
+           '#type' => 'checkbox',
+           '#title' => t('Acepto la política de privacitat de dades'),
+           '#attributes' => array('class' => array('newcheck_class')),
+        );
+        unset($form['actions']['preview']);//Elimino el boton previo
+
+      //  \Drupal::messenger()->addMessage(t('id de formulario de contacto.'));
+
+      //cambiar el orden de aparicion de los campos
+      $peso1 = $form['newcheck']['#weight']=3; //coloca el ultimo el check creado
+
+    //carbiar atributo row a comentari
+
+      $form['actions']['submit']['#value'] = 'ENVIAR';
+
+
+      //ksm($form);
+    }
+
     if ($form_id == 'comment_comment_form') {
+      //ksm($form);
       //$form['comment_body[0][value]']['#attributes']['class'][] = 'form-control';
       //echo "HOLA SOY TU FORM";
       //  $form[]['comment_body']['#attributes']['#placeholder'] = t('comment');
@@ -180,6 +216,13 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
         $form['politica_privacidad'][LANGUAGE_NONE][0]['value']['#attributes']['class'][] = 'foo';*/
       }
 
+      if($form_id == 'user_login_form'){
+        //ksm($form);
+        echo "HOLA SOY TU FORM";
+        //dpm($form);
+        ksm($form);
+
+      }
       //dpm($form);
     //  drupal_set_message("Form ID is : " . $form_id);//---------EXTRAES ID DE FORMULARIOS
 
@@ -187,15 +230,15 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
 
 
 function manosminimal_preprocess_views_view_fields(&$variables) {
- //OBTIENE LOS VALORES DE LAS VARIABLES POR DEFECTO, SE PUEDEN CREAR NUEVAS VARIABLES O CAMBIAR EL VALOR DE LAS EXISTENTES
- //O PREPROCESAR UNA FECHA, ETC
-    $view = $variables['view'];
-    $row = $variables['row'];
-    // You can get the field value for the field this way even if the field is hidden (excluded from display)
-    $field_value = $view->style_plugin->getField($row->index, 'field_text_dia');
-    $field_value2 = $view->style_plugin->getField($row->index, 'created');
-    $field_value3 = $view->style_plugin->getField($row->index, 'field_imatge_post');
-  //echo($field_value3);
-  //CON ESTA LINE CAMBIAS EL VALOR DE LA VARIABLE POR DEFECTO O CREAS UNA NUEVA
-  //$variables['fields']['create']->content = $field_value3;
+       //OBTIENE LOS VALORES DE LAS VARIABLES POR DEFECTO, SE PUEDEN CREAR NUEVAS VARIABLES O CAMBIAR EL VALOR DE LAS EXISTENTES
+       //O PREPROCESAR UNA FECHA, ETC
+          $view = $variables['view'];
+          $row = $variables['row'];
+          // You can get the field value for the field this way even if the field is hidden (excluded from display)
+          $field_value = $view->style_plugin->getField($row->index, 'field_text_dia');
+          $field_value2 = $view->style_plugin->getField($row->index, 'created');
+          $field_value3 = $view->style_plugin->getField($row->index, 'field_imatge_post');
+        //echo($field_value3);
+        //CON ESTA LINE CAMBIAS EL VALOR DE LA VARIABLE POR DEFECTO O CREAS UNA NUEVA
+        //$variables['fields']['create']->content = $field_value3;
 }

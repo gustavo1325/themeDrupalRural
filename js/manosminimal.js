@@ -54,7 +54,6 @@ const showSearch = (lupaid, searchBlock, img_search_lupa, blockmenu) => {
             largemaxBp= matchMedia('(max-width: 991px)'),
             menu_principal= document.getElementById(blockmenu)
 
-      console.log(menu_principal)
       if(lupaid && searchBlock && src_img && largemaxBp.matches){
             lupa.addEventListener('click',() => {
                 search.classList.toggle('show')
@@ -69,7 +68,7 @@ const showSearch = (lupaid, searchBlock, img_search_lupa, blockmenu) => {
       if(lupaid && searchBlock && src_img && largeminBp.matches){
         lupa.addEventListener('click',() => {
 
-          console.log(largeminBp)
+        //  console.log(largeminBp)
             search.classList.toggle('show2')
             menu_principal.classList.toggle('show3')
             if(src_img.getAttribute('src') == '/rural/web/themes/custom/manosminimal/img/lupa.JPG'){//cambio atributo scr para mostrar lupa o x
@@ -316,7 +315,7 @@ const extraeidnode = ($url) =>{
 var idnode= location.pathname;
 var idactualnode = extraeidnode(idnode)
 
-jQuery(document).ready(function(){ //llamada AJAX desde el botom like, envia un ok para aumentar el contadro like en la base de datos
+jQuery(document).ready(function(){ //llamada AJAX desde el botom like, envia un ok para aumentar el contadror like en la base de datos
 
   const numberlikes = () => {
     let actualizalike='inicializa';
@@ -419,16 +418,13 @@ const patron= new RegExp("dia_a_dia"), //esta expresion regular es para decidir 
       largeBp= matchMedia('(min-width: 767px)')
 const imgpostrural=  Array.from(document.querySelectorAll('.img_dia'))
 if(imgpostrural.length > 0){
-  //console.log(imgpostrural)
-let imgpostruralun= imgpostrural[0].width
+    let imgpostruralun= imgpostrural[0].width
    if(mediumBp.matches){
       imgpostrural.map(el => el.style.height=imgpostruralun  + "px")
       imgpostrural.map(el => el.style.width=imgpostruralun + "px")
-      console.log("donde estoy se supone que en menos de 577")
    }else{
      imgpostrural.map(el => el.style.height=imgpostruralun/2  + "px")
      imgpostrural.map(el => el.style.width=imgpostruralun + "px")
-     console.log("donde estoy se supone que en mas de 577")
 
    }
 }
@@ -495,3 +491,200 @@ let urlactual= location.href,
 //  }
 // }
 //  liNa.setAttribute('id', 'item-compra')
+
+
+//recolocamos elemento textarea del form contact al tomar el focomenu
+
+const textarea_contact =document.getElementById("edit-field-comentarirural-0-value"),
+      class_textarea_contact =document.querySelector('.form-item-field-comentarirural-0-value')
+      class_textarea_contact_label =document.querySelector('.form-item-field-comentarirural-0-value label')
+
+
+if(textarea_contact){
+        textarea_contact.addEventListener('focus',() => {
+          class_textarea_contact.style.marginTop='0'
+          class_textarea_contact_label.style.top='0'
+        })
+}
+
+
+//cambiar aspecto (imagen y background) del modulo compra a la rural para plana horts y contact
+const patronhorts= new RegExp("horts"),
+      patroncontact = new RegExp("contact"),
+      backgroundCompra = document.getElementById("content_comprarural"),
+      imgCompra = document.getElementById("img_comprarural"),
+      textconpra=document.getElementById("textconpra"),
+      compra_email=document.querySelector('.compra_email'),
+      compra_politica_privacidad=document.querySelector('.comprarural-addform label.option'),
+      submit_compra=document.getElementById("edit-submit--3"),
+      submit_compra_contact=document.getElementById("edit-submit--2"),
+      img_cambio=document.getElementById("img_cambio")
+      img_cambio_phone=document.getElementById("img_cambio_phone")
+
+
+frhor=urlactual.search(patronhorts)
+frcont=urlactual.search(patroncontact)
+if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor != -1 && mediumBp.matches || frcont != -1 && mediumBp.matches){
+      if(backgroundCompra){
+        backgroundCompra.style.background='#90b37d'
+        imgCompra.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/Compra_Rural_ico.png')
+        textconpra.style.color='#fff'
+        compra_email.style.background='#90b37d'
+        compra_email.style.borderColor='#fff'
+        compra_email.classList.add('cambio')
+        compra_politica_privacidad.style.color='#fff'
+        submit_compra.style.background='#90b37d'
+        submit_compra.style.borderColor='#fff'
+        submit_compra.style.color='#fff'
+        submit_compra_contact.style.background='#90b37d'
+        submit_compra_contact.style.borderColor='#fff'
+        submit_compra_contact.style.color='#fff'
+        img_cambio.setAttribute('srcset', '/rural/web/themes/custom/manosminimal/img/els_horts_compra_rural.png')
+        img_cambio_phone.setAttribute('srcset', '/rural/web/themes/custom/manosminimal/img/hort_img_cambio_phone.png')
+
+      }
+}
+
+
+//controlar la altura de las imagenes del horts y ateneu para que sean cuadradas
+const img_galeria_hor_ateneu=  Array.from(document.querySelectorAll('.img_galeria_hort'))
+
+if(img_galeria_hor_ateneu.length > 0){
+  let width_img_galeria= img_galeria_hor_ateneu[0].width
+  img_galeria_hor_ateneu.map(el => el.style.height=width_img_galeria  + "px")
+}
+
+//hacemos cuadradas las imagenes de las galerias de hort y ateneu
+const img_galeria_horts_ateneu_phone = document.getElementById("img_galeria_hort_ateneu")
+if(img_galeria_horts_ateneu_phone){
+      let width_galeria_phone= img_galeria_horts_ateneu_phone.width
+      img_galeria_horts_ateneu_phone.style.height= width_galeria_phone + "px"
+}
+
+//activar boton de la galeria
+const flecha_galeria =  document.querySelector('.flecha_galeria'),
+      src_galeria= document.getElementById("img_galeria_hort_ateneu")
+      img1=document.getElementById("img1"),
+      img2=document.getElementById("img2"),
+      img3=document.getElementById("img3")
+var img_src1
+var img_src2
+var img_src3
+      if(img1 || img2 || img3){
+      img_src1=img1.getAttribute('src'),
+      img_src2=img2.getAttribute('src'),
+      img_src3=img3.getAttribute('src')
+    }
+let e=0
+array_galeria=[img_src1, img_src2, img_src3]
+
+if(flecha_galeria && img_src1 && img_src2 && img_src3){
+    flecha_galeria.addEventListener('click',() => {
+        e++
+        src_galeria.setAttribute('src', array_galeria[e])
+
+        if(e>2){
+          e=0
+          src_galeria.setAttribute('src', array_galeria[e])
+        }
+
+    })
+}
+
+
+//cambiar background del modulo de instagran en la plana de ateneu > 768 y cambio background galeria cuando <768
+const patronateneu= new RegExp("ateneu_rural"),
+      content_instagram_ateneu=document.getElementById("content_instagram"),
+      img_instagram_phone= document.querySelector('.item_img_instagram')
+frateneu=urlactual.search(patronateneu)
+if(frateneu != -1 && largeBp.matches){
+  content_instagram_ateneu.style.background='#fcf9f0'
+}
+
+//quitar padding-top en la plana de movil del modulo de instagran
+if(frateneu != -1 && mediumBp.matches){
+  img_instagram_phone.style.paddingTop='0px'
+}
+
+
+//traigo del servidor las URL de los seis post para la galeria_post
+
+//boton siguiente
+$( "#galeria_post_siguiente").click(function(e) {
+ array_post=[]
+        $.ajax({
+          url: "diadia",
+          type: "POST",
+        })
+        .done(function(data){
+              for(let i=0; i<6; i++){
+                array_post[i]=data[0].message[i];
+                if(data[0].message[i] == urlactual){
+                }
+              }
+              let length_array= array_post.length
+
+                for(i=0; i<length_array; i++){
+                      if(array_post[i] == urlactual && i<length_array-2){
+                      location.href= array_post[i+1]
+                      break
+                      }
+                      if(i==length_array-1){
+                        location.href=array_post[0]
+                        break
+                      }
+                }
+        });
+});
+
+
+//boton anterior
+
+$( "#galeria_post_anterior").click(function(e) {
+ array_post=[]
+        $.ajax({
+          url: "diadia",
+          type: "POST",
+        })
+        .done(function(data){
+              for(let i=0; i<6; i++){
+                array_post[i]=data[0].message[i];
+                if(data[0].message[i] == urlactual){
+                }
+              }
+              let length_array= array_post.length
+
+                for(i=0; i<length_array -1; i++){
+                      if(array_post[i] == urlactual && i != 0){
+                      location.href= array_post[i-1]
+                      break
+                      }
+                      if(array_post[i] == urlactual && i== 0){
+                        location.href=array_post[length_array-1]
+                        break
+                      }
+                }
+
+        });
+});
+
+
+//Controla el tamaño de la imagen post_pagina de desk
+
+const post_img=document.getElementById("post_img"),
+      content_post=document.getElementById("content_post"),
+      item_title_post=document.getElementById("item_title_post")
+      if(content_post){
+        var width_content_post=content_post.clientWidth
+      }
+
+if(post_img && content_post){
+      // let width_post_img=post_img.width
+      if(largeBp.matches){
+          //img_post.style.height= (width_content_post  + "px")
+          post_img.style.width= (width_content_post / 2 + "px")
+         item_title_post.style.width= (width_content_post / 2 + "px")
+          post_img.style.height= (width_content_post / 2 + "px")
+          console.log(width_content_post)
+      }
+}

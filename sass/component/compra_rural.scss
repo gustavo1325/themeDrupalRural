@@ -1,6 +1,9 @@
 @import"mixin";
 
 
+.cambio::placeholder{
+  color:#fff;
+}
 
 
 #content_comprarural{
@@ -22,64 +25,61 @@
   grid-template-columns: 1fr 1fr 1fr;
   @include rwd(large){
       grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+  }
 }
 
 .intem_comprarural_img{
     grid-area: 1 / 1 / 5 / 2;
     @include rwd(large){
         grid-area: 1 / 1 / 5 / 3;
-      }
+    }
 }
 
 .intem_comprarural_content{
-  grid-area: 1 / 2 / 5 / 4;
-  margin-bottom: -1.5rem;
-  @include rwd(large){
-      grid-area: 1 / 3 / 4 / 5;
+    grid-area: 1 / 2 / 5 / 4;
+    margin-bottom: -1.5rem;
+    @include rwd(large){
+        grid-area: 1 / 3 / 4 / 5;
     }
 }
 
 
 .comprarural_text{
-  font-size: 0.6em;
-  max-width: 80%;
-  text-align: justify;
-  margin:0 0 0.6rem 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  @include rwd(425px){
-    font-size: var(--text_comment);
-  }
-  @include rwd(mediumLarge){
-      max-width: 80%;
-      font-size: var(--texto);
-  }
-  @include rwd(large){
-        font-size: var(--menu);
-
-  }
-  @include rwd(1200px){
-        font-size: 0.9em;
-  }
-  @include rwd(extralarge){
-        font-size: 1.3em;
-        margin-bottom: 1.5rem;
-  }
-}
-
-.item_comprarural_form{
-
-}
-.comprarural-addform{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  max-width: 90%;
-  margin: 0 auto;
-  @include rwd(large){
+    font-size: 0.6em;
     max-width: 80%;
-  }
+    text-align: justify;
+    margin:0 0 0.6rem 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include rwd(425px){
+      font-size: var(--text_comment);
+    }
+    @include rwd(mediumLarge){
+        max-width: 80%;
+        font-size: var(--texto);
+    }
+    @include rwd(large){
+          font-size: var(--menu);
+
+    }
+    @include rwd(1200px){
+          font-size: 0.9em;
+    }
+    @include rwd(extralarge){
+          font-size: 1.3em;
+          margin-bottom: 1.5rem;
+    }
+}
+
+.comprarural-addform{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 90%;
+    margin: 0 auto;
+    @include rwd(large){
+      max-width: 80%;
+    }
 }
 .compra_email{
     background:var(--compra_rural_fondo1);
@@ -88,26 +88,18 @@
     font-size: var(--text_form);
     @include rwd(mediumLarge){
       font-size: 0.8em;
-      }
-
-  input[type="text"]{
-
-  }
-
+    }
 }
 
 .comprarural-addform .form-item-email{
     grid-area: 1 / 1 / 2 / 4;
-    //background: red;
 }
 .comprarural-addform .form-checkboxes{
     grid-area: 2 / 1 / 3 / 3;
-  //background: red;
 }
 
 .comprarural-addform .form-actions{
     grid-area: 2 / 3 / 3 / 4;
-  //  background: red;
   .form-submit{
     margin-top:0.3rem;
     background: var(--compra_rural_fondo1);
@@ -132,22 +124,22 @@
 
 
 #edit-politica-privacidad .form-item-politica-privacidad-acepto-la-politica-de-privacidad {
-  @include rwd(mediumLarge){
+   @include rwd(mediumLarge){
     margin-top:1.5rem;
     }
     @include rwd(large){
       margin-top:0.5rem;
-      }
-      @include rwd(1039px){
-        margin-top:2rem;
-        }
+    }
+    @include rwd(1039px){
+      margin-top:2rem;
+    }
 
-      .option{
+    .option{
         font-size: var(--leer_mas);
         margin-top: -0.3rem;
         @include rwd(mediumLarge){
           font-size: 0.7rem;
-        }
+      }
         @include rwd(large){
           font-size: 0.7rem;
         }
@@ -165,13 +157,8 @@
     @include rwd(large){
         max-width: 80%;
         margin-top: 1rem;
-      }
+    }
   }
-}
-
-.compra_politica_privacidad {
-  //border: none;
-
 }
 
 
@@ -217,7 +204,6 @@ input[type="checkbox"]:checked + label:after {
 
 
 .comprarural-addform .form-actions .form-submit {
-    //margin-top: 1.3rem;
     @include rwd(large){
       font-size: 1.1em;
     }

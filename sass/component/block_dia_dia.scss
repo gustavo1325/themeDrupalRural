@@ -1,20 +1,5 @@
 @import"mixin";
-//cambio el orden del contenido HTML
 
-/*.views-row.clearfix.row-2 {
-  .views-col.col-1 {
-    display:-webkit-flex;
-	  display: -ms-flexbox;
-	  display: flex;
-    background: red;
-    .views-field-field-imatge-post{
-        background: red;
-        order:-1;
-    }
-}
-
-
-}*/
 #container_dia{
   max-width: var(--max-width-contetnt);
   margin: 0 auto;
@@ -61,29 +46,14 @@
 }
 
 .time_post1{
-  color:var(--barra_texto_suscribete_leermas);
-  font-size:0.9em;
+    color:var(--barra_texto_suscribete_leermas);
+    font-size:0.9em;
     @include rwd(extralarge){
       font-size:1.2em;
-  }
-  @include rwd(extralarge){
-    font-size: 2em;
-  }
-  /*.bocadillo-cuadrado
-    position: relative
-    height: 200px
-    width: 300px
-    background: $color-bocadillo
-    box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5)
-    &:before
-        border: 25px solid $color-bocadillo
-        content: ''
-        border-left-color: transparent
-        border-bottom-color: transparent
-        border-right-color: transparent
-        position: absolute
-        bottom: -48px
-        left: calc(50% - 25px)*/
+    }
+    @include rwd(extralarge){
+      font-size: 2em;
+    }
 }
 
 .dia_post_content{
@@ -131,19 +101,11 @@
 
 }
 .borde_flecha{
-  grid-area: 1 / 1 / 5 / 2;
-  position: relative;
- background: var(--fondo_principal);
- display: grid;
- align-items: center;
- //z-index:600;
-//background: fff;
-  //box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
-  @include rwd(mediumLarge){
-    //width: 100%;
-    //grid-area: 1 / 2 / 3 / 3
-    }
-
+   grid-area: 1 / 1 / 5 / 2;
+   position: relative;
+   background: var(--fondo_principal);
+   display: grid;
+   align-items: center;
 }
 .borde_flecha::before{
   border: 25px solid var(--fondo_principal);
@@ -154,34 +116,31 @@
   position: absolute;
   right:  -30px;
   bottom: calc(50% - 20px);
-
 }
 
 
-  .content-items{
+.content-items{
     max-width: 80%;
     padding-left: 0.5rem;
     margin-left: 0.7rem;
     display: flex;
     flex-direction: column;
-    }
+}
 
   //segundo imtem de plana movil home
-  .dia_post_content1{
+.dia_post_content1{
     display:grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .borde_flecha1{
+}
+.borde_flecha1{
     grid-area: 1 / 2 / 5 / 3;
     position: relative;
     background: var(--fondo_principal);
     display: grid;
     align-items: center;
+}
 
-
-  // z-index:700;
-  }
-  .borde_flecha1::before{
+.borde_flecha1::before{
     border: 25px solid var(--fondo_principal);
 
     content: '';
@@ -191,29 +150,28 @@
     position: absolute;
     left: -30px;
     bottom:  calc(50% - 20px);
-  }
-
-
-  .dia_post_item_img1{
-      grid-area: 1 / 1 / 5 / 2;
-      text-align: right;
-  }
-
-  .time_post2{
-    color:var(--barra_texto_suscribete_leermas);
-  }
-
-.img_like_dia{
-  position:relative;
-  top:2px;
-  width: 13px;
-  height:13px;
-  object-fit: cover;
-  object-position: 0px 0px;
-  padding-top:1.5px;
 }
 
-//object-fit
+
+.dia_post_item_img1{
+      grid-area: 1 / 1 / 5 / 2;
+      text-align: right;
+}
+
+.time_post2{
+    color:var(--barra_texto_suscribete_leermas);
+}
+
+.img_like_dia{
+    position:relative;
+    top:2px;
+    width: 13px;
+    height:13px;
+    object-fit: cover;
+    object-position: 0px 0px;
+    padding-top:1.5px;
+}
+
 
 .img_dia{
   width: 100%;

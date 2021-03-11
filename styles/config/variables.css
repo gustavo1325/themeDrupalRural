@@ -23,7 +23,12 @@
   --interlineado:1.6;
   --max-width-contetnt:1400px;
   --max-width-header:1900px;
-  --padding-lateral:1rem; }
+  --padding-lateral:1rem;
+  --fontSize: 19px;
+  --lineWidth: 2px;
+  --lineColor: #CCC;
+  --backgroundColor: #FFF;
+  --xPadding: 10px; }
 
 p {
   line-height: var(--interlineado); }

@@ -8,9 +8,9 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      border-bottom: 60px solid var(--fondo_texto_separado);
-      border-top: 50px solid var(--fondo_texto_separado);
-      margin-top: 0px; } }
+      margin-top: 0px;
+      padding-bottom: 60px;
+      padding-top: 50px; } }
 
 .content_item {
   display: flex;
@@ -22,7 +22,7 @@
       margin-top: 2rem; } }
 
 .item_img_instagram {
-  border-top: 25px solid var(--fondo_texto_separado); }
+  padding-top: 25px; }
   @media screen and (min-width: 767px) {
     .item_img_instagram {
       max-width: 35%; } }

@@ -1,11 +1,60 @@
-#content_node {
-  margin-top: 1.2rem; }
+#content_post {
+  max-width: var(--max-width-contetnt);
+  background: var(--fondo_principal);
+  margin: 0 auto; }
+  @media screen and (min-width: 767px) {
+    #content_post {
+      margin-top: -2.4%; } }
+  @media screen and (min-width: 1100px) {
+    #content_post {
+      margin-top: -2%; } }
+  @media screen and (min-width: 1400px) {
+    #content_post {
+      margin-top: -1%; } }
 
-#item_title {
+@media screen and (min-width: 767px) {
+  #item_img_post {
+    float: left; } }
+
+.post_img {
+  width: var(--width_post);
+  height: var(--height_post);
+  object-fit: cover;
+  object-position: 0px 0px; }
+  @media screen and (min-width: 767px) {
+    .post_img {
+      padding-right: 10px; } }
+
+.flecha_img {
+  display: block;
+  margin: auto;
+  cursor: pointer; }
+  @media screen and (min-width: 767px) {
+    .flecha_img {
+      display: none; } }
+
+#content_items_post {
+  margin-bottom: 1.2rem; }
+
+#item_title_post {
   font-size: var(--menu);
-  color: var(--tipografi_principal); }
-  #item_title h2 {
-    padding: 0 1.2rem; }
+  color: var(--tipografi_principal);
+  text-align: left;
+  padding-bottom: 2rem; }
+  @media screen and (min-width: 767px) {
+    #item_title_post {
+      float: left;
+      margin-top: 2rem; } }
+  #item_title_post h2 {
+    padding: 0 1.2rem;
+    text-align: left; }
+
+.titulo_post {
+  padding-left: 1.2rem; }
+
+.borde_titulo {
+  max-width: 150px;
+  padding-left: 1.2rem; }
 
 #borde_fantasma {
   border-bottom: 5px solid var(--compra_rural_fondo2);
@@ -26,6 +75,9 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 2.2rem; }
+  @media screen and (min-width: 767px) {
+    .content_redes {
+      clear: both; } }
 
 .content_comparte ul {
   padding-left: 1.2rem; }
@@ -58,22 +110,12 @@
   margin-top: 0.3rem;
   margin-right: 1.2rem; }
 
-.flecha_img {
-  display: block;
-  margin: auto; }
-
-.post_img {
-  width: var(--width_post);
-  height: var(--height_post);
-  object-fit: cover;
-  object-position: 0px 0px; }
-
 #item_img {
   position: relative; }
 
 #efecto1 {
   position: absolute;
-  top: 80%;
+  top: 65%;
   left: 50%; }
 
 /*article#comment-2 footer, article#comment-1 footer, article#comment-3 footer, article#comment-4 footer, article#comment-5 footer {
@@ -108,6 +150,9 @@ div#content_node article {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem; }
+  @media screen and (min-width: 767px) {
+    .coment_post {
+      width: 500px; } }
   .coment_post label {
     display: none; }
   .coment_post #edit-preview {
@@ -215,4 +260,13 @@ background-image: url("../img/relleno_likes.jpg");
 background-repeat: no-repeat;
 background-position: 23px ;*/
   background: linear-gradient(to right, #353d2d var(--contador_like), transparent 50%);
+  cursor: pointer; }
+
+#galeria_post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2rem; }
+
+#galeria_post_siguiente, #galeria_post_anterior {
   cursor: pointer; }

@@ -1,0 +1,42 @@
+<header class="main-header">
+  <div class="container-header">
+    <div id="header_top" clas="header-item">
+      {% if page.header_top %}
+        {{page.header_top}}
+      {% endif %}
+      </div>
+
+      <div id="header-header" class="header-item">
+      {% if page.header %}
+        {{page.header}}
+      {% endif %}
+      </div>
+  </div>
+</header>
+
+<section>
+    <div id="main-content_contact" clas="main-item">
+      {% if page.content %}
+          <div id="item_contact_gif">
+                <img class="" src="/rural/web/themes/custom/manosminimal/img/Logo(Contacto).gif" alt="gif logo"/>
+          </div>
+
+          {{page.content }}
+
+      {% endif %}
+
+    </div>
+</section>
+<footer class="main-footer">
+    <div id="footer_contact" class="footer-item">
+      {% if page.footer_firs %}
+          {{page.footer_firs}}
+      {% endif %}
+    </div>
+
+<div id="footer_contact" class="footer-item">
+  {% if page.footer %}
+      {{page.footer}}
+  {% endif %}
+</div>
+</footer>

@@ -1,3 +1,11 @@
+/*
+body{
+  @include rwd(1401px){
+        background: var(--fondo_principal);
+  }
+
+}
+*/
 #block-menuprincipalstock .main-menu-toggle {
   display: none; }
 
@@ -78,8 +86,8 @@
       top: 17px; } }
   @media screen and (min-width: 1200px) {
     #item-compra::before {
-      top: 16px;
-      left: -14px; } }
+      top: 13px;
+      left: -12px; } }
 
 @media screen and (min-width: 992px) {
   #block-manosminimal-main-menu {

@@ -23,3 +23,19 @@
   max-width: 80%;
   margin: 0 auto;
   padding: 1rem 0; }
+
+@media screen and (min-width: 767px) {
+  #item_img_projet_phone {
+    display: none; } }
+
+#item_title_projet, #item_img_projet {
+  display: none; }
+  @media screen and (min-width: 767px) {
+    #item_title_projet, #item_img_projet {
+      display: block; } }
+
+#galeria_img_phone {
+  padding-top: 2rem; }
+
+#flecha_galeria {
+  padding-bottom: 2rem; }
