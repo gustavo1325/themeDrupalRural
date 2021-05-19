@@ -1,2 +1,5 @@
 #block-manosminimal-branding {
   max-width: 300px; }
+  @media screen and (min-width: 1200px) {
+    #block-manosminimal-branding {
+      max-width: 350px; } }

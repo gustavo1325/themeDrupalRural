@@ -7,15 +7,19 @@ $backgroundColor: #fcf9f0;
 $xPadding: 10px;
 
 
+#content_contact_content{
+  background: var(--fondo_principal);
+}
 
 
 #main-content_contact{
   max-width: var(--max-width-contetnt);
   background: var(--fondo_principal);
   margin:0 auto;
-  padding-top: 1.5rem;
+padding-top: 6.5rem;
 
   @include rwd(large){
+    padding-top: 6.5rem;
   display: grid;
   grid-template-columns:   1fr 1fr;
   }
@@ -35,6 +39,7 @@ $xPadding: 10px;
   }
   @include rwd(xlarge){
     width: 500px;
+    margin-left: 5.8rem;
   }
 
 }
@@ -176,6 +181,17 @@ textarea#edit-field-comentarirural-0-value{
   right: 10px;
   color:var(--compra_rural_fondo2);
   background: var(--fondo_principal);
+  border-color: var(--compra_rural_fondo2);
+  @include rwd(960px){
+    right: 30px;
+  }
+}
+.class_submit_contact{
+//  position:relative;
+  bottom: 70px;
+  right: 10px;
+  color:var(--compra_rural_fondo2);
+  background: var(--fondo_principal) !important;
   border-color: var(--compra_rural_fondo2);
   @include rwd(960px){
     right: 30px;

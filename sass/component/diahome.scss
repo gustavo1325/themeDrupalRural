@@ -1,5 +1,18 @@
 @import"mixin";
 
+.diahome_item{
+   @include rwd(large){
+     padding-top:4.5rem;
+   }
+}
+.img_inici_dia{
+  border-bottom: 25px solid var(--fondo_texto_separado);
+}
+#contentdiahomecontent{
+  background:var(--fondo_principal);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 #text_diahome {
     margin-bottom: 0;
    padding-bottom: 1rem;
@@ -16,10 +29,21 @@
     color:var(--tipografi_principal);
     margin:0 !important;
     padding-top: 2.3rem;
+    @include rwd(1100px){
+      padding-left: 10rem;
+      padding-right: 7rem;
+    }
   }
   p{
     font-size: var(--texto);
     text-align: justify;
+    @include rwd(large){
+      line-height: 2em;
+    }
+    @include rwd(1100px){
+      padding-left: 10rem;
+      padding-right: 10rem;
+    }
   }
     padding: 0 1rem;
     @include rwd(large){
@@ -28,9 +52,11 @@
     }
 }
 
+
 .diahome_img{
   border-bottom: 25px solid var(--fondo_texto_separado);
 }
+
 
 #borde_fantasma{
   @include rwd(large){
@@ -43,4 +69,10 @@
   @include rwd(1400px){
     max-width: 12%;
   }
+}
+
+#contentdiahome #borde_fantasma{
+  @include rwd(1100px){
+  margin-left: 10rem;
+}
 }

@@ -1,5 +1,11 @@
 @import"mixin";
 
+#containerhort{
+  @include rwd(large){
+    background:var(--fondo_principal);
+  }
+}
+
 #content_els_horts{
   max-width:var(--max-width-contetnt);
   background:var(--fondo_principal);
@@ -9,15 +15,27 @@
     color:var(--tipografi_principal);
     margin:0 !important;
     padding-top: 2.3rem;
+    @include rwd(1100px){
+      padding-left: 7rem;
+    }
   }
   p{
     text-align: justify;
+      @include rwd(large){
+        line-height: 2em;
+
+      }
+      @include rwd(1100px){
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
   }
 
 }
 
 #img_slider_horts img{
   @include rwd(large){
+    padding-top:4.5rem;
     border-bottom: 25px solid var(--fondo_texto_separado);
   }
 }
@@ -25,6 +43,10 @@
     display:none;
     @include rwd(large){
       display:block;
+    }
+    @include rwd(1000px){
+      display:block;
+      padding-bottom: 2rem;
     }
 }
 .descripcion_horts_phone{
@@ -37,6 +59,7 @@
 .item_horts_descripcion{
   max-width: 90%;
   margin:0 auto;
+
    h1{
 
       font-size: var(--titulo);
@@ -58,6 +81,9 @@
     //flex-direction: column;
     justify-content: space-around;
   }
+  @include rwd(1000px){
+    padding-bottom: 2rem;
+  }
 }
 
 #galeria_img_phone{
@@ -66,6 +92,7 @@
   }
   max-width: 90%;
   margin:0 auto;
+  text-align: center;
 }
 
 .container_galeria_hort{
@@ -85,9 +112,13 @@
 #content_mapa_hort{
   max-width: 90%;
   margin:0 auto;
-  display:grid;
+  //display:grid;
+  display:none;
   grid-template-columns: 1fr 1fr 1fr;
   //grid-area: 1 / 2 / 5 / 3;
+  @include rwd(1000px){
+    padding-bottom: 2rem;
+  }
 }
 
 #item_title_mapa{
@@ -107,4 +138,9 @@
   margin-right: 10px;
   margin-top:10px;
   cursor: pointer;
+}
+#borde_fantasma {
+  @include rwd(1100px){
+    margin-left: 7rem;
+  }
 }

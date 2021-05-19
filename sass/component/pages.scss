@@ -1,9 +1,12 @@
 @import"mixin";
 
 .views-field-body{
+  max-width: var(--max-width-contetnt);
+  margin:0 auto;
   @include rwd(large){
   display: flex;
-  justify-content: center;}
+  justify-content: center;
+}
   .field-content{
     @include rwd(large){
     max-width: 80%;
@@ -11,10 +14,11 @@
   }
 }
 #block-views-block-pages-block-1{
-  max-width: var(--max-width-contetnt);
+  //max-width: var(--max-width-contetnt);
   background:var(--fondo_principal);
   margin: 0 auto;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: justify;
   p{
     font-family: var(--tipografia);
@@ -37,6 +41,8 @@
 }
 
 .img-pages{
+  max-width: var(--max-width-contetnt);
+  margin:0 auto;
   .field-content{
       text-align: center;
     img{

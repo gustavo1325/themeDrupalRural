@@ -1,0 +1,12 @@
+@import"mixin";
+
+div#block-manosminimal-local-tasks {
+        @include rwd(large){
+          padding-top: 100px;
+        }
+    padding-top: 100px;
+}
+
+#edit-name, #edit-pass{
+  max-width: 50%;
+}

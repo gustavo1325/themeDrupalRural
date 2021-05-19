@@ -2,7 +2,6 @@
   color: #fff; }
 
 #content_comprarural {
-  max-width: var(--max-width-contetnt);
   margin: 0 auto;
   background: var(--compra_rural_fondo1); }
   @media screen and (min-width: 767px) {
@@ -138,6 +137,9 @@
         max-width: 80%;
         margin-top: 1rem; } }
 
+#comprarural-addform .form-actions {
+  margin-bottom: 0px; }
+
 .compra_politica_privacidad {
   visibility: hidden; }
 
@@ -175,7 +177,8 @@ input[type="checkbox"]:checked + label:after {
   display: none; }
   @media screen and (min-width: 767px) {
     .img_ondasfooter {
-      display: block; } }
+      display: block;
+      margin-top: -5px; } }
 
 @media screen and (min-width: 767px) {
   .img_comprarural {
@@ -184,3 +187,6 @@ input[type="checkbox"]:checked + label:after {
 @media screen and (min-width: 960px) {
   .img_comprarural {
     margin-bottom: -0.7rem; } }
+
+.item_comprarural #lupa {
+  display: none; }

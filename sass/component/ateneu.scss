@@ -2,20 +2,58 @@
 @import"mixin";
 
 #content_ateneu{
-  max-width:var(--max-width-contetnt);
+//  max-width:var(--max-width-contetnt);
   background:var(--fondo_principal);
-  margin:0 auto;
+  //margin:0 auto;
       h1{
         color:var(--tipografi_principal);
         margin:0 !important;
         padding-top: 2.3rem;
+          @include rwd(1100px){
+            padding-left: 7rem;
+            padding-right: 7rem;
+          }
+
       }
       p{
         text-align: justify;
+        @include rwd(large){
+          line-height: 2em;
+
+        }
+        @include rwd(1100px){
+        padding-left: 7rem;
+        padding-right: 7rem;
+      }
       }
 }
 
+#item_ateneu_descripcio_content{
+    background:var(--fondo_principal);
+
+    @include rwd(1000px){
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+}
+#item_ateneu_descripcio{
+    max-width:var(--max-width-contetnt);
+}
+
+#item_ateneu90{
+  max-width: 90%;
+  margin: 0 auto;
+}
+#content_projet_content{
+  @include rwd(1000px){
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #d6dacc;
+  }
+}
 #content_projet{
+  margin: 0 auto;
+  max-width:var(--max-width-contetnt);
     background: #d6dacc;
 }
 
@@ -25,14 +63,15 @@
     h1{
       font-size: var(--texto);
       color: var(--verde_titulo);
-
+      text-align: center;
+      padding-bottom: 1rem;
     }
 }
 
 #item_img_projet{
     max-width: 80%;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 #item_img_projet_phone{

@@ -1,8 +1,18 @@
 @import"mixin";
 
+#nodepost_content_content{
+  background: var(--fondo_principal);
+    @include rwd(large){
+      padding-top: 7rem;
+    }
+  @include rwd(1000px){
+    //padding-top: 1rem;
+  }
+}
+
 #content_post{
   max-width: var(--max-width-contetnt);
-  background: var(--fondo_principal); //BUSCA OTRO SELECTOR PARA ESTO PORQUE CAMBIA EL FONDO DEL MODULO DE COMPRA RURAL
+  background: var(--fondo_principal);
 
   margin:0 auto;
   @include rwd(large){
@@ -19,7 +29,6 @@
 
 #item_img_post{
   @include rwd(large){
-
     float:left;
   }
 }
@@ -30,7 +39,8 @@
     object-fit: cover;
     object-position: 0px 0px;
     @include rwd(large){
-      padding-right: 10px;
+      padding-right: 30px;
+      padding-top: 1rem;
     }
   }
 
@@ -44,9 +54,8 @@
     }
   }
 
-  #content_items_post{
+#content_items_post{
     margin-bottom: 1.2rem;
-
   }
 #item_title_post{
   font-size: var(--menu);
@@ -55,38 +64,42 @@
   padding-bottom: 2rem;
 
   @include rwd(large){
-
     float:left;
     margin-top: 2rem;
-
   }
     h2{
-      padding: 0 1.2rem;
       text-align: left;
-      @include rwd(large){
-
-
-      }
     }
 }
 .titulo_post{
   padding-left: 1.2rem;
+  @include rwd(large){
+    padding-left:0px;
+    padding-right: 1rem;
+  }
 }
 .borde_titulo{
   max-width: 150px;
   padding-left: 1.2rem;
+  @include rwd(large){
+    padding-left:0px;
+  }
 }
 
 #borde_fantasma{
   border-bottom: 5px solid var(--compra_rural_fondo2);
   max-width: 35%;
-  margin-left: 1.2rem;
+//  margin-left: 1.2rem;
 }
 
 
 #format_date span{
   font-size: var(--leer_mas);
   padding-left: 1.2rem;
+  @include rwd(1000px){
+    font-size: var(--menu);
+  }
+
 }
 
 #text_post{
@@ -95,6 +108,7 @@
     font-size: var(--texto);
     text-align: justify;
     padding: 0 1.2rem;
+
 
   }
 }
@@ -271,7 +285,6 @@ textarea#edit-comment-body-0-value {
   margin-left: 0.3rem;
   li{}
   a{
-
     text-decoration: none;
     color:var(--tipografi_principal);
     font-size: var(--text_comment);
@@ -304,7 +317,9 @@ form#comment-form {
   }
 }
 
+
 .js-comment{
+  //padding-top:100px;
   /*article{
 
    border:1px solid #d9d9d9;
@@ -315,7 +330,7 @@ form#comment-form {
     font-size: var(--text_comment);
     padding: 0.5rem;
     span{
-      font-size:  var(--text_form);
+      font-size:  1em;
     }
 
   }

@@ -21,7 +21,7 @@ body{
 .main-menu-toggle{
   margin: 0.5rem 0.5rem ;
   text-align: center;
-  width: 2rem;
+  width: 1.6rem;
   height: 1.1rem;
   background: linear-gradient(var(--menu_hamburger) 15%, transparent 15%, transparent 40%,
     var(--menu_hamburger) 40%, var(--menu_hamburger) 55%, transparent 55%, transparent 85%,
@@ -185,13 +185,13 @@ body{
 //----------menu princiopal
 #block-manosminimal-branding{
   @include rwd(extralarge){
-        max-width: 450px !important;
+      //  max-width: 450px !important;
   }
 }
 
 #header_top{
   @include rwd(extralarge){
-    padding-bottom: 1.9rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -200,6 +200,7 @@ body{
     .main-nav{
       @include rwd(extralarge){
         width:60em;
+        padding-left: 60px;
       }
 
     }
@@ -220,10 +221,14 @@ body{
   @include rwd(large){
     padding-bottom:5px;
     border-bottom: 10px solid transparent;
-    border-image-source: url(../img/focomenum.png);
+    border-image-source: url(../img/focomenun200.png);
     border-image-repeat: round;
-    border-image-slice: 35;
+    border-image-slice: 85;
     border-image-width: 0 0 15px 0;
   }
 
+}
+
+img#img_search_lupa {
+    margin-right: 1rem;
 }

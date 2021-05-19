@@ -1,0 +1,101 @@
+@import"mixin";
+
+//la cabecera la dejo fija
+body{
+  position:relative;
+}
+
+.main-header{
+  position:fixed;
+  z-index: 10000;
+  width: 100%;
+    @include rwd(large){
+      position:fixed;
+      z-index: 10000;
+      width: 100%;
+    }
+
+}
+
+
+//bajo imagen principal el alto de la cabecera
+
+.views-field.views-field-field-img-home-phone {
+    padding-top: 80px;
+}
+
+//dejo fija imagen principal
+
+
+#block-views-block-image-inici-phone-block-1, .quisom_item_img, #img_slider_horts, .compra_item_img, .diahome_item, #img_slider_ateneu{
+    position:relative;
+      z-index: -1;
+    //  transition: all 0.9s;
+}
+
+#block-views-block-image-inici-block-1{
+  position:relative;
+    z-index: -1;
+}
+
+#block-views-block-pages-block-1{
+  position:relative;
+  z-index: 1000;
+  //transition: all 0.2s;
+
+}
+.fijadoElemento{
+  position:fixed;
+  top:50px;
+}
+
+//modulo dia_a_dia
+
+#block-diadiablock{
+  position: relative;
+  z-index: 5000;
+  //transition: all 0.9s;
+
+}
+
+//modulo content_instagram
+#block-sigueinstagramblock{
+  position: relative;
+  z-index: 6000;
+  //transition: all 0.9s;
+
+}
+
+
+#block-compraruralblock{
+  position: relative;
+  z-index: 7000;
+}
+
+div#img_ondasfooter {
+    margin-bottom: -3px;
+}
+
+#contetnt_footerual, #block-footeruralblock, #block-newsletter-sularyyblock-2, #img_ondasfooter, #block-licenciaderechosblock #footer_contact{
+  position: relative;
+  z-index: 8000;
+}
+#main-content{
+  //transition: all 0.9s;
+}
+
+#footer_contact{
+  background: #fff;
+}
+
+//creo las capa para el paralax de quiso_movil
+.quisom_item{
+  position: relative;
+  z-index: -1;
+}
+/*
+#feature\:fourche {
+    position: relative;
+    z-index: 8000;
+    margin-top: -10px}
+*/

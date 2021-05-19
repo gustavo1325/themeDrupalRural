@@ -1,0 +1,35 @@
+/*
+#content{
+  position: relative;
+}
+#randomid{
+    //display:none;
+    z-index: 19999;
+    position: fixed;
+    top:33%;
+    left: 28%;
+    @include rwd(large){
+      top:40%;
+    }
+}
+
+#popup_mobil{
+  @include rwd(large){
+    display:none;
+  }
+}
+
+#popup_destok{
+  //display:none;
+  @include rwd(large){
+    //display:block;
+  }
+}
+.img_popup{
+  padding-top: 2rem;
+  object-fit: contain;
+  object-position: 0px 0px;
+  width: 500px;
+  height: 400px;
+}
+*/

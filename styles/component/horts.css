@@ -1,3 +1,7 @@
+@media screen and (min-width: 767px) {
+  #containerhort {
+    background: var(--fondo_principal); } }
+
 #content_els_horts {
   max-width: var(--max-width-contetnt);
   background: var(--fondo_principal);
@@ -7,11 +11,22 @@
     color: var(--tipografi_principal);
     margin: 0 !important;
     padding-top: 2.3rem; }
+    @media screen and (min-width: 1100px) {
+      #content_els_horts h1 {
+        padding-left: 7rem; } }
   #content_els_horts p {
     text-align: justify; }
+    @media screen and (min-width: 767px) {
+      #content_els_horts p {
+        line-height: 2em; } }
+    @media screen and (min-width: 1100px) {
+      #content_els_horts p {
+        padding-left: 7rem;
+        padding-right: 7rem; } }
 
 @media screen and (min-width: 767px) {
   #img_slider_horts img {
+    padding-top: 4.5rem;
     border-bottom: 25px solid var(--fondo_texto_separado); } }
 
 .descripcion_horts_destok {
@@ -19,6 +34,10 @@
   @media screen and (min-width: 767px) {
     .descripcion_horts_destok {
       display: block; } }
+  @media screen and (min-width: 1000px) {
+    .descripcion_horts_destok {
+      display: block;
+      padding-bottom: 2rem; } }
 
 @media screen and (min-width: 767px) {
   .descripcion_horts_phone {
@@ -42,10 +61,14 @@
     #content_galeria_hort {
       display: flex;
       justify-content: space-around; } }
+  @media screen and (min-width: 1000px) {
+    #content_galeria_hort {
+      padding-bottom: 2rem; } }
 
 #galeria_img_phone {
   max-width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
   @media screen and (min-width: 767px) {
     #galeria_img_phone {
       display: none; } }
@@ -63,8 +86,11 @@
 #content_mapa_hort {
   max-width: 90%;
   margin: 0 auto;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr; }
+  @media screen and (min-width: 1000px) {
+    #content_mapa_hort {
+      padding-bottom: 2rem; } }
 
 #item_title_mapa {
   grid-area: 1 / 1 / 2 / 2;
@@ -81,3 +107,7 @@
   margin-right: 10px;
   margin-top: 10px;
   cursor: pointer; }
+
+@media screen and (min-width: 1100px) {
+  #borde_fantasma {
+    margin-left: 7rem; } }

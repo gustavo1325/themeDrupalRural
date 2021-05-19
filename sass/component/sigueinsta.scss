@@ -1,5 +1,8 @@
 @import"mixin";
 
+#block-sigueinstagramblock{
+  background: var(--fondo_texto_separado);
+}
 
 #content_instagram{
   max-width: var(--max-width-contetnt);
@@ -13,7 +16,7 @@
   //  border-bottom: 60px solid var(--fondo_texto_separado);
     //border-top: 50px solid var(--fondo_texto_separado);
     margin-top: 0px;
-    padding-bottom: 60px;
+    padding-bottom: 5rem;
     padding-top: 50px;
   }
 }

@@ -1,7 +1,7 @@
 @import"mixin";
 
 #content_items{
-  max-width: var(--max-width-contetnt);
+
   background:var(--fondo_principal);
   margin:0 auto;
   padding-bottom:2rem;
@@ -11,7 +11,10 @@
     @include rwd(large){
       padding-top: 2.3rem;
     }
-  }5
+    @include rwd(1000px){
+      //padding-left: 3rem;
+    }
+  }
   p{
     //font-size:0.8em;
     @include rwd(large){
@@ -21,6 +24,21 @@
   }
 }
 
+.compra_item_img{
+    @include rwd(large){
+      padding-top:4.5rem;
+    }
+}
+
+#item_distribucio_content{
+  max-width: var(--max-width-contetnt);
+  margin:0 auto;
+  @include rwd(large){
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+}
 .compra_img{
    border-bottom: 25px solid var(--fondo_texto_separado);
 }
@@ -34,6 +52,7 @@
      font-size: 1.2em;
      @include rwd(large){
      font-size: var(--titulo);
+
      }
      @include rwd(1200px){
        font-size: 2em;
@@ -44,8 +63,12 @@
 
   #borde_fantasma_compra{
     border-bottom: 5px solid var(--compra_rural_fondo2);
-    margin-left: 0;
+    margin-left: 0rem;
+
     width: 8rem;
+    @include rwd(large){
+      margin-left: 3rem;
+    }
   }
 }
 
@@ -61,7 +84,7 @@
         padding-bottom:1rem;
       }
       h1{
-        padding-top:1rem;
+        padding-top:2rem;
         font-size: 1rem;
         border-bottom: 3px solid var(--compra_rural_fondo2);
         @include rwd(large){
@@ -77,13 +100,17 @@
       p{
         margin:0;
         font-size: 0.9em;
+
+        @include rwd(800px){
+          font-size: 0.8em;
+        }
         @include rwd(1200px){
           font-size: 1.2em;
         }
       }
 }
 .distribucion_text{
-  padding:1rem 0 2.5rem 0;
+  padding:1rem 2rem 2.5rem 0;
 }
 .distribucion_img{
   @include rwd(large){
@@ -97,18 +124,31 @@
 }
 
 #content_items_cistellas{
-  max-width: 95%;
+  max-width: var(--max-width-contetnt);
   margin:0 auto;
+  //max-width: 95%;
+
   @include rwd(large){
-    max-width: 100%;
+  //  max-width: 100%;
   }
 }
 
+#item_cistelles_botiga_content{
+  background: var(--fondo_texto_separado);
+  @include rwd(1000px){
+  padding-top: 2rem;
+  padding-bottom: 2rem;}
+}
 
 #item_cistelles_botiga{
+  max-width: var(--max-width-contetnt);
+  margin:0 auto;
   background: var(--fondo_texto_separado);
   h1{
-    text-align: center;
+  //  text-align: center;
+    @include rwd(1000px){
+        text-align: left;
+    }
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 4px solid var(--compra_rural_fondo2);
@@ -147,7 +187,9 @@
   max-width: 80%;
   margin:0 auto;
   font-size:0.7em;
-
+    h1{
+      padding-top: 2rem;
+    }
 
   @include rwd(1200px){
     font-size: 1em;
@@ -269,12 +311,52 @@
 
 .borde_compra_img{
   max-width: 50%;
+
 }
 
-.parrafo_cistellas1{
+/*#parrafo_cistellas1{
+  @include rwd(1000px){
+    padding-top: 1rem
+    font-weight: 300;
+  }
+}*/
+p.parrafo_cistellas1{
   margin-top: 0px;
-  font-weight: 600;
+  font-weight: 300;
+    margin-right: 1rem;
+  @include rwd(1000px){
+    padding-top: 1rem
+  }
 }
 .parrafo_cistellas{
   margin-top:0;
+  padding-right: 1rem;
+}
+
+.item_distribucion_p{
+    @include rwd(large){
+    line-height: 2em;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.item_distribucion_p_margen{
+  padding-bottom: 4rem;
+}
+
+.img_venta{
+  @include rwd(large){
+    margin-bottom: 2rem;
+  }
+}
+
+
+.titulo_distribucion{
+  @include rwd(large){
+    padding-left: 3rem;
+  }
+}
+
+.informacio_cistellas_text{
+  padding-bottom: 2rem;
 }

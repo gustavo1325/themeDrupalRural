@@ -1,3 +1,6 @@
+#block-diadiablock {
+  background: var(--fondo_principal); }
+
 #container_dia {
   max-width: var(--max-width-contetnt);
   margin: 0 auto;
@@ -24,7 +27,8 @@
   position: relative;
   font-size: var(--titulo);
   margin: 0;
-  padding-top: 1.5rem; }
+  padding-top: 1.5rem;
+  padding-bottom: 2rem; }
   @media screen and (min-width: 1400px) {
     #titulo_dia {
       font-size: 2em;
@@ -128,7 +132,7 @@
 
 .img_like_dia {
   position: relative;
-  top: 2px;
+  top: -2px;
   width: 13px;
   height: 13px;
   object-fit: cover;

@@ -1,3 +1,8 @@
+@import"mixin";
+
 #block-manosminimal-branding{
-  max-width:300px ;
+  max-width:300px;
+  @include rwd(1200px){
+    max-width:350px;
+  }
 }

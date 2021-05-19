@@ -1,9 +1,6 @@
 const $ =jQuery;
 
-$(document).ready(()=>{
 
-
-});
 
 addEventListener('DOMContentLoaded',()=>{
 const post_sumid = document.querySelector('.form-textarea')
@@ -306,13 +303,14 @@ comparteRedes()
 //************************************************BOTTOM LIKE **********************************************************+
 
 
-//extraeidnode extrae el id de la url
+//extrae id node extrae el id de la url
 const extraeidnode = ($url) =>{
-  let id=$url.charAt($url.length-1)
-  return id
+  let id=$url.slice(-5) //sustrae los ultimos 5 digitos d ela url
+  let cadena_sustrae=id.replace(/[^0-9]/g, "") //elimina de la cadena no los caracteres que no son numeros
+  return cadena_sustrae
 }
 
-var idnode= location.pathname;
+var idnode= location.pathname; //devuelve nombre url actual
 var idactualnode = extraeidnode(idnode)
 
 jQuery(document).ready(function(){ //llamada AJAX desde el botom like, envia un ok para aumentar el contadror like en la base de datos
@@ -338,6 +336,7 @@ jQuery(document).ready(function(){ //llamada AJAX desde el botom like, envia un 
   }
 
 const  comprobacionlikes = document.getElementById('like')
+
 if(comprobacionlikes){
  numberlikes()
 }
@@ -346,11 +345,10 @@ if(comprobacionlikes){
 
 
 
-//$('p').one('click', function() {
+
 
     $( "#like" ).click(function(e) {
-      $("#like").off('click');
-
+    //  $("#like").off('click');
       datos = {"actualizalike":"bottom",
                 "idnode" : idactualnode
               };
@@ -361,7 +359,6 @@ if(comprobacionlikes){
                   //dataType: 'text',
                 })
                 .done(function(data){
-                  //console.log(data);
                   let result_count_like= data[0].message["countlike"]
                   const like_img_count = document.getElementById('id_img_like')
                 //  like_img_count .classList.add('img_like_count')
@@ -431,7 +428,7 @@ if(imgpostrural.length > 0){
 
 //------------------------------------- solicitar la URL para decidir que vista del modulo dia a dia mostrar
 
-let urlactual= location.href,
+var urlactual= location.href,
     diahomephone =document.getElementById("diahome_phone"),
     diaadi_phone =document.getElementById("didaadia_phone"),
     didhome_desk =document.getElementById("didhome_desk"),
@@ -448,15 +445,12 @@ let urlactual= location.href,
     if(diaadi_phone){diaadi_phone.style.display="none"}
     if(didhome_desk){didhome_desk.style.display="block"}
     if(diaadi_desk){diaadi_desk.style.display="none"}
-  //  console.log("estoy en dia home escritorio")
-    //document.getElementById("id").style.property="value"
   }
   if(fr == -1 && mediumBp.matches){
     if(diahomephone){diahomephone.style.display="block"}
     if(diaadi_phone){diaadi_phone.style.display="none"}
     if(didhome_desk){didhome_desk.style.display="none"}
     if(diaadi_desk){diaadi_desk.style.display="none"}
-    //console.log("estoy en dia home movil")
   }
 
   if(fr != -1 && largeBp.matches){
@@ -464,7 +458,6 @@ let urlactual= location.href,
     if(diaadi_phone){diaadi_phone.style.display="none"}
     if(didhome_desk){didhome_desk.style.display="none"}
     if(diaadi_desk){diaadi_desk.style.display="block"}
-  //  console.log("estoy en dia a dia escritorio")
   }
 
   if(fr != -1 && mediumBp.matches){
@@ -472,8 +465,6 @@ let urlactual= location.href,
     if(diaadi_phone){diaadi_phone.style.display="block"}
     if(didhome_desk){didhome_desk.style.display="none"}
     if(diaadi_desk){diaadi_desk.style.display="none"}
-      //console.log("estoy en el dia a dia movil")
-
   }
 
   ///////--------------------------------- colocamo img al item del menu con el focomenu PERO NO HACE FALTA
@@ -509,6 +500,8 @@ if(textarea_contact){
 
 
 //cambiar aspecto (imagen y background) del modulo compra a la rural para plana horts y contact
+$(document).ready(()=>{
+
 const patronhorts= new RegExp("horts"),
       patroncontact = new RegExp("contact"),
       backgroundCompra = document.getElementById("content_comprarural"),
@@ -516,14 +509,14 @@ const patronhorts= new RegExp("horts"),
       textconpra=document.getElementById("textconpra"),
       compra_email=document.querySelector('.compra_email'),
       compra_politica_privacidad=document.querySelector('.comprarural-addform label.option'),
-      submit_compra=document.getElementById("edit-submit--3"),
-      submit_compra_contact=document.getElementById("edit-submit--2"),
-      img_cambio=document.getElementById("img_cambio")
+      submit_compra=document.getElementById("compra_desa"),
+      img_cambio=document.getElementById("img_cambio"),
       img_cambio_phone=document.getElementById("img_cambio_phone")
 
 
 frhor=urlactual.search(patronhorts)
 frcont=urlactual.search(patroncontact)
+
 if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor != -1 && mediumBp.matches || frcont != -1 && mediumBp.matches){
       if(backgroundCompra){
         backgroundCompra.style.background='#90b37d'
@@ -536,7 +529,7 @@ if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor !=
         submit_compra.style.background='#90b37d'
         submit_compra.style.borderColor='#fff'
         submit_compra.style.color='#fff'
-        submit_compra_contact.style.background='#90b37d'
+        //submit_compra_contact.style.background='#90b37d'
         submit_compra_contact.style.borderColor='#fff'
         submit_compra_contact.style.color='#fff'
         img_cambio.setAttribute('srcset', '/rural/web/themes/custom/manosminimal/img/els_horts_compra_rural.png')
@@ -544,7 +537,7 @@ if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor !=
 
       }
 }
-
+});
 
 //controlar la altura de las imagenes del horts y ateneu para que sean cuadradas
 const img_galeria_hor_ateneu=  Array.from(document.querySelectorAll('.img_galeria_hort'))
@@ -594,11 +587,15 @@ if(flecha_galeria && img_src1 && img_src2 && img_src3){
 
 //cambiar background del modulo de instagran en la plana de ateneu > 768 y cambio background galeria cuando <768
 const patronateneu= new RegExp("ateneu_rural"),
+      patronquison= new RegExp("qui_som"),
       content_instagram_ateneu=document.getElementById("content_instagram"),
-      img_instagram_phone= document.querySelector('.item_img_instagram')
+      img_instagram_phone= document.querySelector('.item_img_instagram'),
+      background_modulo=document.getElementById("block-sigueinstagramblock")
 frateneu=urlactual.search(patronateneu)
-if(frateneu != -1 && largeBp.matches){
+fraquison=urlactual.search(patronquison)
+if(frateneu != -1 && largeBp.matches || fraquison != -1 && largeBp.matches ){
   content_instagram_ateneu.style.background='#fcf9f0'
+  background_modulo.style.background='#fcf9f0'
 }
 
 //quitar padding-top en la plana de movil del modulo de instagran
@@ -607,7 +604,7 @@ if(frateneu != -1 && mediumBp.matches){
 }
 
 
-//traigo del servidor las URL de los seis post para la galeria_post
+//traigo del servidor las URL de los seis post para la galeria_post botones siguiente y anterior
 
 //boton siguiente
 $( "#galeria_post_siguiente").click(function(e) {
@@ -622,14 +619,16 @@ $( "#galeria_post_siguiente").click(function(e) {
                 if(data[0].message[i] == urlactual){
                 }
               }
-              let length_array= array_post.length
+              var length_array= array_post.length
+            //  condole.log(length_array)
 
                 for(i=0; i<length_array; i++){
-                      if(array_post[i] == urlactual && i<length_array-2){
+                      if(array_post[i] == urlactual && i<length_array-1){
                       location.href= array_post[i+1]
+
                       break
                       }
-                      if(i==length_array-1){
+                      if(i == 5){
                         location.href=array_post[0]
                         break
                       }
@@ -649,22 +648,25 @@ $( "#galeria_post_anterior").click(function(e) {
         .done(function(data){
               for(let i=0; i<6; i++){
                 array_post[i]=data[0].message[i];
+                console.log(array_post[i])
                 if(data[0].message[i] == urlactual){
                 }
               }
               let length_array= array_post.length
 
-                for(i=0; i<length_array -1; i++){
+                for(i=0; i<length_array; i++){
+                      console.log(i)
+                      console.log(urlactual)
                       if(array_post[i] == urlactual && i != 0){
                       location.href= array_post[i-1]
+                      console.log("hola pepe")
                       break
                       }
-                      if(array_post[i] == urlactual && i== 0){
+                     if(array_post[i] == urlactual && i== 0){
                         location.href=array_post[length_array-1]
                         break
                       }
                 }
-
         });
 });
 
@@ -685,6 +687,134 @@ if(post_img && content_post){
           post_img.style.width= (width_content_post / 2 + "px")
          item_title_post.style.width= (width_content_post / 2 + "px")
           post_img.style.height= (width_content_post / 2 + "px")
-          console.log(width_content_post)
       }
+}
+
+//modificar url de iconos de redes en el footer de los post que contiene node en la url
+const patroUrlPost= new RegExp("node"),
+img_face_redes=document.getElementById("img_face_redes"),
+img_insta_redes=document.getElementById("img_insta_redes")
+franodepost=urlactual.search(patroUrlPost)
+if(franodepost != -1){
+  if(img_face_redes && img_insta_redes){
+    img_face_redes.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/facebookVerde.png')
+    img_insta_redes.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/instagramVerde.png')
+  }
+}
+
+
+//----------------------------------------------- PARALLAX -------------------------------------------------------------------
+
+const img_inicio=document.getElementById("block-views-block-image-inici-phone-block-1"),
+img_inicio_movil=document.getElementById("block-views-block-image-inici-block-1"),
+img_quison=document.querySelector('.quisom_item_img'),
+img_horts=document.getElementById("img_slider_horts"),
+img_pagina_compra=document.querySelector('.compra_item_img'),
+img_diadia=document.querySelector('.diahome_item'),
+img_ateneu=document.getElementById("img_slider_ateneu"),
+img_quison_movil=document.querySelector(".quisom_item")
+
+
+/*modulo_main=document.getElementById("main-content"),
+modulo_pages=document.getElementById("block-views-block-pages-block-1"),
+modulo_diadia=document.getElementById("block-diadiablock"),
+modulo_instagram=document.getElementById("block-sigueinstagramblock"),
+modulo_headerHead=document.getElementById("header_held"),
+modulo_headerTop=document.getElementById("header_top"),
+modulo_comprarural=document.getElementById("block-compraruralblock"),
+modulo_ondas=document.getElementById("img_ondasfooter"),
+modulo_footer=document.querySelector('.main-footer'),
+modulo_feature=document.getElementById("feature:fourche")
+
+console.log(modulo_footer)
+*/
+
+//Alturas de elemtos
+/*var a_modulo_headerTop= modulo_headerTop.offsetHeight
+var a_modulo_headerHead= modulo_headerHead.offsetHeight
+*/
+
+window.addEventListener('scroll',() =>{
+  var scrollTop= document.documentElement.scrollTop
+
+//RALENTIZO LA imagen de inicio
+
+//comentado para quitar paralax de pagina de inicio
+/*
+    if(img_inicio  && largeBp.matches){
+      img_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+    }
+
+
+//ralentizado img img_quison
+    if(img_quison  && largeBp.matches){
+      img_quison.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+    }
+//ralentizado img img_horts
+    if(img_horts  && largeBp.matches){
+      img_horts.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+    }
+//realentiza img_pagina_comprar
+    if(img_pagina_compra  && largeBp.matches){
+      img_pagina_compra.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+    }
+//ralentiza diapagina_img
+    if(img_diadia  && largeBp.matches){
+      img_diadia.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+    }
+//ralentiza ateneu_rural
+if(img_ateneu  && largeBp.matches){
+  img_ateneu.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+*/
+
+if(img_inicio){
+  img_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+
+if(img_inicio_movil){
+  img_inicio_movil.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+
+//ralentizado img img_quison
+if(img_quison){
+  img_quison.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+//ralentizado img img_horts
+if(img_horts){
+  img_horts.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+//realentiza img_pagina_comprar
+if(img_pagina_compra){
+  img_pagina_compra.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+//ralentiza diapagina_img
+if(img_diadia){
+  img_diadia.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+//ralentiza ateneu_rural
+if(img_ateneu ){
+img_ateneu.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+
+//ralentiza quison movil
+if(img_quison_movil ){
+img_quison_movil.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+
+
+
+
+});
+
+
+//edito la pagina de replica de comentario para bajar el contenido que quedo detras de la cabecera por aplicarle position fixe
+
+const repli_coment_patron= new RegExp("reply"),
+repli_coment= document.querySelector('.indented')
+
+patrontrue=urlactual.search(repli_coment_patron)
+if(patrontrue != -1){
+  //console.log("hola gugu")
+  repli_coment.style.paddingTop='100px'
 }

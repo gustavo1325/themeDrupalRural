@@ -1,0 +1,64 @@
+body {
+  position: relative; }
+
+.main-header {
+  position: fixed;
+  z-index: 10000;
+  width: 100%; }
+  @media screen and (min-width: 767px) {
+    .main-header {
+      position: fixed;
+      z-index: 10000;
+      width: 100%; } }
+
+.views-field.views-field-field-img-home-phone {
+  padding-top: 80px; }
+
+#block-views-block-image-inici-phone-block-1, .quisom_item_img, #img_slider_horts, .compra_item_img, .diahome_item, #img_slider_ateneu {
+  position: relative;
+  z-index: -1; }
+
+#block-views-block-image-inici-block-1 {
+  position: relative;
+  z-index: -1; }
+
+#block-views-block-pages-block-1 {
+  position: relative;
+  z-index: 1000; }
+
+.fijadoElemento {
+  position: fixed;
+  top: 50px; }
+
+#block-diadiablock {
+  position: relative;
+  z-index: 5000; }
+
+#block-sigueinstagramblock {
+  position: relative;
+  z-index: 6000; }
+
+#block-compraruralblock {
+  position: relative;
+  z-index: 7000; }
+
+div#img_ondasfooter {
+  margin-bottom: -3px; }
+
+#contetnt_footerual, #block-footeruralblock, #block-newsletter-sularyyblock-2, #img_ondasfooter, #block-licenciaderechosblock #footer_contact {
+  position: relative;
+  z-index: 8000; }
+
+#footer_contact {
+  background: #fff; }
+
+.quisom_item {
+  position: relative;
+  z-index: -1; }
+
+/*
+#feature\:fourche {
+    position: relative;
+    z-index: 8000;
+    margin-top: -10px}
+*/

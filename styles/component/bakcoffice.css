@@ -1,0 +1,8 @@
+div#block-manosminimal-local-tasks {
+  padding-top: 100px; }
+  @media screen and (min-width: 767px) {
+    div#block-manosminimal-local-tasks {
+      padding-top: 100px; } }
+
+#edit-name, #edit-pass {
+  max-width: 50%; }

@@ -2,7 +2,7 @@
 
 #container_quisom{
   .text_pre_mas{
-    max-width: var(--max-width-contetnt);
+    //max-width: var(--max-width-contetnt);
     background: var(--fondo_texto_separado);
     margin: 0 auto;
   }
@@ -17,7 +17,7 @@
   display:none;
   @include rwd(large){
     display:block;
-    max-width: var(--max-width-contetnt);
+  //  max-width: var(--max-width-contetnt);
     background: var(--fondo_texto_separado);
   }
   @include rwd(1400px){
@@ -25,18 +25,33 @@
   }
 }
 
+#content_text_quisom{
+  display:flex;
+  max-width: var(--max-width-contetnt);
+  margin:0 auto;
+  @include rwd(1000px){
+    max-width: 80%;
+  }
+}
+
+p.text_quison_desk {
+  @include rwd(large){
+    padding: 2rem 3rem;
+    text-align: justify;
+    line-height: 2em; //cambio
+  }
+
+}
 .quisom_item_img {
     display:none;
     @include rwd(large){
       display:block;
       max-width: 1900px !important;
+      padding-top:4.5rem;
     }
 }
 
-#content_text_quisom{
-  display:flex;
 
-}
 #content_text_quison_phone .text_pre_mas{
     background: var(--fondo_texto_separado);
     margin-top: -10px ;
@@ -49,7 +64,7 @@
       display: flex;
       flex-direction: column;
     }
-    @include rwd(1400){
+    @include rwd(1400px){
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -73,10 +88,10 @@
 }
 
 #tres_ejes{
+    background:var(--fondo_principal);
   @include rwd(large){
     background:var(--fondo_principal);
-    max-width: var(--max-width-contetnt);
-    margin:0 auto;
+
     h1{
       font-size: 1.2em;
     }
@@ -86,10 +101,31 @@
 #img_grupo_canferriol{
   @include rwd(large){
     background:var(--fondo_principal);
-    max-width: var(--max-width-contetnt);
+    //max-width: var(--max-width-contetnt);
     margin:0 auto;
   }
 }
+.video_qisom{
+  height: 0;
+  padding-bottom: 56.25%;
+  background:var(--fondo_principal);
+  position: relative;
+
+  > iframe,
+  > video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*
+.container_video{
+  width: 75%;
+  max-width: 960px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 
 .bottom_leer_mas{
   text-align: center;
@@ -118,6 +154,9 @@
 
 
 .can_ferriol2{
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
   padding-top: 1.5rem;
 }
 p#bordere {
@@ -132,24 +171,24 @@ p#bordere {
     font-size:1.1em;
     color:var(--text_titleinstagram);
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
+    padding-top: 4rem;
     }
 }
 
 img.can_ferriol_img {
+  max-width: 80%;
+  display:block;
+  margin:auto;
+
   @include rwd(large){
-    max-width: 80%;
+    max-width: 70%;
     display:block;
     margin:auto;
-    padding-bottom: 2rem;
+    padding-bottom: 3em;
   }
 }
 
-.can_ferriol2{
-  @include rwd(large){
-    display:none;
-  }
-}
 
 img.can_ferriol22 {
   display:none;
@@ -175,14 +214,28 @@ img.can_ferriol22 {
 }
 
 #text_pre_mas2, #text_leer_mas2{
-  @include rwd(large){
-    max-width: 90%;
-    margin: 0 auto;
+  max-width: 80%;
+  margin:0 auto;
+  p{
+
+    text-align: justify;
+
   }
 }
+
 #text_p_leer_mas2{
   @include rwd(large){
     margin-bottom: 0px;
+    padding-bottom: 3rem;
   }
 
+}
+
+
+//corrije el posicionamiento fijo de la cabecera respecto de las imagenes
+.img_slider_padding{
+  padding-top: 2rem;
+  @media screen and (min-device-width: 479px) and (max-device-width: 767px) {
+    padding-top: 4rem;
+  }
 }

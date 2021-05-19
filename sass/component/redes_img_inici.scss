@@ -5,7 +5,8 @@
 }
 
 #block-redesstaticblock-2{
-  position:absolute;
+  position:fixed;
+  z-index: 18000;
   display:none;
     @include rwd(large){
       display:block;
@@ -42,4 +43,8 @@
       max-width: 4.5rem;
       padding: 10px;
     }
+}
+
+div#content-redes ul li {
+  padding-top: 0rem;
 }

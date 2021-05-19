@@ -15,17 +15,27 @@
 </header>
 
 <section>
+  <div id="content_contact_content">
     <div id="main-content_contact" clas="main-item">
-      {% if page.content %}
-          <div id="item_contact_gif">
-                <img class="" src="/rural/web/themes/custom/manosminimal/img/Logo(Contacto).gif" alt="gif logo"/>
-          </div>
 
-          {{page.content }}
+          {% if page.content %}
+              <div id="item_contact_gif">
+                    <img class="" src="/rural/web/themes/custom/manosminimal/img/Logo(Contacto).gif" alt="gif logo"/>
+              </div>
 
-      {% endif %}
+                {{page.content }}
+
+
+          {% endif %}
 
     </div>
+
+    <div id="comprarural_contact">
+          {% if page.highlighted %}
+              {{page.highlighted}}
+          {% endif %}
+    </div>
+  </div>
 </section>
 <footer class="main-footer">
     <div id="footer_contact" class="footer-item">

@@ -68,6 +68,10 @@ function manosminimal_preprocess_block(array &$variables) {
   $variables['#cache']['max-age'] = 0;
 //  echo($variables['plugin_id']);
 }*/
+//QUIERO CREAR VARIABLE DE UN BLOQUE
+/*  if ($variables['plugin_id'] == 'comprarural') {
+    echo($variables['plugin_id']);
+  }*/
 }
 
 /**
@@ -169,7 +173,7 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
     if ($form_id == 'contact_message_contacte_form') {
 
      $form['elemento_img'] = array(
-        '#markup' => '<img src="/rural/web/themes/custom/manosminimal/img/icono_contacto.png"',
+        '#markup' => '<img src="/rural/web/themes/custom/manosminimal/img/icono_contacto.png">',
       );
       $form['elemento_img']['#prefix'] = ' <div class="img_contact">';
       $form['elemento_img']['#suffix'] = '</div>';
@@ -187,6 +191,17 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
         );
         unset($form['actions']['preview']);//Elimino el boton previo
 
+        //creo una clase para el shortcut_set_customize_submit(form, form_state)
+        //creo una clase para el botom de submit
+        $form['actions']['#type'] = 'actions';
+        $form['actions']['submit'] = [
+          '#type' => 'submit',
+          '#value' =>t('DESA'),
+          '#button_type' => 'primary',
+          '#attributes' => array(
+            'class' => array('class_submit_contact')
+          ),
+        ];
       //  \Drupal::messenger()->addMessage(t('id de formulario de contacto.'));
 
       //cambiar el orden de aparicion de los campos
@@ -218,9 +233,12 @@ function  manosminimal_form_alter( &$form, &$form_state, $form_id ) {
 
       if($form_id == 'user_login_form'){
         //ksm($form);
-        echo "HOLA SOY TU FORM";
         //dpm($form);
-        ksm($form);
+      //  ksm($form);
+
+      }
+
+      if($form_id == 'newsletter_sularyy_addform'){
 
       }
       //dpm($form);

@@ -7,11 +7,12 @@
 
 
 #content_comprarural{
-  max-width: var(--max-width-contetnt);
+//  max-width: var(--max-width-contetnt);
   margin: 0 auto;
   background: var(--compra_rural_fondo1);
   @include rwd(large){
       margin-top:0;
+      
     }
 }
 
@@ -161,6 +162,10 @@
   }
 }
 
+#comprarural-addform .form-actions{
+  margin-bottom: 0px;
+
+}
 
 //----------------------------------SUTITUIR form-checkboxes
 
@@ -214,6 +219,7 @@ input[type="checkbox"]:checked + label:after {
   display:none;
   @include rwd(large){
       display:block;
+      margin-top: -5px;
     }
 }
 
@@ -224,4 +230,9 @@ input[type="checkbox"]:checked + label:after {
  @include rwd(960px){
   margin-bottom: -0.7rem;
 }
+}
+
+//quitar la lupa
+.item_comprarural #lupa {
+    display: none;
 }

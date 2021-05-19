@@ -7,6 +7,7 @@ li {
 img{
   max-width: 100%;
   height: auto;
+  margin-bottom: -5px;
 }
 
 *,*::before,*::after {
@@ -17,6 +18,7 @@ body{
   margin: 0 auto;
   font-family: var(--tipografia) , sans-serif;
   color:var(--tipografi_principal);
+  max-width: var(--max-width-header);
 }
 #content{
   max-width: var(--max-width-header);

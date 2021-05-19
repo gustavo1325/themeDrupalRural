@@ -53,11 +53,7 @@
   padding-left: 0.4em;
   max-width: 8px;
   max-height: 8px;
-  transform: scale(1);
-  /*padding-left: 1.2em;
-  padding-top: 0.3em;
-  //margin-top:100px
-  //top:2px;*/ }
+  transform: scale(1); }
 
 #newsletter-sularyy-addform {
   padding-top: 1rem; }
@@ -87,10 +83,6 @@ input.newsletter_sularyy_nom::placeholder {
 input.newsletter_sularyy_email::placeholder {
   color: var(--barra_texto_suscribete_leermas); }
 
-/*.form-checkbox{
-  border-color: var(--form);
-  background: red;
-}*/
 #edit-politica-privacidad, #edit-politica-privacidad--2, #edit-politica-privacidad--3 {
   margin-top: 1rem;
   font-size: 0.7em;
@@ -124,11 +116,6 @@ label.option {
 .newsletter-sularyy-addform .form-actions {
   margin-bottom: 0; }
 
-#edit-actions--2, #edit-actions {
-  text-align: right;
-  padding-bottom: 1.5rem;
-  margin-bottom: 0; }
-
 .newsletter_sularyy_bottom {
   text-align: right;
   font-size: 0.7em;
@@ -137,6 +124,7 @@ label.option {
   padding-left: 1rem;
   background: #fff;
   margin-top: 2.5rem;
+  margin-bottom: 0;
   border: 1px solid #d9d9d9;
   border-radius: 15px; }
 
@@ -146,43 +134,13 @@ label.option {
 .onda_movil {
   width: 100%;
   position: absolute;
-  top: -14px;
-  left: 0; }
+  top: -15px;
+  left: 0;
+  z-index: 15000; }
   @media screen and (min-width: 767px) {
     .onda_movil {
       display: none; } }
 
-/*.wave{
-     background:
-       linear-gradient(to right);
-     //height: 50px;
-     //position: relative;
-}
-.wave::before{
-     content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     right: 0;
-     background-repeat: repeat;
-     height: 10px;
-     background-size: 20px 20px;
-     background-image:
-       radial-gradient(circle at 10px -5px, transparent 12px, aquamarine 13px);
-}
-.wave::after{
-     content: "";
-     position: absolute;
-     left: 0;
-     top: 0;
-     right: 0;
-     background-repeat: repeat;
-     height: 15px;
-     background-size: 40px 20px;
-     background-image:
-       radial-gradient(circle at 10px 15px, aquamarine 12px, transparent 13px);
-}
-*/
 @media screen and (min-width: 767px) {
   .item_newsletter #lupa {
     display: none; } }

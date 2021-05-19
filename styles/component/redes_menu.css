@@ -1,5 +1,5 @@
 .img_redes {
-  max-width: 35px;
+  max-width: 35px !important;
   align-items: center; }
 
 #content-redes ul {

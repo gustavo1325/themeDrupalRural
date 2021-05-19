@@ -12,7 +12,7 @@ regions:
   held: Help
   sidebar_first: 'Sidebar first'
   content: Content
-  highlighted: Highlighted
+  highlighted: 'Highlighted'
   sidebar_second: 'Sidebar second'
   feature_firs: 'Feature firs'
   feature_second: 'Feature second'

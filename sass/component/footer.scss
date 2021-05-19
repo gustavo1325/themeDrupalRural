@@ -17,9 +17,6 @@ footer{
     @media screen and(min-width: 425px){
         height: 350px;
     }
-    @include rwd(large){
-    //  width: 50%
-    }
 }
 
 #block-footeruralblock{
@@ -71,7 +68,7 @@ footer{
     p{
       font-size:0.8em;
       color: var(--form);
-      padding-left:3rem;
+      padding-left:17rem;
       @include rwd(425px){
       font-size:var(--texto);
       }
@@ -82,12 +79,37 @@ footer{
         font-size:var(--texto);
       }
     }
+    padding-top: 1.1rem;
+    padding-left: 0.6rem;
+    @include rwd(425px){
+     max-width: 80%;
+    }
+    @include rwd(768px){
+     padding-top: 1rem;
+    }
 }
+
+#content_email, #content_wapssa{
+  @include rwd(425px){
+    padding-left: 2rem;
+  }
+  @include rwd(768px){
+    padding-left: 0.3rem;
+  }
+  @include rwd(900px){
+    padding-left: 0.7rem;
+  }
+  @include rwd(1200px){
+    padding-left: 0rem;
+  }
+}
+
+
 
 .invertir_email{unicode-bidi: bidi-override; direction: rtl}
 .mail_footer{
   position: relative;
-  right: 8%;
+  right: 10%;
   @include rwd(large){
     right: 10%;
   }
@@ -111,7 +133,7 @@ footer{
   max-width:4px;
   max-height:4px;
   transform: scale(0.1);
- left:65px;
+ left:62px;
  top:-6px;
  @include rwd(large){
    left:95px;
@@ -168,6 +190,10 @@ footer{
   transform: scale(0.1);
   left:0px;
   top:1px;
+  @include rwd(1200px){
+    max-width:8px;
+    max-height:8px;
+  }
   @include rwd(large){
     top:-5px;
   }
@@ -192,14 +218,14 @@ footer{
 
 #content_email{
   @include rwd(large){
-    margin-top:1.5rem;
+    margin-top:1.2rem;
   }
   @include rwd(992px){
     margin-top:1rem;
   }
 }
 #content_email, #content_wapssa{
-  margin-left:1rem;
+
   @include rwd(576px){
     margin-left:3rem;
   }
@@ -224,10 +250,18 @@ footer{
 }
 
 div#content-redes {
-    margin-top: 2.3rem;
+  margin-top: -1rem;
+
     @include rwd(extralarge){
       margin-top:0rem;
 
+    }
+    ul{
+      li{
+        display:block;
+        padding-top: 1rem;
+        text-align: left;
+      }
     }
 }
 
@@ -235,4 +269,19 @@ div#content-redes {
   @include rwd(large){
     display: none;
   }
+}
+
+.img_redes{
+  max-width: 10%;
+}
+
+.item-redes{
+  position: relative;
+}
+.redesfooter{
+  //padding-left: 0.5rem;
+  font-size: 0.8em;
+  position: absolute;
+  left: 40px;
+  top:20px;
 }
