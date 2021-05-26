@@ -7,7 +7,9 @@ body{
 }
 */
 #block-menuprincipalstock .main-menu-toggle {
-  display: none; }
+  display: none;
+  position: relative;
+  z-index: 20000; }
 
 .main-menu-toggle {
   margin: 0.5rem 0.5rem;
@@ -109,7 +111,7 @@ body{
         font-size: 0.8em;
         border: none;
         display: inline; }
-    #block-menuprincipalstock #content-redes {
+    #block-menuprincipalstock #content-redes-menu {
       display: none; } }
 
 @media screen and (min-width: 1039px) {
@@ -153,3 +155,15 @@ body{
 
 img#img_search_lupa {
   margin-right: 1rem; }
+
+#content-redes-menu {
+  margin-top: 3rem; }
+
+.item-redes-menu {
+  display: inline; }
+
+.redes_img_menu {
+  padding-right: 1rem; }
+
+.img_redes_menu {
+  max-width: 35px; }

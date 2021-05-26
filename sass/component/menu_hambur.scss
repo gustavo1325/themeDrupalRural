@@ -13,6 +13,8 @@ body{
 #block-menuprincipalstock{
   .main-menu-toggle{
     display:none;
+    position:relative;
+    z-index:20000;
   }
 
 }
@@ -150,7 +152,7 @@ body{
           display: inline;
         }
     }
-    #content-redes {
+    #content-redes-menu {
       display:none;
     }
   }
@@ -231,4 +233,20 @@ body{
 
 img#img_search_lupa {
     margin-right: 1rem;
+}
+
+
+//estilos iconos de redes menu
+#content-redes-menu{
+  margin-top: 3rem;
+}
+.item-redes-menu{
+  display:inline;
+}
+.redes_img_menu{
+  padding-right: 1rem;
+}
+.img_redes_menu{
+  max-width: 35px
+
 }

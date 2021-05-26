@@ -3,6 +3,12 @@
 div#block-licenciaderechosblock{
   width:100%;
   margin-top: 2.5rem;
+  @include rwd(700px){
+    padding-top: 6rem;
+  }
+  @include rwd(large){
+    padding-top: 2rem;
+  }
   @include rwd(1400px){
     background: #fff;
     padding-top: 2rem;

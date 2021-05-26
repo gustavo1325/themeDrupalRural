@@ -17,6 +17,7 @@ footer{
     @media screen and(min-width: 425px){
         height: 350px;
     }
+
 }
 
 #block-footeruralblock{
@@ -271,8 +272,34 @@ div#content-redes {
   }
 }
 
-.img_redes{
-  max-width: 10%;
+.img_redes_footer{
+  max-width: 11.3%;
+  padding-top: 1rem;
+  margin-left: -0.5rem;
+  @include rwd(425px){
+    max-width: 8.3%;
+    margin-left: 0.3rem;
+  }
+  @include rwd(700px){
+    max-width: 7.6%;
+  }
+  @include rwd(large){
+    max-width: 8%;
+  }
+  @include rwd(1000px){
+  margin-left: 0.3rem;
+  }
+  @include rwd(1200px){
+  margin-left: 1rem;
+  }
+  @include rwd(1300px){
+  margin-left: 4.3rem;
+  max-width: 6.3%;
+  }
+  @include rwd(1400px){
+  margin-left: 0.5rem;
+  max-width: 7.3%;
+  }
 }
 
 .item-redes{
@@ -280,8 +307,67 @@ div#content-redes {
 }
 .redesfooter{
   //padding-left: 0.5rem;
-  font-size: 0.8em;
+  font-size: 0.9em;
   position: absolute;
-  left: 40px;
+  left: 30px;
   top:20px;
+  opacity: .5;
+  @include rwd(425px){
+    left: 50px;
+  }
+  @include rwd(500px){
+    left: 50px;
+  }
+  @include rwd(550px){
+    font-size: 1em;
+    left: 60px;
+  }
+  @include rwd(600px){
+    font-size: 1em;
+    left: 60px;
+  }
+  @include rwd(large){
+    font-size: 0.8em;
+    left: 40px;
+    top: 18px;
+  }
+  @include rwd(1000px){
+    font-size: 1em;
+    left: 65px;
+    top: 28px;
+  }
+  @include rwd(1300px){
+    left: 115px;
+    top: 23px;
+  }
+  @include rwd(1400px){
+    left: 65px;
+
+  }
+
+}
+#correoRuralColl{
+    margin-left: 15px;
+    @include rwd(425px){
+      margin-left: -1px;
+    }
+  @include rwd(600px){
+
+    margin-left: -45px;
+  }
+  @include rwd(700px){
+    top:28px;
+  }
+  @include rwd(large){
+    margin-left:0.2rem;
+  }
+  @include rwd(1000px){
+    margin-left:-0.6rem;
+  }
+  @include rwd(1100px){
+    margin-left:-2.6rem;
+  }
+  @include rwd(1300px){
+    margin-left:-3.4rem;
+  }
 }

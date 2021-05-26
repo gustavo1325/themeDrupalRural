@@ -136,7 +136,7 @@ label.option {
   position: absolute;
   top: -15px;
   left: 0;
-  z-index: 15000; }
+  z-index: 1000; }
   @media screen and (min-width: 767px) {
     .onda_movil {
       display: none; } }
