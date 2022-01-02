@@ -30,6 +30,10 @@
     }
 }
 
+div#item_distribucio {
+  padding-top: 5rem;
+}
+
 #item_distribucio_content{
   max-width: var(--max-width-contetnt);
   margin:0 auto;
@@ -253,10 +257,15 @@
 
 }
 .cistellas_img{
-  max-width: 100%;
+  width: 368px;
+  height: auto;
+  
+ 
   @include rwd(1000px){
-    max-width: 90%;
+    
     padding-left:2rem;
+    object-fit: cover;
+    object-position: 0px 0px;
   }
 }
 
@@ -292,7 +301,7 @@
       font-size: 0.7em;
     }
     @include rwd(1000px){
-      padding:0 3rem;
+      //padding:0 3rem;
       font-size:1em;
     }
     @include rwd(1200px){

@@ -20,6 +20,10 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   text-align: justify;
+  @include rwd(large){
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
   p{
     font-family: var(--tipografia);
     font-size: var(--texto);
@@ -31,7 +35,9 @@
         font-size: var(--titulo);
       }
       @include rwd(large){
-        font-size: var(--texto);
+        font-size: 25px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
       }
       @include rwd(extralarge){
         font-size: 1.5em;

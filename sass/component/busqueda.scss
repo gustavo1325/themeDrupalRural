@@ -66,13 +66,20 @@
     border:none;
     border-bottom: 1px solid #555;
     background: var(--fondo_principal);
-    font-size: 0.6em;
+    font-size: 0.8em;
     @include rwd(992px){
       width: 500px;
     }
     @include rwd(extralarge){
       width: 600px;
     }
+  }
+}
+
+.js-form-type-search{
+  input:focus{
+  //  quita el recuadro por defecto cuando se da el focus al input
+  outline: none;
   }
 }
 

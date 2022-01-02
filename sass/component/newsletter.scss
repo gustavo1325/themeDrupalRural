@@ -3,6 +3,7 @@
 
 #block-newsletter-sularyyblock{
   display: block;
+  z-index: 89991;
   @include rwd(large){
     display:none;
 

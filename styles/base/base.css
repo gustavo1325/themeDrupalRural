@@ -38,3 +38,6 @@ div#block-manosminimal-content #lupa {
 
 #block-newsletter-sularyyblock #lupa {
   display: none; }
+
+input, textarea {
+  outline: none; }

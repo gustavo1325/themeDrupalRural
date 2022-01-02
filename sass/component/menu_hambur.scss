@@ -74,8 +74,8 @@ body{
 
 #item-compra{
   font-weight: 700;
-  position:relative;
-  padding-left: 2em;
+  //position:relative;
+  //padding-left: 2em;
 
   //Aplicamos un border image a elmento del menu, hay que relacionarlo con un evento focus
     a:active{
@@ -92,7 +92,7 @@ body{
     border-image-slice: 30;
     border-image-width: 0 0 15px 0;*/
 }
-
+/*
 #item-compra::before{
   content: url('../img/flechaP.png');
   //display: block;
@@ -117,14 +117,42 @@ body{
     left: -12px;
 
   }
+}*/
+
+
+//show basket icon
+#block-menuprincipalstock .main-menu #item-compra{
+  position: relative;
+}
+
+#item-compra::before{
+  content: url('../img/cesta.png');
+  transform: scale(.3);
+  position: absolute;
+  top: 8px;
+  left: 13px;
+}
+
+#block-menuprincipalstock .main-menu #item-compra::before{
+  content: url('../img/cesta.png');
+  transform: scale(.3);
+  position: absolute;
+  top: -11px;
+  left: -27px;
+  @include rwd(1200px){
+    top: -15px;
+    left: -30px;
+  }
 }
 
 @media screen and(min-width: 992px){
-  #header_top{
-  }
 
   #block-manosminimal-main-menu{
     display: none;
+  }
+  #block-manosminimal-branding{
+    width: 200px;
+    margin-right: -30px;
   }
   #block-menuprincipalstock{
       max-width: 100%;
@@ -135,10 +163,6 @@ body{
       position: static;
       height:auto;
       width: auto;
-
-          .main-menu__item{
-
-          }
     }
     .main-menu{
       //width:36em;
@@ -165,7 +189,7 @@ body{
   }
   .main-menu{
     li{
-    font-size: 0.9em;}
+    font-size: 0.8em;}
   }
 }
 }
@@ -179,7 +203,7 @@ body{
       .main-menu{
         li{
           padding: 1em;
-        font-size: 0.9em;}
+        font-size: 0.8em;}
       }
     }
 }
@@ -208,29 +232,46 @@ body{
     }
 }
 
-.main-menu__item{
-  a{
-  /*  padding-bottom:5px;
-    border-bottom: 10px solid transparent;
-    border-image-source: url(../img/focomenum.png);
-    border-image-repeat: round;
-    border-image-slice: 35;
-    border-image-width: 0 0 15px 0;*/
-  }
-
-}
 .main-menu__item .is-active{
-  @include rwd(large){
-    padding-bottom:5px;
+  @media screen and(min-width: 991px){
+    //display: block;
+  //padding-bottom:5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/zigzag_menu.png);
+    border-image-repeat: round;
+    border-image-slice: 75;
+    border-image-width: 0 0 12px 0;
+   // border-image-slice: 85;
+   // border-image-width: 0 0 15px 0;
+  }
+  @media screen and(max-width: 991px){
+    padding-left: 1rem;
+    //display: block;
+/*    padding-bottom:5px;
     border-bottom: 10px solid transparent;
     border-image-source: url(../img/focomenun200.png);
     border-image-repeat: round;
     border-image-slice: 85;
-    border-image-width: 0 0 15px 0;
+    border-image-width: 0 0 15px 0;*/
   }
 
 }
+.main-menu__item .is-active::before{
+  @media screen and(max-width: 991px){
+    content: url('../img/flechaP.png');
+    //display: block;
+    max-width:2px;
+    max-height:2px;
+    padding-left: 2.2em;
+    padding-top: 0.3em;
+    transform: scale(0.6);
+    //margin-top:100px
+    position: absolute;
+    left:30px;
+  //  top:34px;
+  }
 
+}
 img#img_search_lupa {
     margin-right: 1rem;
 }

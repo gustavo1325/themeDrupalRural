@@ -73,7 +73,9 @@
   background: var(--fondo_principal); }
   @media screen and (min-width: 767px) {
     #tres_ejes {
-      background: var(--fondo_principal); }
+      background: var(--fondo_principal);
+      padding-top: 3rem;
+      padding-bottom: 3rem; }
       #tres_ejes h1 {
         font-size: 1.2em; } }
 
@@ -149,7 +151,7 @@ img.can_ferriol_img {
   margin: auto; }
   @media screen and (min-width: 767px) {
     img.can_ferriol_img {
-      max-width: 70%;
+      max-width: 60%;
       display: block;
       margin: auto;
       padding-bottom: 3em; } }

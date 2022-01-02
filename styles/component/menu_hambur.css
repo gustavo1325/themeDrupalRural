@@ -55,8 +55,6 @@ body{
 
 #item-compra {
   font-weight: 700;
-  position: relative;
-  padding-left: 2em;
   /*  padding: 15px;  Este border-img del elmento li
     border-image-source: url(../img/focomenu.png);
     border-image-repeat: round;
@@ -70,27 +68,32 @@ body{
     border-image-slice: 30;
     border-image-width: 0 0 15px 0; }
 
-#item-compra::before {
-  content: url("../img/flechaP.png");
-  max-width: 2px;
-  max-height: 2px;
+/*
+#item-compra::before{
+  content: url('../img/flechaP.png');
+  //display: block;
+  max-width:2px;
+  max-height:2px;
   padding-left: 1.2em;
   padding-top: 0.3em;
   transform: scale(0.6);
+  //margin-top:100px
   position: absolute;
-  left: 1px; }
-  @media screen and (min-width: 992px) {
-    #item-compra::before {
-      top: 17px;
-      left: -2px; } }
-  @media screen and (min-width: 1039px) {
-    #item-compra::before {
-      top: 17px; } }
-  @media screen and (min-width: 1200px) {
-    #item-compra::before {
-      top: 13px;
-      left: -12px; } }
+  left:1px;
+  //top:2px;
+  @media screen and(min-width: 992px){
+    top:17px;
+    left:-2px;
+  }
+  @media screen and(min-width: 1039px){
+    top:17px;
+  }
+  @media screen and(min-width: 1200px){
+    top:13px;
+    left: -12px;
 
+  }
+}*/
 @media screen and (min-width: 992px) {
   #block-manosminimal-main-menu {
     display: none; }
@@ -144,14 +147,34 @@ body{
     border-image-slice: 35;
     border-image-width: 0 0 15px 0;*/ }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 991px) {
   .main-menu__item .is-active {
-    padding-bottom: 5px;
+    border-bottom: 10px solid transparent;
+    border-image-source: url(../img/zigzag_menu.png);
+    border-image-repeat: round;
+    border-image-slice: 75;
+    border-image-width: 0 0 12px 0; } }
+
+@media screen and (max-width: 991px) {
+  .main-menu__item .is-active {
+    padding-left: 1rem;
+    /*    padding-bottom:5px;
     border-bottom: 10px solid transparent;
     border-image-source: url(../img/focomenun200.png);
     border-image-repeat: round;
     border-image-slice: 85;
-    border-image-width: 0 0 15px 0; } }
+    border-image-width: 0 0 15px 0;*/ } }
+
+@media screen and (max-width: 991px) {
+  .main-menu__item .is-active::before {
+    content: url("../img/flechaP.png");
+    max-width: 2px;
+    max-height: 2px;
+    padding-left: 2.2em;
+    padding-top: 0.3em;
+    transform: scale(0.6);
+    position: absolute;
+    left: 30px; } }
 
 img#img_search_lupa {
   margin-right: 1rem; }

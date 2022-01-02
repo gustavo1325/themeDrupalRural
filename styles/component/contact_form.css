@@ -14,6 +14,9 @@
 
 .contact-message-contacte-form {
   padding-left: 1rem; }
+  @media screen and (min-width: 767px) {
+    .contact-message-contacte-form {
+      padding-top: 5rem; } }
 
 #item_contact_gif {
   display: none;

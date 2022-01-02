@@ -41,6 +41,28 @@ function manosminimal_preprocess_page(array &$variables) {
 
 }
 
+
+/**
+ * Implements hook_preprocess_compraruralpagina() for compraruralpagina.html.twig.
+ */
+
+function manosminimal_preprocess_compraruralpagina(array &$variables) {
+ // $variables['newvariable'] = bottombotigablock; //creo una variable newvariable para la pagina compraruralpagina
+
+
+
+  $a2a_block = \Drupal\block\Entity\Block::load('bottombotigablock'); //pongo el id del bloque que quiero pasar como variable
+  $a2a_block_view = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($a2a_block);
+  if ($a2a_block_view) {
+      $variables['block_bottombotigablock'] = $a2a_block_view;//creo la variable que pondre en mi plantilla entre el contenido
+  }
+
+
+}
+
+
 /**
  * Implements hook_theme_suggestions_page_alter().
  */

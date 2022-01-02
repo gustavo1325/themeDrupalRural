@@ -1,5 +1,6 @@
 @import"mixin";
 
+
 $fontSize: 19px;
 $lineWidth: 2px;
 $lineColor: #CCC;
@@ -26,6 +27,9 @@ padding-top: 6.5rem;
 }
 .contact-message-contacte-form {
   padding-left: 1rem;
+  @include rwd(large){
+    padding-top: 5rem;
+  }
 }
 #item_contact_gif{
   display:none;

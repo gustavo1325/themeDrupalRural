@@ -1,5 +1,8 @@
 //breaK point
 // font-family: 'Montserrat', sans-serif;
+body{
+  background:var(--fondo_principal);
+}
 li {
   list-style:none;
 }
@@ -25,7 +28,7 @@ body{
   margin: 0 auto;
 }
 footer{
-  max-width: var(--max-width-contetnt);
+  max-width: 1900px;
   margin: 0 auto;
   background:var(--fondo_principal);
 }
@@ -46,4 +49,7 @@ div#block-manosminimal-content #lupa {
 }
 #block-newsletter-sularyyblock #lupa{
   display: none;
+}
+input, textarea{
+  outline: none;
 }

@@ -1,0 +1,274 @@
+#block-bottombotigablock{
+    position: relative;
+    z-index: 1893;
+    background: var(--fondo_principal);
+    margin-bottom: -16px; 
+    padding-bottom: 3rem;
+    }
+
+    .bottomM{
+        position: relative;
+        text-align: center;
+    }
+    #tituloBotom {
+        padding: 18% 10% 5% 10%;
+        color:var(--botom_botiga);
+        position: absolute;
+        font-size: 0.8em;
+        cursor: pointer;
+        top: 1%;
+        left: 26%;
+        @include rwd(425px){
+            left:28%;
+        }
+        @include rwd(500px){ 
+            top: 3%;
+            left: 29%;
+        }
+        @include rwd(600px){
+            top: 4%;
+            left: 31%;
+        }
+        @include rwd(700px){
+            font-size: 0.9em;
+            top: 4%;
+            left: 31%;
+        } 
+        @include rwd(800px){
+            font-size: 1em;
+            top: 4%;
+            left: 31%;
+        }
+        @include rwd(900px){
+            font-size: 1em;
+            top: 3%;
+            left: 33%;
+        }
+        @include rwd(992px){
+            padding: 12% 10% 3% 10%;
+            top:0%;
+            left:33%;
+        }
+        @include rwd(1100px){
+            top:0%;
+        }
+        @include rwd(1200px){
+            top:0%;
+            left: 34%;
+        }
+        @include rwd(1300px){
+            top:0%;
+            left: 35%;
+        }
+        @include rwd(1400px){
+            font-size: 1.2em;
+            top:0%;
+            left: 34%;
+        }
+        @include rwd(1500px){
+            top:-4%;
+            left: 34%;
+        }@include rwd(1600px){
+            top:-8%;
+            left: 35%;
+        }
+        @include rwd(1700px){
+            top:-13%;
+        }
+        @include rwd(1800px){
+            top:-18%;
+            left: 35%;
+        }
+        @include rwd(1900px){
+            top:-24%;
+            left: 36%;
+        }
+         
+    }
+    #textBotom {
+        text-align: left;
+        font-size: 0.9em;
+        max-width: 40%;
+        margin-left: 29px;
+        margin-top: -40px;
+        @include rwd(500px){
+            margin-left: 32px;
+             margin-top: -57px
+        }
+        @include rwd(600px){
+            margin-top: -72px
+        }
+        @include rwd(700px){
+            margin-top: -85px
+        }
+        @include rwd(800px){
+            margin-top: -99px;
+            margin-left: 37px;
+        }
+        @include rwd(900px){
+            margin-left: 68px;
+        }
+        @include rwd(992px){
+            max-width: 15%;
+            margin-top: -154px;
+            margin-left: 132px;
+        }
+        @include rwd(1100px){
+            margin-top: -167px;
+            margin-left: 156px;
+        }
+        @include rwd(1200px){
+            margin-top: -187px;
+            margin-left: 166px;
+        }
+        @include rwd(1300px){
+            
+            max-width: 11%;
+            margin-top: -205px;
+            margin-left: 192px;
+        }
+        @include rwd(1400px){
+            font-size: 1.2em;
+            margin-top: -219px;
+            margin-left: 217px;
+        }
+        @include rwd(1500px){
+            margin-top: -219px;
+            margin-left: 271px;
+        }
+        @include rwd(1600px){
+            margin-top: -227px;
+            margin-left: 317px;
+        }
+        @include rwd(1700px){
+            max-width: 10%;
+            margin-left: 364px;
+        }
+        @include rwd(1800px){
+           
+            margin-top: -232px;
+            margin-left: 401px;
+        }
+        @include rwd(1900px){
+            
+            margin-left: 442px;
+        }
+    }
+    #textBotom::before{
+        content: url('../img/asteriscoText.png');
+        transform: scale(.6);
+        position: absolute;
+            left:0%;
+            top:63%;
+            @include rwd(425px){
+                top:66%;
+            }
+            @include rwd(500px){
+                left:1%;
+                top:75%;
+            }
+            @include rwd(600px){
+                top:78%;
+            }
+            @include rwd(700px){
+                top:81%;
+            }
+            @include rwd(800px){
+                top:83%;
+            }
+            @include rwd(900px){
+                top:90%;
+                left: 4%;
+            }
+            @include rwd(992px){
+                top:62%;
+                left: 10%;
+            }
+            @include rwd(1100px){
+                top:64%;
+                left: 11%;
+            }
+            @include rwd(1200px){
+                top:66%;
+            }
+            @include rwd(1300px){
+                top:68%;
+                left: 12%;
+            }
+            @include rwd(1400px){
+                top:58%;
+                left:13%;
+            }
+            @include rwd(1500px){
+                left: 16%;
+            }
+            @include rwd(1600px){
+                top:64%;
+                left: 18%;
+            }
+            @include rwd(1700px){
+                top:57%;
+                left: 19%;
+            }@include rwd(1800px){
+                top:63%;
+                left: 20%;
+            }
+            @include rwd(1900px){
+                top:63%;
+                left: 21%;
+            }
+
+    }
+    #elijebotiga{
+        display:none;
+        margin-top:-203px;
+        @include rwd(600px){
+            margin-top:-233px;
+        }
+        @include rwd(700px){
+            margin-top:-257px;
+        }
+        @include rwd(800px){
+            margin-top:-342px;
+        }
+        @include rwd(1000px){
+            margin-top:-430px;
+        }
+       
+       
+    }
+
+    div#block-views-block-pages-block-1 {
+        @include rwd(1400px){
+            margin-top: -20px;
+        }
+        
+    }
+
+
+    //animacion
+    .effecOPacity{
+        
+        animation: botomopacity 2s;
+        animation-iteration-count:1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes botomopacity {
+        from {opacity: 1;}
+        to {opacity: 0;}
+    }
+
+    .effecOPacityIn{
+        animation: botomopacityIn 2s;
+        animation-iteration-count:1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes botomopacityIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+
+ div#block_bottombotigablock {
+    margin-bottom: -1.5rem;
+}

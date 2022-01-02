@@ -27,8 +27,8 @@ const showMenu = (toggleCl,navId) => {
 showMenu('.main-menu-toggle' , '.main-nav')
 
 //marcar item de menu comprar a la rural
-const liNa = document.querySelector('.main-menu li:nth-child(3)')
-      listock =document.querySelector('#block-menuprincipalstock .main-menu li:nth-child(3)')
+const liNa = document.querySelector('.main-menu li:first-child')
+      listock =document.querySelector('#block-menuprincipalstock .main-menu li:first-child')
 if(liNa){
   liNa.setAttribute('id', 'item-compra')
 }
@@ -520,7 +520,7 @@ frcont=urlactual.search(patroncontact)
 if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor != -1 && mediumBp.matches || frcont != -1 && mediumBp.matches){
       if(backgroundCompra){
         backgroundCompra.style.background='#90b37d'
-        imgCompra.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/Compra_Rural_ico.png')
+        imgCompra.setAttribute('src', '/rural/web/themes/custom/manosminimal/img/compra-la-rural.png')
         textconpra.style.color='#fff'
         compra_email.style.background='#90b37d'
         compra_email.style.borderColor='#fff'
@@ -712,7 +712,8 @@ img_horts=document.getElementById("img_slider_horts"),
 img_pagina_compra=document.querySelector('.compra_item_img'),
 img_diadia=document.querySelector('.diahome_item'),
 img_ateneu=document.getElementById("img_slider_ateneu"),
-img_quison_movil=document.querySelector(".quisom_item")
+img_quison_movil=document.querySelector(".quisom_item"),
+video_inicio=document.getElementById("block-slidervideoblock")
 
 
 /*modulo_main=document.getElementById("main-content"),
@@ -768,6 +769,10 @@ if(img_ateneu  && largeBp.matches){
 }
 */
 
+if(video_inicio){
+  video_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
+}
+
 if(img_inicio){
   img_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
@@ -814,7 +819,108 @@ const repli_coment_patron= new RegExp("reply"),
 repli_coment= document.querySelector('.indented')
 
 patrontrue=urlactual.search(repli_coment_patron)
+
 if(patrontrue != -1){
-  //console.log("hola gugu")
+
   repli_coment.style.paddingTop='100px'
+}
+
+
+//calculo al altura de header y aplico esa altura al elemento posterior(pagina compra a la rural) para salvar la position fixer de  la cabecera
+
+const heightHeader=document.querySelector('.main-header'),
+      botiga_url_patron= new RegExp("compra_a_la_rural"),
+      content= document.getElementById("content"),
+      mainFooter=document.querySelector('.main-footer')
+
+patrontrue=urlactual.search(botiga_url_patron)
+
+if(patrontrue != -1){
+  if(heightHeader){
+    content.style.marginTop=heightHeader.offsetHeight + "px"
+    mainFooter.style='display:none'
+  }
+  
+}
+
+
+
+//pasar el titulo del post a mayusculas
+
+let titulo_post_id=document.getElementById("titulo_post_id")
+
+if(titulo_post_id){
+
+cadenaTituloPost= titulo_post_id.innerHTML
+cadenaTituloPostMyuscula= cadenaTituloPost.toUpperCase()
+titulo_post_id.innerHTML =cadenaTituloPostMyuscula
+
+}
+
+
+
+
+
+
+//events bottom shop online
+//event shop santcugat->icons home
+
+const iconoSancu= document.getElementById("iconoSancu"),
+      iconoBcn= document.getElementById("iconoBcn"),
+      cercle= document.getElementById("cercle"),
+      cerclebcn= document.getElementById("cerclebcn"),
+      borderSancu= document.getElementById('borderTop'),
+      borderBcn= document.getElementById('borderTopBcn')
+
+      //for movile
+      if(iconoSancu && iconoBcn && cercle && cerclebcn){
+        cercle.addEventListener('mouseenter',() =>{
+          //añade clase para mostrar el circulo
+           cercle.classList.toggle("iconoShop")
+          //añade clase para mostrar el guion encima del titulo que vale para tamaño grande pero no para movil
+        borderSancu.style.display="block"
+        
+        })
+        cercle.addEventListener('mouseleave',() =>{
+          cercle.classList.toggle("iconoShop")
+          borderSancu.style.display="none"
+          
+        })
+
+        cerclebcn.addEventListener('mouseenter',() =>{
+          cerclebcn.classList.toggle("iconoShop")
+          borderBcn.style.display="block"
+        })
+        cerclebcn.addEventListener('mouseleave',() =>{
+          cerclebcn.classList.toggle("iconoShop")
+          borderBcn.style.display="none"
+        })   
+      }
+
+
+
+//BOTON HACIA TIENDA ONLINE DEL HOME Y ON ESTEM
+
+const bottombotiga= document.getElementById("bottombotiga"),
+      elijebotiga= document.getElementById("elijebotiga"),
+      itemfirsbotombotiga= document.getElementById("itemfirsbotombotiga"),
+      tituloBotom= document.getElementById("tituloBotom")
+
+
+if(bottombotiga && elijebotiga && itemfirsbotombotiga && tituloBotom){
+  console.log("estoy awui")
+ 
+  //change mouseenter for click
+  tituloBotom.addEventListener('click',() =>{
+   // console.log("has pasado por encima")
+    bottombotiga.classList.add("effecOPacity") //transicion fundido out
+
+    setTimeout(retardodisplay, 200)
+
+    function retardodisplay(){
+      elijebotiga.style.display="block"
+      elijebotiga.classList.add("effecOPacityIn") //transicion fundido out
+    }
+  })
+
 }

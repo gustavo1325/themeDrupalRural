@@ -15,6 +15,10 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   text-align: justify; }
+  @media screen and (min-width: 767px) {
+    #block-views-block-pages-block-1 {
+      padding-top: 6rem;
+      padding-bottom: 6rem; } }
   #block-views-block-pages-block-1 p {
     font-family: var(--tipografia);
     font-size: var(--texto);
@@ -27,7 +31,9 @@
         font-size: var(--titulo); } }
     @media screen and (min-width: 767px) {
       #block-views-block-pages-block-1 p {
-        font-size: var(--texto); } }
+        font-size: 25px;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem; } }
     @media screen and (min-width: 1400px) {
       #block-views-block-pages-block-1 p {
         font-size: 1.5em; } }

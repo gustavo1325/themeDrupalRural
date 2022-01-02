@@ -191,11 +191,13 @@
     padding: 1.5rem 3rem; } }
 
 .cistellas_img {
-  max-width: 100%; }
+  width: 368px;
+  height: auto; }
   @media screen and (min-width: 1000px) {
     .cistellas_img {
-      max-width: 90%;
-      padding-left: 2rem; } }
+      padding-left: 2rem;
+      object-fit: cover;
+      object-position: 0px 0px; } }
 
 .item_cistelles_content {
   max-width: 55%;
@@ -229,7 +231,6 @@
         font-size: 0.7em; } }
     @media screen and (min-width: 1000px) {
       .item_cistelles_content p {
-        padding: 0 3rem;
         font-size: 1em; } }
     @media screen and (min-width: 1200px) {
       .item_cistelles_content p {

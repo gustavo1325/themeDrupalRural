@@ -76,6 +76,9 @@
 #format_date span {
   font-size: var(--leer_mas);
   padding-left: 1.2rem; }
+  @media screen and (min-width: 767px) {
+    #format_date span {
+      padding-left: 0rem; } }
   @media screen and (min-width: 1000px) {
     #format_date span {
       font-size: var(--menu); } }
@@ -269,6 +272,9 @@ form#comment-form input[type="text"] {
 label.js-form-required.form-required {
   font-size: var(--text_comment); }
 
+textarea#edit-comment-body-0-value {
+  outline: none; }
+
 .img_like {
   /*  background: rgb(53, 61, 45);
 background-image: url("../img/relleno_likes.jpg");
@@ -284,4 +290,8 @@ background-position: 23px ;*/
   padding-bottom: 2rem; }
 
 #galeria_post_siguiente, #galeria_post_anterior {
-  cursor: pointer; }
+  cursor: pointer;
+  max-width: 3%; }
+
+#titulo_post_id {
+  line-height: 30px; }

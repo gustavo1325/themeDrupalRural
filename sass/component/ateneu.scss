@@ -27,6 +27,13 @@
       }
       }
 }
+#content_projet_content{
+  @include rwd(large){
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+  }
+}
 
 #item_ateneu_descripcio_content{
     background:var(--fondo_principal);
@@ -58,7 +65,7 @@
 }
 
 #item_title_projet{
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     h1{
       font-size: var(--texto);
@@ -72,6 +79,9 @@
     max-width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
+    @include rwd(large){
+      text-align: center;
+      }
 }
 
 #item_img_projet_phone{
@@ -93,4 +103,11 @@
 
 #flecha_galeria{
   padding-bottom: 2rem;
+}
+
+.img_ateneu_project{
+  @include rwd(large){
+    max-width: 90%;
+  }
+  
 }

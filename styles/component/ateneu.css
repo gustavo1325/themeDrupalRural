@@ -18,6 +18,11 @@
         padding-left: 7rem;
         padding-right: 7rem; } }
 
+@media screen and (min-width: 767px) {
+  #content_projet_content {
+    margin-top: 4rem;
+    margin-bottom: 4rem; } }
+
 #item_ateneu_descripcio_content {
   background: var(--fondo_principal); }
   @media screen and (min-width: 1000px) {
@@ -44,7 +49,7 @@
   background: #d6dacc; }
 
 #item_title_projet {
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto; }
   #item_title_projet h1 {
     font-size: var(--texto);
@@ -56,6 +61,9 @@
   max-width: 80%;
   margin: 0 auto;
   padding: 2rem 0; }
+  @media screen and (min-width: 767px) {
+    #item_img_projet {
+      text-align: center; } }
 
 @media screen and (min-width: 767px) {
   #item_img_projet_phone {
@@ -72,3 +80,7 @@
 
 #flecha_galeria {
   padding-bottom: 2rem; }
+
+@media screen and (min-width: 767px) {
+  .img_ateneu_project {
+    max-width: 90%; } }

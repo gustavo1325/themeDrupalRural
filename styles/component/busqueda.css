@@ -48,13 +48,16 @@
   border: none;
   border-bottom: 1px solid #555;
   background: var(--fondo_principal);
-  font-size: 0.6em; }
+  font-size: 0.8em; }
   @media screen and (min-width: 992px) {
     .js-form-type-search input {
       width: 500px; } }
   @media screen and (min-width: 1400px) {
     .js-form-type-search input {
       width: 600px; } }
+
+.js-form-type-search input:focus {
+  outline: none; }
 
 .js-form-item.form-item.js-form-type-search.form-item-keys.js-form-item-keys.form-no-label {
   text-align: center; }

@@ -3,6 +3,9 @@
 div#block-licenciaderechosblock{
   width:100%;
   margin-top: 2.5rem;
+  @include rwd(400px){
+    margin-top: 0rem;
+  }
   @include rwd(700px){
     padding-top: 6rem;
   }
@@ -11,7 +14,7 @@ div#block-licenciaderechosblock{
   }
   @include rwd(1400px){
     background: #fff;
-    padding-top: 2rem;
+    padding-top: 14rem;
   }
 }
 #content_privacitat{
