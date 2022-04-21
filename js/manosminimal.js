@@ -36,11 +36,6 @@ if(listock){
   listock.setAttribute('id', 'item-compra')
 }
 
-//obtener valor de la variable css que establece la altura del header para desplazar el menu tooger
-
-/*let heigthHeader = document.getElementById('header_top').offsetHeight
-getComputedStyle(document.documentElement).getPropertyValue('--header-height', heigthHeader)*/
-
 
 //function show search
 const showSearch = (lupaid, searchBlock, img_search_lupa, blockmenu) => {
@@ -64,8 +59,6 @@ const showSearch = (lupaid, searchBlock, img_search_lupa, blockmenu) => {
       }
       if(lupaid && searchBlock && src_img && largeminBp.matches){
         lupa.addEventListener('click',() => {
-
-        //  console.log(largeminBp)
             search.classList.toggle('show2')
             menu_principal.classList.toggle('show3')
             if(src_img.getAttribute('src') == '/rural/web/themes/custom/manosminimal/img/lupa.JPG'){//cambio atributo scr para mostrar lupa o x
@@ -109,9 +102,9 @@ if(view_dia){
 //--------------------------------Formatea la fecha de creacion de nodo
 const date_nodo =  document.getElementById('format_date')
 if(date_nodo){
-    var  dateNodo = date_nodo.querySelector("span").innerText
-    var  subCadena = dateNodo.substring(5, 16)
-    var    dia= subCadena.substring(0, 2)
+    var dateNodo = date_nodo.querySelector("span").innerText
+    var subCadena = dateNodo.substring(5, 16)
+    var dia= subCadena.substring(0, 2)
     var ano=subCadena.substring(6, 10)
     var mes=subCadena.substring(3, 5)
     var foro=date_nodo.querySelector("span")
@@ -125,7 +118,6 @@ let date_post1,
   date_post2,
   date_post3,
   date_post4
-//if(date1){date_post1=date1.innerText}
 const date2=  document.querySelector('.time_post2')
 if(date2){date_post2 = date2.innerText}
 const date3=  document.querySelector('.time_post3')
@@ -135,21 +127,6 @@ if(date4){date_post4= date4.innerText}
 
 const date1=  Array.from(document.querySelectorAll('.time_post1'))
 
-
-//console.log(date1[0])
-
-/*let date_post1,
-  date_post2,
-  date_post3,
-  date_post4
-if(date1){date_post1=date1.innerText}
-const date2=  document.querySelector('.time_post2')
-if(date2){date_post2 = date2.innerText}
-const date3=  document.querySelector('.time_post3')
-if(date3){date_post3=date3.innerText}
-const date4=  document.querySelector('.time_post4')
-if(date4){date_post4= date4.innerText}
-*/
 
 //Array.from(document.querySelectorAll('.img_dia'))
 const mescat = (mess) => {
@@ -262,7 +239,7 @@ for(i=0; i < date1.length; i++){
     fecha_post_formateada = trata_fecha_post(fecha);
     date1[i].innerHTML = fecha_post_formateada;
   }
-  //console.log(fecha_post_formateada)
+  
 }
 
 
@@ -342,13 +319,7 @@ if(comprobacionlikes){
 }
 
 
-
-
-
-
-
-    $( "#like" ).click(function(e) {
-    //  $("#like").off('click');
+ $( "#like" ).click(function(e) {
       datos = {"actualizalike":"bottom",
                 "idnode" : idactualnode
               };
@@ -356,14 +327,12 @@ if(comprobacionlikes){
                   url: "countlikes",
                   type: "POST",
                   data: datos,
-                  //dataType: 'text',
+                  
                 })
                 .done(function(data){
                   let result_count_like= data[0].message["countlike"]
                   const like_img_count = document.getElementById('id_img_like')
-                //  like_img_count .classList.add('img_like_count')
                   like_img_count.style.background='linear-gradient(to right, #353d2d var(--contador_like), transparent ' + result_count_like + '%)'
-                //  console.log(result_count_like)
 
         });
       })
@@ -435,8 +404,6 @@ var urlactual= location.href,
     diaadi_desk =document.getElementById("dia_desk")
 
 
-
-
    fr=urlactual.search(patron)
 
   if(fr == -1 && largeBp.matches){
@@ -467,23 +434,7 @@ var urlactual= location.href,
     if(diaadi_desk){diaadi_desk.style.display="none"}
   }
 
-  ///////--------------------------------- colocamo img al item del menu con el focomenu PERO NO HACE FALTA
-
-//const itemmenumprincipal=  Array.from(document.querySelectorAll('.main-menu__item a'))
-
-//var patrons=[new RegExp("qui_som"), new RegExp("horts"), new RegExp("compra_a_la_rural"), new RegExp("ateneu_rural"), new RegExp("dia_a_dia"), new RegExp("contacte")];
-
-//for(i=0; i<=5; i++){
-//  urlactual;
-//  frr=urlactual.search(patrons[i]);
-//  if(frr != -1){
-//  itemmenumprincipal[i].setAttribute('class', 'itemmeu');
-//    console.log(i);
-//  }
-// }
-//  liNa.setAttribute('id', 'item-compra')
-
-
+ 
 //recolocamos elemento textarea del form contact al tomar el focomenu
 
 const textarea_contact =document.getElementById("edit-field-comentarirural-0-value"),
@@ -529,7 +480,6 @@ if(frhor != -1 && largeBp.matches || frcont != -1 && largeBp.matches || frhor !=
         submit_compra.style.background='#90b37d'
         submit_compra.style.borderColor='#fff'
         submit_compra.style.color='#fff'
-        //submit_compra_contact.style.background='#90b37d'
         submit_compra_contact.style.borderColor='#fff'
         submit_compra_contact.style.color='#fff'
         img_cambio.setAttribute('srcset', '/rural/web/themes/custom/manosminimal/img/els_horts_compra_rural.png')
@@ -715,59 +665,13 @@ img_ateneu=document.getElementById("img_slider_ateneu"),
 img_quison_movil=document.querySelector(".quisom_item"),
 video_inicio=document.getElementById("block-slidervideoblock")
 
-
-/*modulo_main=document.getElementById("main-content"),
-modulo_pages=document.getElementById("block-views-block-pages-block-1"),
-modulo_diadia=document.getElementById("block-diadiablock"),
-modulo_instagram=document.getElementById("block-sigueinstagramblock"),
-modulo_headerHead=document.getElementById("header_held"),
-modulo_headerTop=document.getElementById("header_top"),
-modulo_comprarural=document.getElementById("block-compraruralblock"),
-modulo_ondas=document.getElementById("img_ondasfooter"),
-modulo_footer=document.querySelector('.main-footer'),
-modulo_feature=document.getElementById("feature:fourche")
-
-console.log(modulo_footer)
-*/
-
-//Alturas de elemtos
-/*var a_modulo_headerTop= modulo_headerTop.offsetHeight
-var a_modulo_headerHead= modulo_headerHead.offsetHeight
-*/
-
 window.addEventListener('scroll',() =>{
   var scrollTop= document.documentElement.scrollTop
 
 //RALENTIZO LA imagen de inicio
 
 //comentado para quitar paralax de pagina de inicio
-/*
-    if(img_inicio  && largeBp.matches){
-      img_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-    }
 
-
-//ralentizado img img_quison
-    if(img_quison  && largeBp.matches){
-      img_quison.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-    }
-//ralentizado img img_horts
-    if(img_horts  && largeBp.matches){
-      img_horts.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-    }
-//realentiza img_pagina_comprar
-    if(img_pagina_compra  && largeBp.matches){
-      img_pagina_compra.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-    }
-//ralentiza diapagina_img
-    if(img_diadia  && largeBp.matches){
-      img_diadia.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-    }
-//ralentiza ateneu_rural
-if(img_ateneu  && largeBp.matches){
-  img_ateneu.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
-}
-*/
 
 if(video_inicio){
   video_inicio.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
@@ -785,18 +689,22 @@ if(img_inicio_movil){
 if(img_quison){
   img_quison.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
+  
 //ralentizado img img_horts
 if(img_horts){
   img_horts.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
+  
 //realentiza img_pagina_comprar
 if(img_pagina_compra){
   img_pagina_compra.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
+  
 //ralentiza diapagina_img
 if(img_diadia){
   img_diadia.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
+  
 //ralentiza ateneu_rural
 if(img_ateneu ){
 img_ateneu.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
@@ -806,10 +714,6 @@ img_ateneu.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 if(img_quison_movil ){
 img_quison_movil.style.transform='translateY(' + scrollTop * 0.6 + 'px)'
 }
-
-
-
-
 });
 
 
@@ -858,10 +762,6 @@ titulo_post_id.innerHTML =cadenaTituloPostMyuscula
 }
 
 
-
-
-
-
 //events bottom shop online
 //event shop santcugat->icons home
 
@@ -908,7 +808,6 @@ const bottombotiga= document.getElementById("bottombotiga"),
 
 
 if(bottombotiga && elijebotiga && itemfirsbotombotiga && tituloBotom){
-  console.log("estoy awui")
  
   //change mouseenter for click
   tituloBotom.addEventListener('click',() =>{
