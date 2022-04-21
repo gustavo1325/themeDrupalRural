@@ -6,10 +6,6 @@ addEventListener('DOMContentLoaded',()=>{
 const post_sumid = document.querySelector('.form-textarea')
 })
 
-//cambiar atributo href de compartir redes
-
-
-
 
 //function show menu para em menu de navegacion de movil
 const showMenu = (toggleCl,navId) => {
